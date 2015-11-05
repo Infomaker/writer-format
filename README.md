@@ -7,4 +7,4 @@ Documentation, examples etc regarding the formats used by Writer
 			content in newitems in the writer.
 - object 	Example and xsd for the object element. The object element is used as extensions 
 			in newsitems as well in idf.
-``
+```
