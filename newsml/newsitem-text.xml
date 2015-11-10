@@ -1,48 +1,29 @@
 <newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1" conformance="power"
     standardversion="2.20" standard="NewsML-G2" guid="1d02738f-7c99-42ba-a6da-3d1b97261523">
-    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_19.xml"/>
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
-    <!-- 
-        <object> elements used directly under <metadata> and <element> must have an id attribute
-        
-        <itemMetaExtProperty> and <contentMetaExtProperty> are used to map base properties for
-        the article that need to be extended.
-    -->
     <itemMeta>
         <itemClass qcode="ninat:text"/>
-        <!-- The party (person or organisation) responsible for the management of the Item. -->
-        <provider literal="MMIT Roger Nyström"/>
+        <provider literal="John Doe"/>
         <versionCreated>2015-07-01T14:11:20+02:00</versionCreated>
         <firstCreated>2015-07-01T14:00:02+02:00</firstCreated>
         <pubStatus qcode="stat:withheld"/>
-
-        <!-- An editorial service to which an item is assigned by its provider. -->
         <service qcode="imchn:premium"/>
         <service qcode="imchn:test"/>
         <title>Proin eget dignissim ipsum</title>
         <edNote>Duis eget magna lacus. In sodales lectus vel egestas rhoncus</edNote>
-
-        <!-- "Base" property extensions -->
         <itemMetaExtProperty type="imext:uri" value="x-im://1d02738f-7c99-42ba-a6da-3d1b97261523"/>
-
+        <itemMetaExtProperty type="imext:url"
+            value="http://example.org/articles/1d02738f-7c99-42ba-a6da-3d1b97261523.xml"/>
         <itemMetaExtProperty type="imext:pubstart" value="2015-07-01T14:27:00+02:00"/>
         <itemMetaExtProperty type="imext:pubstop" value="2015-10-05T15:14:13+02:00"/>
-
-        <!-- Article type -->
         <itemMetaExtProperty type="imext:type" value="Web article"/>
         <itemMetaExtProperty type="imext:typeid" value="285"/>
-
-        <!-- Article subtype (e.g. articlepart type) -->
         <itemMetaExtProperty type="imext:subtype" value="Article"/>
         <itemMetaExtProperty type="imext:subtypeid" value="1"/>
-
-        <!-- Links to the newsItem -->
         <links xmlns="http://www.infomaker.se/newsml/1.0">
-            <!-- Related article -->
             <link title="Quisque pharetra id velit quis commodo" rel="article" type="x-im/article"
                 uuid="2175c4bb-fdcc-5a52-bc3b-658562f554cf"/>
-
-            <!-- Creator -->
             <link title="John Doe" rel="creator" type="x-im/user"
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
                 <data>
@@ -50,8 +31,6 @@
                     <altId>58456</altId>
                 </data>
             </link>
-
-            <!-- Author -->
             <link title="Jane Doe" rel="author" type="x-im/user"
                 uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f">
                 <data>
@@ -63,38 +42,28 @@
                         url="//example.org/byline/images/janedoe.jpg"/>
                 </links>
             </link>
-
-            <!-- Main section -->
             <link title="Sport" rel="section" type="x-im/mainsection">
                 <data>
                     <altId>87521</altId>
                 </data>
             </link>
-
-            <!-- Other sections -->
             <link title="Local" rel="section" type="x-im/section">
                 <data>
                     <altId>45784</altId>
                 </data>
             </link>
-
-            <!-- "Category" -->
             <link title="Hedemora" rel="subject" type="x-im/category"
                 uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87">
                 <data>
                     <fullPath>Allmänt/Dalarna/Hedemora</fullPath>
                 </data>
             </link>
-
-            <!-- "Topic" -->
             <link title="Volvo" rel="subject" type="x-im/topic"
                 uuid="b201e042-555b-11e5-885d-feff819cdc9f">
                 <data>
                     <category>CARS</category>
                 </data>
             </link>
-
-            <!-- Place -->
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
                 <data>
@@ -111,55 +80,36 @@
     <contentMeta>
         <contentCreated>2015-07-01T14:00:02+02:00</contentCreated>
         <contentModified>2015-07-01T14:11:20+02:00</contentModified>
-
-        <!-- Creator -->
         <creator type="cpnat:person">
             <name>John Doe</name>
             <remoteInfo residref="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
         </creator>
-
-        <!-- Author -->
         <contributor type="cpnat:person">
             <name>Jane Doe</name>
             <remoteInfo residref="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
         </contributor>
-
         <slugline>Praesent nisl risus, lobortis sed congue at...</slugline>
         <description>Quisque ullamcorper non ligula vel commodo.</description>
-
-        <!-- "Category" -->
         <subject type="cpnat:abstract">
             <name>Allmänt/Dalarna/Hedemora</name>
             <remoteInfo residref="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
         </subject>
-
-        <!-- "Topic" -->
         <subject type="cpnat:object">
             <name>Volvo</name>
             <remoteInfo residref="b201e042-555b-11e5-885d-feff819cdc9f"/>
         </subject>
-
-        <!-- Place -->
         <subject type="cpnat:poi">
             <name>Alvesta</name>
             <remoteInfo residref="bce38dda-555b-11e5-885d-feff819cdc9f"/>
         </subject>
-
         <language tag="en"/>
-
-        <!-- Extraced from <contributor> -->
         <by>Jane Doe</by>
-
-        <!-- Extracted from content/headline -->
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
-
-        <!-- News prio and lifetime -->
-        <contentMetaExtProperty type="imext:lifetimename" value="6 hours"/>
-        <contentMetaExtProperty type="imext:lifetimecode" value="PT6H"/>
+        <contentMetaExtProperty type="imext:prio" value="1"/>
+        <contentMetaExtProperty type="imext:lifetimename" value="6H"/>
+        <contentMetaExtProperty type="imext:lifetimecode" value="PT6H"/>        
         <contentMetaExtProperty type="imext:lifetimeend" value="2016-01-31T10:00:00.000+01:00"/>
-
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
-            <!-- This is the teaser text -->
             <object id="8400c74d667e" type="x-im/teaser"
                 title="Sed sit amet turpis a purus fringilla">
                 <data>
@@ -178,8 +128,6 @@
                     </link>
                 </links>
             </object>
-
-            <!-- This is an image that is not placed inline -->
             <object id="46f60ada63fd" type="x-im/image"
                 uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
                 uuid="c382c937-8511-5d48-9677-55658c2bbb32">
@@ -209,7 +157,6 @@
                 <group type="body">
                     <element id="fafbedf02da1" type="body" format="html">
                         <p xml:space="preserve">Mauris eleifend, orci nec volutpat efficitur,
-                            <!-- A youtube clip inline-inline -->
                             <object id="59097ae592c7" type="x-im/youtube" url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
                                 <data>
                                     <autoStart>true</autoStart>
@@ -218,7 +165,6 @@
                         <p xml:space="preserve">In hac habitasse platea dictumst.</p>
                     </element>
                     <element id="dcc7c5fcf709" type="object">
-                        <!-- Since this image is a referenced object it is represented by a link with attribute rel="self" -->
                         <object id="943b2917de0b" type="x-im/image"
                             uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                             <links>
