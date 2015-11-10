@@ -10,12 +10,15 @@ The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/
 ## XML outline
 All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text">`. "Internal" images, i.e. images that are stored as part of the customers content, are represented as `<newsItem>`s with `<itemClass qcode="ninat:picture">`.
 
-## The XML explained
+## The XML (text) explained
 ```xml
 <newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1" conformance="power"
     standardversion="2.20" standard="NewsML-G2" guid="1d02738f-7c99-42ba-a6da-3d1b97261523">
+
     <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
     <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
+
+    <!-- catalog for infomaker extensions: imchn, imext etc... -->
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>    
     
     <itemMeta>
@@ -280,5 +283,99 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             </idf>
         </inlineXML>
     </contentSet>
+</newsItem>
+```
+## The XML (image) explained
+```xml
+<newsItem guid="c382c937-8511-5d48-9677-55658c2bbb32" xmlns="http://iptc.org/std/nar/2006-10-01/"
+    conformance="power" standardversion="2.20" standard="NewsML-G2">
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_22.xml"/>
+    <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
+    <itemMeta>
+        <!-- Identifies the newsItem as an aricle. -->
+        <itemClass qcode="ninat:picture"/>
+        <versionCreated>2015-07-01T14:11:20+02:00</versionCreated>
+        <firstCreated>2015-07-01T14:11:20+02:00</firstCreated>
+
+        <!-- The image filename -->
+        <fileName>vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg</fileName>
+
+        <!-- Type image -->
+        <itemMetaExtProperty type="imext:type" value="x-im/image"/>
+
+        <!-- Uniform resource locator. -->
+        <itemMetaExtProperty type="imext:url" value="//s3.example-img.se/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
+
+        <!-- Uniform resource indicator. -->
+        <itemMetaExtProperty type="imext:uri" value="x-im://image/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
+        
+        <!-- 
+            The "links" element contains resources of various kinds that are
+            linked to the image. Each link must have a "rel" and a "type".            
+        -->
+        <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- Photographer. -->
+            <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9ff"
+                title="Jane Doe"/>
+            
+            <!-- Link to thumb. -->
+            <link rel="thumb" type="x-im/image"
+                url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka_thumb.jpeg"/>
+
+            <!-- Link to preview. -->
+            <link rel="preview" type="x-im/image"
+                url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka_preview.jpeg"/>
+        </links>
+    </itemMeta>
+    <contentMeta>
+        <contentCreated>2015-07-01T14:11:20+02:00</contentCreated>
+        <contentModified>2015-07-01T14:11:20+02:00</contentModified>
+        
+        <!-- 
+            Element represent the photographer.
+
+            Note that "remoteInfo" (if present) should reference to
+            "links/link" with rel="author" and type="x-im/user".
+        -->
+        <contributor type="cpnat:person">
+            <name>Jane Doe</name>
+            <remoteInfo residref="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
+        </contributor>
+
+        <!-- 
+            The "metadata" element contains metadata that are included 
+            in the image.
+        -->
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+                <!-- Metadata for the image. -->
+                <object id="46f60ada63fd" type="x-im/image">
+                    <data>
+                        <width>1536</width>
+                        <height>1024</height>
+                        <caption>Maecenas at nisl in lorem egestas egestas.</caption>
+                    </data>
+                    <links>
+                        <link rel="2x1" type="x-im/softcrop">
+                            <data>
+                                <x>45</x>
+                                <y>80</y>
+                                <width>2900</width>
+                                <height>1400</height>
+                            </data>
+                        </link>
+                        <link rel="3x2" type="x-im/softcrop">
+                            <data>
+                                <x>80</x>
+                                <y>5</y>
+                                <width>2700</width>
+                                <height>1800</height>
+                            </data>
+                        </link>
+                    </links>
+                </object>
+            </metadata>
+        </metadata>
+    </contentMeta>
 </newsItem>
 ```
