@@ -11,7 +11,7 @@ The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/
 All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text">`. "Internal" images, i.e. images that are stored as part of the customers content, are represented as `<newsItem>`s with `<itemClass qcode="ninat:picture">`.
 
 ## The XML explained
-```
+```xml
 <newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1" conformance="power"
     standardversion="2.20" standard="NewsML-G2" guid="1d02738f-7c99-42ba-a6da-3d1b97261523">
     <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
