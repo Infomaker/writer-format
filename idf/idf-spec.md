@@ -2,14 +2,23 @@
 The idf (infomaker data format) is used to represent the content part (`inlineXML`) of a newsItem. For further information about the idf format please see [idf.xsd](https://github.com/Infomaker/writer-format/blob/master/idf/idf.xsd).
 
 ## Revision history
+* 1.1   Added comments.
 * 1.0	Initial revision.
 
 ## The XML (text) explained
-TODO: Add explanation
 ```xml
+<!-- 
+    For more information about <idf...>, see idf.xsd.
+-->
 <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
+    <!-- Mandatory, i.e. at least one <group...> is expected -->
     <group type="header">
+        <!-- 
+            Attributes @id and @type are mandatory. Attribute @format is currently not used.
+            Allowed children of <element> are <p...> and <object...>.
+        -->
         <element id="d0dbf67d385e" type="headline" format="html">
+            <!-- xml:space="preserve" is mandatory for <p...>. -->
             <p xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </element>
         <element id="8a5ef068ef17" type="dateline" format="html">
@@ -19,6 +28,10 @@ TODO: Add explanation
     <group type="body">
         <element id="fafbedf02da1" type="body" format="html">
             <p xml:space="preserve">Mauris eleifend, orci nec volutpat efficitur,
+                <!-- 
+                    <object...> is described https://github.com/Infomaker/writer-format/tree/master/object.
+                    <object...> can occur as an inline element or as a block element.
+                -->
                             <object id="59097ae592c7" type="x-im/youtube" url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
                                 <data>
                                     <autoStart>true</autoStart>
@@ -27,6 +40,7 @@ TODO: Add explanation
             <p xml:space="preserve">In hac habitasse platea dictumst.</p>
         </element>
         <element id="dcc7c5fcf709" type="object">
+            <!-- <object...> as a block element -->
             <object id="943b2917de0b" type="x-im/image" uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                 <links>
                     <link rel="self" type="x-im/image"

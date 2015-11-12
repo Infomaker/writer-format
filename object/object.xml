@@ -1,0 +1,12 @@
+<object id="46f60ada63fd" type="x-im/image" uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
+    uuid="c382c937-8511-5d48-9677-55658c2bbb32">
+    <data>
+        <width>1536</width>
+        <height>1024</height>
+        <text>Maecenas at nisl in lorem egestas egestas.</text>
+    </data>
+    <links>
+        <link title="Jane Doe" rel="author" type="x-im/user"
+            uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
+    </links>
+</object>
