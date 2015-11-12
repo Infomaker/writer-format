@@ -5,7 +5,7 @@ The idf (infomaker data format) is used to represent the content part (`inlineXM
 * 1.1   Added comments.
 * 1.0	Initial revision.
 
-## The XML (text) explained
+## The XML explained
 ```xml
 <!-- 
     For more information about <idf...>, see idf.xsd.
@@ -40,7 +40,10 @@ The idf (infomaker data format) is used to represent the content part (`inlineXM
             <p xml:space="preserve">In hac habitasse platea dictumst.</p>
         </element>
         <element id="dcc7c5fcf709" type="object">
-            <!-- <object...> as a block element -->
+            <!-- 
+                <object...> as a block element. Note that attribute @type of 
+                <element...> should be "object" in this case. 
+            -->
             <object id="943b2917de0b" type="x-im/image" uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                 <links>
                     <link rel="self" type="x-im/image"
