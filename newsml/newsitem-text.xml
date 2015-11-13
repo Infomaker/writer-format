@@ -67,12 +67,7 @@
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
                 <data>
-                    <positions>
-                        <position>
-                            <latitude>56.89921039999999</latitude>
-                            <longitude>14.556000600000061</longitude>
-                        </position>
-                    </positions>
+                    <position>POINT(56.89921 14.55600)</position>
                 </data>
             </link>
         </links>
@@ -107,7 +102,7 @@
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
         <contentMetaExtProperty type="imext:prio" value="1"/>
         <contentMetaExtProperty type="imext:lifetimename" value="6H"/>
-        <contentMetaExtProperty type="imext:lifetimecode" value="PT6H"/>        
+        <contentMetaExtProperty type="imext:lifetimecode" value="PT6H"/>
         <contentMetaExtProperty type="imext:lifetimeend" value="2016-01-31T10:00:00.000+01:00"/>
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="8400c74d667e" type="x-im/teaser"
@@ -128,17 +123,21 @@
                     </link>
                 </links>
             </object>
-            <object id="46f60ada63fd" type="x-im/image"
-                uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
-                uuid="c382c937-8511-5d48-9677-55658c2bbb32">
-                <data>
-                    <width>1536</width>
-                    <height>1024</height>
-                    <text>Maecenas at nisl in lorem egestas egestas.</text>
-                </data>
+            <object id="46f60ada63fd" type="x-im/image" uuid="c382c937-8511-5d48-9677-55658c2bbb32">
                 <links>
-                    <link title="Jane Doe" rel="author" type="x-im/user"
-                        uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
+                    <link rel="self" type="x-im/image"
+                        url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
+                        uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg">
+                        <data>
+                            <caption>Maecenas at nisl in lorem egestas egestas.</caption>
+                            <width>1536</width>
+                            <height>1024</height>
+                        </data>
+                        <links>
+                            <link rel="author" type="x-im/user"
+                                uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
+                        </links>
+                    </link>
                 </links>
             </object>
         </metadata>
@@ -168,7 +167,7 @@
                         <object id="943b2917de0b" type="x-im/image"
                             uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                             <links>
-                                <link rel="self" type="x-im/image"
+                                <link rel="self" type="x-im/image" uri="x-im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
                                     url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg">
                                     <data>
                                         <caption>Vivamus luctus eros.</caption>

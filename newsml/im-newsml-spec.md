@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.2   Changed representation of position (geodata) to WKT "standard".
 * 1.1   Added XML eplained.
 * 1.0	Initial revision.
 
@@ -131,13 +132,9 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             <!-- Place. -->
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
-                <data>
-                    <positions>
-                        <position>
-                            <latitude>56.89921039999999</latitude>
-                            <longitude>14.556000600000061</longitude>
-                        </position>
-                    </positions>
+                <data>      
+                    <!-- WKT format for position -->              
+                    <position>POINT(56.89921 14.55600)</position>                    
                 </data>
             </link>
         </links>
@@ -261,17 +258,21 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             </object>
 
             <!-- Related image that is not placed in content. -->
-            <object id="46f60ada63fd" type="x-im/image"
-                uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
-                uuid="c382c937-8511-5d48-9677-55658c2bbb32">
-                <data>
-                    <width>1536</width>
-                    <height>1024</height>
-                    <text>Maecenas at nisl in lorem egestas egestas.</text>
-                </data>
+            <object id="46f60ada63fd" type="x-im/image" uuid="c382c937-8511-5d48-9677-55658c2bbb32">
                 <links>
-                    <link title="Jane Doe" rel="author" type="x-im/user"
-                        uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
+                    <link rel="self" type="x-im/image"
+                        url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
+                        uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg">
+                        <data>
+                            <caption>Maecenas at nisl in lorem egestas egestas.</caption>
+                            <width>1536</width>
+                            <height>1024</height>
+                        </data>
+                        <links>
+                            <link rel="author" type="x-im/user"
+                                uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
+                        </links>
+                    </link>
                 </links>
             </object>
         </metadata>
