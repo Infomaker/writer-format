@@ -1,0 +1,320 @@
+{
+    "@xmlns": "http://iptc.org/std/nar/2006-10-01/",
+    "@version": "1",
+    "@conformance": "power",
+    "@standardversion": "2.20",
+    "@standard": "NewsML-G2",
+    "@guid": "1d02738f-7c99-42ba-a6da-3d1b97261523",
+    "catalogRef": {"@href": "http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"},
+    "catalogRef#_2": {"@href": "http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"},
+    "itemMeta": {
+        "itemClass": {"@qcode": "ninat:text"},
+        "provider": {"@literal": "John Doe"},
+        "versionCreated": "2015-07-01T14:11:20+02:00",
+        "firstCreated": "2015-07-01T14:00:02+02:00",
+        "pubStatus": {"@qcode": "stat:withheld"},
+        "service": {"@qcode": "imchn:premium"},
+        "service#_2": {"@qcode": "imchn:test"},
+        "title": "Proin eget dignissim ipsum",
+        "edNote": "Duis eget magna lacus. In sodales lectus vel egestas rhoncus",
+        "itemMetaExtProperty": {
+            "@type": "imext:uri",
+            "@value": "x-im://1d02738f-7c99-42ba-a6da-3d1b97261523"
+        },
+        "itemMetaExtProperty#_2": {
+            "@type": "imext:url",
+            "@value": "http://example.org/articles/1d02738f-7c99-42ba-a6da-3d1b97261523.xml"
+        },
+        "itemMetaExtProperty#_3": {
+            "@type": "imext:pubstart",
+            "@value": "2015-07-01T14:27:00+02:00"
+        },
+        "itemMetaExtProperty#_4": {
+            "@type": "imext:pubstop",
+            "@value": "2015-10-05T15:14:13+02:00"
+        },
+        "itemMetaExtProperty#_5": {
+            "@type": "imext:type",
+            "@value": "Web article"
+        },
+        "itemMetaExtProperty#_6": {
+            "@type": "imext:typeid",
+            "@value": "285"
+        },
+        "itemMetaExtProperty#_7": {
+            "@type": "imext:subtype",
+            "@value": "Article"
+        },
+        "itemMetaExtProperty#_8": {
+            "@type": "imext:subtypeid",
+            "@value": "1"
+        },
+        "links": {
+            "@xmlns": "http://www.infomaker.se/newsml/1.0",
+            "link": {
+                "@title": "Quisque pharetra id velit quis commodo",
+                "@rel": "article",
+                "@type": "x-im/article",
+                "@uuid": "2175c4bb-fdcc-5a52-bc3b-658562f554cf"
+            },
+            "link#_2": {
+                "@title": "John Doe",
+                "@rel": "creator",
+                "@type": "x-im/user",
+                "@uuid": "9e1653f3-7575-4cb7-9b74-dc4dea63513e",
+                "data": {
+                    "email": "john.doe@example.org",
+                    "altId": "58456"
+                }
+            },
+            "link#_3": {
+                "@title": "Jane Doe",
+                "@rel": "author",
+                "@type": "x-im/user",
+                "@uuid": "bad4314c-7e33-11e5-8bcf-feff819cdc9f",
+                "data": {
+                    "email": "jane.doe@example.org",
+                    "altId": "456"
+                },
+                "links": {"link": {
+                    "@rel": "avatar",
+                    "@type": "x-im/image",
+                    "@url": "//example.org/byline/images/janedoe.jpg"
+                }}
+            },
+            "link#_4": {
+                "@title": "Sport",
+                "@rel": "section",
+                "@type": "x-im/mainsection",
+                "data": {"altId": "87521"}
+            },
+            "link#_5": {
+                "@title": "Local",
+                "@rel": "section",
+                "@type": "x-im/section",
+                "data": {"altId": "45784"}
+            },
+            "link#_6": {
+                "@title": "Hedemora",
+                "@rel": "subject",
+                "@type": "x-im/category",
+                "@uuid": "d72eb011-1552-4af4-8d15-cd4f8c157a87",
+                "data": {"fullPath": "Allmänt/Dalarna/Hedemora"}
+            },
+            "link#_7": {
+                "@title": "Volvo",
+                "@rel": "subject",
+                "@type": "x-im/topic",
+                "@uuid": "b201e042-555b-11e5-885d-feff819cdc9f",
+                "data": {"category": "CARS"}
+            },
+            "link#_8": {
+                "@title": "Alvesta",
+                "@rel": "subject",
+                "@type": "x-im/place",
+                "@uuid": "bce38dda-555b-11e5-885d-feff819cdc9f",
+                "data": {"position": "POINT(56.89921 14.55600)"}
+            }
+        }
+    },
+    "contentMeta": {
+        "contentCreated": "2015-07-01T14:00:02+02:00",
+        "contentModified": "2015-07-01T14:11:20+02:00",
+        "creator": {
+            "@type": "cpnat:person",
+            "name": "John Doe",
+            "remoteInfo": {"@residref": "9e1653f3-7575-4cb7-9b74-dc4dea63513e"}
+        },
+        "contributor": {
+            "@type": "cpnat:person",
+            "name": "Jane Doe",
+            "remoteInfo": {"@residref": "bad4314c-7e33-11e5-8bcf-feff819cdc9f"}
+        },
+        "slugline": "Praesent nisl risus, lobortis sed congue at...",
+        "description": "Quisque ullamcorper non ligula vel commodo.",
+        "subject": {
+            "@type": "cpnat:abstract",
+            "name": "Allmänt/Dalarna/Hedemora",
+            "remoteInfo": {"@residref": "d72eb011-1552-4af4-8d15-cd4f8c157a87"}
+        },
+        "subject#_2": {
+            "@type": "cpnat:object",
+            "name": "Volvo",
+            "remoteInfo": {"@residref": "b201e042-555b-11e5-885d-feff819cdc9f"}
+        },
+        "subject#_3": {
+            "@type": "cpnat:poi",
+            "name": "Alvesta",
+            "remoteInfo": {"@residref": "bce38dda-555b-11e5-885d-feff819cdc9f"}
+        },
+        "language": {"@tag": "en"},
+        "by": "Jane Doe",
+        "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "contentMetaExtProperty": {
+            "@type": "imext:prio",
+            "@value": "1"
+        },
+        "metadata": {
+            "@xmlns": "http://www.infomaker.se/newsml/1.0",
+            "object": {
+                "@type": "x-im/lifetime",
+                "data": {
+                    "description": "6H",
+                    "text": "PTH6",
+                    "format": "lifetimecode",
+                    "end": "2016-01-31T10:00:00.000+01:00"
+                }
+            },
+            "object#_2": {
+                "@id": "8400c74d667e",
+                "@type": "x-im/teaser",
+                "@title": "Sed sit amet turpis a purus fringilla",
+                "data": {"text": "Duis eget magna lacus. In sodales lectus vel egestas rhoncus. Fusce\n                        ultrices urna vel ante sodales tincidunt. Maecenas at nisl in lorem egestas\n                        egestas id sed ipsum. Sed aliquam gravida dolor."},
+                "links": {"link": {
+                    "@rel": "image",
+                    "@type": "x-im/image",
+                    "@uri": "x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg",
+                    "@uuid": "c382c937-8511-5d48-9677-55658c2bbb32",
+                    "data": {
+                        "width": "1536",
+                        "height": "1024"
+                    }
+                }}
+            },
+            "object#_3": {
+                "@id": "46f60ada63fd",
+                "@type": "x-im/image",
+                "@uuid": "c382c937-8511-5d48-9677-55658c2bbb32",
+                "links": {"link": {
+                    "@rel": "self",
+                    "@type": "x-im/image",
+                    "@url": "//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg",
+                    "@uri": "x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg",
+                    "data": {
+                        "caption": "Maecenas at nisl in lorem egestas egestas.",
+                        "width": "1536",
+                        "height": "1024"
+                    },
+                    "links": {"link": {
+                        "@rel": "author",
+                        "@type": "x-im/user",
+                        "@uuid": "bad4314c-7e33-11e5-8bcf-feff819cdc9f",
+                        "@title": "Jane Doe"
+                    }}
+                }}
+            }
+        }
+    },
+    "contentSet": {"inlineXML": {"idf": {
+        "@xmlns": "http://www.infomaker.se/idf/1.0",
+        "@xml:lang": "sv",
+        "group": {
+            "@type": "header",
+            "element": {
+                "@id": "d0dbf67d385e",
+                "@type": "headline",
+                "@format": "html",
+                "p": {
+                    "@xml:space": "preserve",
+                    "#text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                }
+            },
+            "element#_2": {
+                "@id": "8a5ef068ef17",
+                "@type": "dateline",
+                "@format": "html",
+                "p": {
+                    "@xml:space": "preserve",
+                    "#text": "New York"
+                }
+            }
+        },
+        "group#_2": {
+            "@type": "body",
+            "element": {
+                "@id": "fafbedf02da1",
+                "@type": "body",
+                "@format": "html",
+                "p": {
+                    "@xml:space": "preserve",
+                    "#text": "Mauris eleifend, orci nec volutpat efficitur,\n                            ",
+                    "object": {
+                        "@id": "59097ae592c7",
+                        "@type": "x-im/youtube",
+                        "@url": "https://www.youtube.com/watch?v=2H4rJ7iw7W0",
+                        "@title": "Maecenas at nisl",
+                        "#text": "\n                                ",
+                        "data": {
+                            "#text": "\n                                    ",
+                            "autoStart": "true",
+                            "#text#_2": "\n                                "
+                        },
+                        "#text#_2": "\n                            "
+                    },
+                    "#text#_2": " massa nibh congue libero, sed vehicula libero dui eget neque."
+                },
+                "p#_2": {
+                    "@xml:space": "preserve",
+                    "#text": "In hac habitasse platea dictumst."
+                }
+            },
+            "element#_2": {
+                "@id": "dcc7c5fcf709",
+                "@type": "object",
+                "object": {
+                    "@id": "943b2917de0b",
+                    "@type": "x-im/image",
+                    "@uuid": "f845d7b8-40cb-545a-8069-36e21ff00908",
+                    "links": {
+                        "link": {
+                            "@rel": "self",
+                            "@type": "x-im/image",
+                            "@uri": "x-im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg",
+                            "@url": "//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg",
+                            "data": {
+                                "caption": "Vivamus luctus eros.",
+                                "width": "1536",
+                                "height": "1024"
+                            },
+                            "links": {"link": {
+                                "@rel": "author",
+                                "@type": "x-im/user",
+                                "@uuid": "bad4314c-7e33-11e5-8bcf-feff819cdc9f",
+                                "@title": "Jane Doe"
+                            }}
+                        },
+                        "link#_2": {
+                            "@rel": "2x1",
+                            "@type": "x-im/softcrop",
+                            "data": {
+                                "x": "45",
+                                "y": "80",
+                                "width": "2900",
+                                "height": "1400"
+                            }
+                        },
+                        "link#_3": {
+                            "@rel": "3x2",
+                            "@type": "x-im/softcrop",
+                            "data": {
+                                "x": "80",
+                                "y": "5",
+                                "width": "2700",
+                                "height": "1800"
+                            }
+                        }
+                    }
+                }
+            },
+            "element#_3": {
+                "@id": "c93fe9cfad5d",
+                "@type": "body",
+                "@format": "html",
+                "p": {
+                    "@xml:space": "preserve",
+                    "#text": "Aenean ullamcorper faucibus felis suscipit faucibus. Cras eu leo lectus."
+                }
+            }
+        }
+    }}}
+}
