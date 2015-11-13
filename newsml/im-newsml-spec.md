@@ -4,7 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
-* 1.4   Added uuid to <link rel="self"...>.
+* 1.4   Added uuid to link/@rel="self".
 * 1.3   Changed lifetime to be represented as <object> insteald of <contentMetaItemExt...>.
 * 1.2   Changed representation of position (geodata) to WKT "standard".
 * 1.1   Added XML eplained.
