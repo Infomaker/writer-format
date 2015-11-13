@@ -100,11 +100,16 @@
         <language tag="en"/>
         <by>Jane Doe</by>
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
-        <contentMetaExtProperty type="imext:prio" value="1"/>
-        <contentMetaExtProperty type="imext:lifetimename" value="6H"/>
-        <contentMetaExtProperty type="imext:lifetimecode" value="PT6H"/>
-        <contentMetaExtProperty type="imext:lifetimeend" value="2016-01-31T10:00:00.000+01:00"/>
+        <contentMetaExtProperty type="imext:prio" value="1"/>        
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <object type="x-im/lifetime">
+                <data>
+                    <description>6H</description>
+                    <text>PTH6</text>
+                    <format>lifetimecode</format>
+                    <end>2016-01-31T10:00:00.000+01:00</end>
+                </data>
+            </object>
             <object id="8400c74d667e" type="x-im/teaser"
                 title="Sed sit amet turpis a purus fringilla">
                 <data>

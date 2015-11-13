@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.3   Changed lifetime to be represented as <object> insteald of <contentMetaItemExt...>.
 * 1.2   Changed representation of position (geodata) to WKT "standard".
 * 1.1   Added XML eplained.
 * 1.0	Initial revision.
@@ -212,31 +213,35 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
         <!-- Extracted from content/headline. -->
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
 
-        <!-- 
-            News prio, lifetime and lifetime end date for article. Valid values
-            described below.
-            
-            imext:prio: 1 - 6 where 1 is lowest priority.            
-            
-            imext:lifetimename and imext:lifetimecode are stored as pairs
-            6H/PT6H
-            1D/P1D
-            7D/P7D
-            30D/P30D
-            ∞/0 (infinite)
-
-            imext:lifetimeend: date format yyyy-MM-dd'T'HH:mm:ssZ. null allowed.
-        -->        
-        <contentMetaExtProperty type="imext:prio" value="1"/>
-        <contentMetaExtProperty type="imext:lifetimename" value="6H"/>
-        <contentMetaExtProperty type="imext:lifetimecode" value="PT6H"/>        
-        <contentMetaExtProperty type="imext:lifetimeend" value="2016-01-31T10:00:00.000+01:00"/>
+        <!-- imext:prio: 1 - 6 where 1 is lowest priority. -->        
+        <contentMetaExtProperty type="imext:prio" value="1"/>        
 
         <!-- 
             The "metadata" element contains metadata that are included in the article
             but not part of the content itself.
         -->
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- 
+                Lifetime and lifetime end date for article. Valid values
+                described below.
+                                
+                imext:lifetimename and imext:lifetimecode are stored as pairs
+                6H/PT6H
+                1D/P1D
+                7D/P7D
+                30D/P30D
+                ∞/0 (infinite)
+
+                imext:lifetimeend: date format yyyy-MM-dd'T'HH:mm:ssZ. null allowed.
+            -->    
+            <object type="x-im/lifetime">
+                <data>
+                    <description>6H</description>
+                    <text>PTH6</text>
+                    <format>lifetimecode</format>
+                    <end>2016-01-31T10:00:00.000+01:00</end>
+                </data>
+            </object>
             <!-- Teaser text for the article. -->
             <object id="8400c74d667e" type="x-im/teaser"
                 title="Sed sit amet turpis a purus fringilla">
