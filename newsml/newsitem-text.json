@@ -169,7 +169,7 @@
                 "@id": "8400c74d667e",
                 "@type": "x-im/teaser",
                 "@title": "Sed sit amet turpis a purus fringilla",
-                "data": {"text": "Duis eget magna lacus. In sodales lectus vel egestas rhoncus. Fusce\n                        ultrices urna vel ante sodales tincidunt. Maecenas at nisl in lorem egestas\n                        egestas id sed ipsum. Sed aliquam gravida dolor."},
+                "data": {"text": "Duis eget magna lacus. In sodales lectus vel egestas rhoncus. Fusceultrices urna vel ante sodales tincidunt. Maecenas at nisl in lorem egestasegestas id sed ipsum. Sed aliquam gravida dolor."},
                 "links": {"link": {
                     "@rel": "image",
                     "@type": "x-im/image",
@@ -237,19 +237,13 @@
                 "@format": "html",
                 "p": {
                     "@xml:space": "preserve",
-                    "#text": "Mauris eleifend, orci nec volutpat efficitur,\n                            ",
+                    "#text": "Mauris eleifend, orci nec volutpat efficitur,",
                     "object": {
                         "@id": "59097ae592c7",
                         "@type": "x-im/youtube",
                         "@url": "https://www.youtube.com/watch?v=2H4rJ7iw7W0",
                         "@title": "Maecenas at nisl",
-                        "#text": "\n                                ",
-                        "data": {
-                            "#text": "\n                                    ",
-                            "autoStart": "true",
-                            "#text#_2": "\n                                "
-                        },
-                        "#text#_2": "\n                            "
+                        "data": {"autoStart": "true"}
                     },
                     "#text#_2": " massa nibh congue libero, sed vehicula libero dui eget neque."
                 },
