@@ -42,9 +42,11 @@ The idf (infomaker data format) is used to represent the content part (`inlineXM
         <element id="dcc7c5fcf709" type="object">
             <!-- 
                 <object...> as a block element. Note that attribute @type of 
-                <element...> should be "object" in this case. 
+                <element...> should be "object" in this case and that @id of
+                <element...> and <object...> should be the same. There can be
+                only one <object...> inside an <element...> with @type="object".
             -->
-            <object id="943b2917de0b" type="x-im/image" uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
+            <object id="dcc7c5fcf709" type="x-im/image" uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                 <links>
                     <link rel="self" type="x-im/image"
                         url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg">
