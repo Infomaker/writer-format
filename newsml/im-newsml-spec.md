@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.4   Added uuid to <link rel="self"...>.
 * 1.3   Changed lifetime to be represented as <object> insteald of <contentMetaItemExt...>.
 * 1.2   Changed representation of position (geodata) to WKT "standard".
 * 1.1   Added XML eplained.
@@ -267,7 +268,8 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
                 <links>
                     <link rel="self" type="x-im/image"
                         url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
-                        uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg">
+                        uri="x-im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
+                        uuid="c382c937-8511-5d48-9677-55658c2bbb32">
                         <data>
                             <caption>Maecenas at nisl in lorem egestas egestas.</caption>
                             <width>1536</width>

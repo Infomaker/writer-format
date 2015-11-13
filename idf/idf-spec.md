@@ -49,7 +49,8 @@ The idf (infomaker data format) is used to represent the content part (`inlineXM
             <object id="dcc7c5fcf709" type="x-im/image" uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                 <links>
                     <link rel="self" type="x-im/image"
-                        url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg">
+                        url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
+                        uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                         <data>
                             <caption>Vivamus luctus eros.</caption>
                             <width>1536</width>
