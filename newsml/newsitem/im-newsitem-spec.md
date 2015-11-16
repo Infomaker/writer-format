@@ -1,5 +1,5 @@
-# Infomaker NewsML spec
-*Note: This NewsML spec concerns Infomakers implementation of NewsML for Writer (Infomakers web based editor).*
+# Infomaker NewsItem spec
+*Note: This NewsItem spec concerns Infomakers implementation of NewsItem for Writer (Infomakers web based editor).*
 
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
