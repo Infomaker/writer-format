@@ -4,8 +4,9 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.5   Changed link/@type="x-im/category" child element "fullPath" to "path". Changed mapping of subject[@type="cpnat:abstract"]/name from link[@type="x-im/category"]/path to link[@type="x-im/category"]/@title. In example below, this means that value of subject[@type="cpnat:abstract"]/name is "Hedemora" (was "Allmänt/Dalarna/Hedemora").
 * 1.4   Added uuid to link/@rel="self".
-* 1.3   Changed lifetime to be represented as <object> insteald of <contentMetaItemExt...>.
+* 1.3   Changed lifetime to be represented as "object" insteald of "contentMetaItemExt".
 * 1.2   Changed representation of position (geodata) to WKT "standard".
 * 1.1   Added XML eplained.
 * 1.0	Initial revision.
@@ -119,7 +120,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             <link title="Hedemora" rel="subject" type="x-im/category"
                 uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87">
                 <data>
-                    <fullPath>Allmänt/Dalarna/Hedemora</fullPath>
+                    <path>Allmänt/Dalarna/Hedemora</path>
                 </data>
             </link>
 
@@ -177,9 +178,11 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             
             Note that "remoteInfo" (if present) should reference to
             "links/link" with rel="subject" and type="x-im/category".
+
+            Note that "name" is mapped to link[@type="x-im/category"]/@title.
         -->
         <subject type="cpnat:abstract">
-            <name>Allmänt/Dalarna/Hedemora</name>
+            <name>Hedemora</name>
             <remoteInfo residref="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
         </subject>
 

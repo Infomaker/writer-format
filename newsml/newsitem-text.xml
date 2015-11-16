@@ -55,7 +55,7 @@
             <link title="Hedemora" rel="subject" type="x-im/category"
                 uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87">
                 <data>
-                    <fullPath>Allmänt/Dalarna/Hedemora</fullPath>
+                    <path>Allmänt/Dalarna/Hedemora</path>
                 </data>
             </link>
             <link title="Volvo" rel="subject" type="x-im/topic"
@@ -86,7 +86,7 @@
         <slugline>Praesent nisl risus, lobortis sed congue at...</slugline>
         <description>Quisque ullamcorper non ligula vel commodo.</description>
         <subject type="cpnat:abstract">
-            <name>Allmänt/Dalarna/Hedemora</name>
+            <name>Hedemora</name>
             <remoteInfo residref="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
         </subject>
         <subject type="cpnat:object">
