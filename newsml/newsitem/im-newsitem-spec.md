@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.7   Rename document from im-newsml-spec.md to im-newsitem-spec.md.
 * 1.6   Misc typos, (PT6H was PTH6 and language/@tag="sv" was "en").
 * 1.5   Changed link/@type="x-im/category" child element "fullPath" to "path". Changed mapping of subject[@type="cpnat:abstract"]/name from link[@type="x-im/category"]/path to link[@type="x-im/category"]/@title. In example below, this means that value of subject[@type="cpnat:abstract"]/name is "Hedemora" (was "Allmänt/Dalarna/Hedemora").
 * 1.4   Added uuid to link/@rel="self".
