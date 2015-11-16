@@ -301,7 +301,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
 ## The XML (image) explained
 ```xml
 <newsItem guid="c382c937-8511-5d48-9677-55658c2bbb32" xmlns="http://iptc.org/std/nar/2006-10-01/"
-    conformance="power" standardversion="2.20" standard="NewsML-G2">
+    conformance="power" standardversion="2.20" standard="NewsML-G2" version="1">
     <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_22.xml"/>
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
     <itemMeta>
@@ -328,7 +328,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
         -->
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- Photographer. -->
-            <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9ff"
+            <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
                 title="Jane Doe"/>
             
             <!-- Link to thumb. -->
@@ -359,35 +359,33 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             The "metadata" element contains metadata that are included 
             in the image.
         -->
-        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
-            <metadata xmlns="http://www.infomaker.se/newsml/1.0">
-                <!-- Metadata for the image. -->
-                <object id="46f60ada63fd" type="x-im/image">
-                    <data>
-                        <width>1536</width>
-                        <height>1024</height>
-                        <caption>Maecenas at nisl in lorem egestas egestas.</caption>
-                    </data>
-                    <links>
-                        <link rel="2x1" type="x-im/softcrop">
-                            <data>
-                                <x>45</x>
-                                <y>80</y>
-                                <width>2900</width>
-                                <height>1400</height>
-                            </data>
-                        </link>
-                        <link rel="3x2" type="x-im/softcrop">
-                            <data>
-                                <x>80</x>
-                                <y>5</y>
-                                <width>2700</width>
-                                <height>1800</height>
-                            </data>
-                        </link>
-                    </links>
-                </object>
-            </metadata>
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">            
+            <!-- Metadata for the image. -->
+            <object id="46f60ada63fd" type="x-im/image">
+                <data>
+                    <width>1536</width>
+                    <height>1024</height>
+                    <caption>Maecenas at nisl in lorem egestas egestas.</caption>
+                </data>
+                <links>
+                    <link rel="2x1" type="x-im/softcrop">
+                        <data>
+                            <x>45</x>
+                            <y>80</y>
+                            <width>2900</width>
+                            <height>1400</height>
+                        </data>
+                    </link>
+                    <link rel="3x2" type="x-im/softcrop">
+                        <data>
+                            <x>80</x>
+                            <y>5</y>
+                            <width>2700</width>
+                            <height>1800</height>
+                        </data>
+                    </link>
+                </links>
+            </object>            
         </metadata>
     </contentMeta>
 </newsItem>

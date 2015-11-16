@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" guid="bce38dda-555b-11e5-885d-feff819cdc9f"
+    version="1" standard="NewsML-G2" standardversion="2.20" conformance="power">
+    <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
+    
+    <!-- catalog for infomaker extensions: imchn, imext etc... -->
+    <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
+    
+    <itemMeta>
+        <itemClass qcode="cinat:concept"/>
+        
+        <!-- The party (person or organisation) responsible for the management of the Item. -->
+        <provider literal="XYZ"/>
+        
+        <versionCreated>2015-08-11T07:30:42Z</versionCreated>
+        <firstCreated>2015-08-11T07:30:42Z</firstCreated>
+        
+        <!-- The publishing status of the Item, its value is "usable" by default. -->
+        <pubStatus qcode="stat:usable"/>
+        
+        <!-- TODO: Denna kanske vi kan ta bort förutsatt att den alltid är samma som <name> nedan -->
+        <!--<title>Alvesta</title>-->
+        
+        <!-- Extension used to map concept to x-im/place -->
+        <itemMetaExtProperty type="imext:type" value="x-im/place"/>
+    </itemMeta>
+    <concept>
+        <!-- Mandatory. @qcode or @uri must be used -->
+        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:bce38dda-555b-11e5-885d-feff819cdc9f"/>
+        
+        <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "place" -->
+        <type qcode="cpnat:poi"/>
+        
+        <!-- Mandatory. Name of concept -->
+        <name>Alvesta</name>
+        
+        <!-- Descriptions -->
+        <definition role="drol:long">A long description...</definition>
+        <definition role="drol:short">A short description</definition>
+                
+        <!-- 
+            Additional information for the concept. If there are any related information to the 
+            concept it is represented as links (href) using the remoteContent 
+        -->
+        <remoteInfo rel="irel:seeAlso" contenttype="text/html" href="http://example.org/alvesta"/>
+
+        <!-- 
+            To represent geodata we are using WKT, for more info see
+            https://en.wikipedia.org/wiki/Well-known_text.
+        -->
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <object type="x-im/place">
+                <data>
+                    <position>POINT(14.55600 56.89921)</position>
+                </data>
+            </object>
+        </metadata>
+    </concept>
+</conceptItem>

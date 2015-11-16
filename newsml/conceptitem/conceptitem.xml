@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" guid="ee569f7d-8e8d-4180-9d01-976dc6e9f014"
+    version="1010181123618" standard="NewsML-G2" standardversion="2.12" conformance="power">
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_19.xml"/>
+    <catalogRef href="http://infomaker.se/some-url-to-im-standard-1.xml"/>
+    <itemMeta>
+        <itemClass qcode="cinat:concept"/>
+        <provider literal="IPTC"/>
+        <versionCreated>2015-08-11T07:30:42Z</versionCreated>
+        <firstCreated>2015-08-11T07:30:42Z</firstCreated>
+        <!-- Kan vara cancelled, usable eller withheld -->
+        <pubStatus qcode="stat:usable"/>
+        <title>Div 3 herr</title>
+    </itemMeta>
+    <concept>
+        <!-- medtopic: must replaced with MittMedias own CV if IPTC:s CV not sufficient  -->
+        <!-- qcode = uuid. Måste prefixas med imcpt (som finns i standarden, se ovan -->
+        <!-- TODO: Might be unnecessary -->
+        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:ee569f7d-8e8d-4180-9d01-976dc6e9f014"/>
+
+        <!-- Dessa presenteras under Kategorier:
+         cpnat:abstract
+         -->
+
+        <!-- Dessa presenteras under Platser:
+         cpnat:poi
+         cpnat:geoArea
+         -->
+
+        <!-- Dessa presentaras under Ämnen:
+         cpnat:event
+         cpnat:person
+         cpnat:organisation
+         cpnat:object (övriga)
+         -->
+
+        <!-- Dessa presenteras under Stories (ej implementerat)
+         imnat:story
+         -->
+
+        <type qcode="cpnat:abstract"/>
+
+        <name>Div 3 herr</name>
+
+        <!-- Beskrivningar -->
+        <definition role="drol:long">En längre beskrivning...</definition>
+        <definition role="drol:short">Kort beskrivning</definition>
+
+        <!-- Egna fält definieras i im-standarden, se ovan -->
+        <!-- imrol:path = Används endast av cpnat:abstract -->
+        <definition role="imrol:path">Sport/Innebandy/Div 3 herr</definition>
+
+        <!-- Länkar -->
+        <remoteInfo rel="irel:seeAlso" contenttype="text/html"
+            href="http://www.innebandy.se/Vastergotland/Kontakt-och-tavlingar/"/>
+        <remoteInfo rel="irel:seeAlso" contenttype="text/html"
+            href="http://www.everysport.com/sport/innebandy/2014-2015/division-3-herr/24790"/>
+
+        <!-- Förälder. Används endast av cpnat:abstract -->
+        <broader qcode="imcpt:230efee7-0b68-4b39-8840-7859a62ee904">
+            <name>Innebandy</name>
+        </broader>
+
+        <!-- Externt id. Kan användas av cpnat:abstract om man vill relatera till IPTC-kategorier -->
+        <sameAs type="cpnat:abstract" qcode="medtop:15078231"/>
+
+        <!-- Used by types cpnat:poi (one position) -->
+        <!-- TODO: We want this in WKT -->
+        <geoAreaDetails>
+            <position latitude="56.89921" longitude="14.55600"/>
+        </geoAreaDetails>
+
+        <!-- Used by cpnat:geoArea (many positions) -->
+        <!-- <geoAreaDetails>
+            <polygon>
+                 <position latitude="56.89921" longitude="14.55601"/>
+                 <position latitude="56.89922" longitude="14.55601"/>
+                 <position latitude="56.89922" longitude="14.55600"/>
+            </polygon>
+        </geoAreaDetails> -->
+
+    </concept>
+</conceptItem>

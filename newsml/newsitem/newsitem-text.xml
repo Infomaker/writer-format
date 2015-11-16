@@ -67,7 +67,7 @@
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
                 <data>
-                    <position>POINT(56.89921 14.55600)</position>
+                    <position>POINT(14.55600 56.89921)</position>
                 </data>
             </link>
         </links>
