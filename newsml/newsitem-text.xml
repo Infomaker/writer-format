@@ -97,7 +97,7 @@
             <name>Alvesta</name>
             <remoteInfo residref="bce38dda-555b-11e5-885d-feff819cdc9f"/>
         </subject>
-        <language tag="en"/>
+        <language tag="sv"/>
         <by>Jane Doe</by>
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
         <contentMetaExtProperty type="imext:prio" value="1"/>
