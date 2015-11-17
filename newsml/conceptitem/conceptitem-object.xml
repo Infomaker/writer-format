@@ -3,51 +3,66 @@
     version="1" standard="NewsML-G2" standardversion="2.20" conformance="power">
     <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
     <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
-    
+
     <!-- catalog for infomaker extensions: imchn, imext etc... -->
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
-    
+
     <itemMeta>
         <itemClass qcode="cinat:concept"/>
-        
+
         <!-- The party (person or organisation) responsible for the management of the Item. -->
-        <provider literal="XYZ"/>
-        
+        <provider literal="John Doe"/>
+
         <versionCreated>2015-08-11T07:30:42Z</versionCreated>
         <firstCreated>2015-08-11T07:30:42Z</firstCreated>
-        
+
         <!-- The publishing status of the Item, its value is "usable" by default. -->
         <pubStatus qcode="stat:usable"/>
-        
+
         <!-- TODO: Denna kanske vi kan ta bort förutsatt att den alltid är samma som <name> nedan -->
-        <!--<title>Volvo</title>-->
-        
+        <title>Volvo</title>
+
         <!-- TODO: is "topic" correct for tags? -->
         <!-- Extension used to map concept to x-im/topic -->
         <itemMetaExtProperty type="imext:type" value="x-im/topic"/>
+
+        <itemMetaExtProperty type="imext:uri" value="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
+
+        <links xmlns="http://www.infomaker.se/newsml/1.0">
+          <link title="John Doe" rel="creator" type="x-im/user"
+              uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
+              <data>
+                  <email>john.doe@example.org</email>
+                  <altId>58456</altId>
+              </data>
+          </link>
+          <link rel="irel:seeAlso" type="text/html" url="http://example.org/volvo">
+          </link>
+        </links>
     </itemMeta>
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
-        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:b201e042-555b-11e5-885d-feff819cdc9f"/>
-        
+        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:b201e042-555b-11e5-885d-feff819cdc9f"
+          uri="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
+
         <!-- TODO: is "topic" correct for tags? -->
         <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "topic" -->
         <type qcode="cpnat:object"/>
-        
+
         <!-- Mandatory. Name of concept -->
         <name>Volvo</name>
-        
+
         <!-- Descriptions -->
         <definition role="drol:long">A long description...</definition>
         <definition role="drol:short">A short description</definition>
-        
+
         <!-- The full path for "object" -->
         <definition role="imrol:path">Cars/Volvo</definition>
-                
-        <!-- 
-            Additional information for the concept. If there are any related information to the 
-            concept it is represented as links (href) using the remoteContent 
+
+        <!--
+            Additional information for the concept. If there are any related information to the
+            concept it is represented as links (href) using the remoteContent
         -->
-        <remoteInfo rel="irel:seeAlso" contenttype="text/html" href="http://example.org/volvo"/>        
+        <remoteInfo rel="irel:seeAlso" contenttype="text/html" href="http://example.org/volvo"/>
     </concept>
 </conceptItem>
