@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.8   Changed object[type="x-im/lifetime"] to object[type="x-im/newsvalue"]. Moved newsprio to object[type="x-im/newsvalue"]/score. Removed "element" wrapping a block "object", i.e. allowed for element and object to be siblings. Added missing "id" to object[type="x-im/newsvalue"].
 * 1.7   Rename document from im-newsml-spec.md to im-newsitem-spec.md.
 * 1.6   Misc typos, (PT6H was PTH6 and language/@tag="sv" was "en").
 * 1.5   Changed link/@type="x-im/category" child element "fullPath" to "path". Changed mapping of subject[@type="cpnat:abstract"]/name from link[@type="x-im/category"]/path to link[@type="x-im/category"]/@title. In example below, this means that value of subject[@type="cpnat:abstract"]/name is "Hedemora" (was "Allmänt/Dalarna/Hedemora").
@@ -218,20 +219,19 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
 
         <!-- Extracted from content/headline. -->
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
-
-        <!-- imext:prio: 1 - 6 where 1 is lowest priority. -->        
-        <contentMetaExtProperty type="imext:prio" value="1"/>        
-
+        
         <!-- 
             The "metadata" element contains metadata that are included in the article
             but not part of the content itself.
         -->
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- 
-                Lifetime and lifetime end date for article. Valid values
+                Score (prio), lifetime and lifetime end date for article. Valid values
                 described below.
+
+                "score" is an integer ranging from 1 - 6 where 1 is the lowest score (prio).
                                 
-                imext:lifetimename and imext:lifetimecode are stored as pairs
+                "description" and "text" are stored as pairs
                 6H/PT6H
                 1D/P1D
                 7D/P7D
@@ -240,8 +240,9 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
 
                 imext:lifetimeend: date format yyyy-MM-dd'T'HH:mm:ssZ. null allowed.
             -->    
-            <object type="x-im/lifetime">
+            <object id="8400c74d665x" type="x-im/newsvalue">
                 <data>
+                    <score>1</score>
                     <description>6H</description>
                     <text>PT6H</text>
                     <format>lifetimecode</format>

@@ -2,12 +2,12 @@
 <!--
   Infomaker Scandinavia AB
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.infomaker.se/object/1.0" xmlns:object="http://www.infomaker.se/object/1.0">
   <xs:element name="object">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="data"/>
-        <xs:element ref="links"/>
+        <xs:element minOccurs="0" ref="object:data"/>
+        <xs:element minOccurs="0" ref="object:links"/>
       </xs:sequence>
       <xs:attribute name="id" use="required" type="xs:NMTOKEN">
         <xs:annotation>
@@ -36,21 +36,22 @@
   <xs:element name="links">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="link"/>
+        <xs:element maxOccurs="unbounded" ref="object:link"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="link">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" ref="data"/>
-        <xs:element minOccurs="0" ref="links"/>
+        <xs:element minOccurs="0" ref="object:data"/>
+        <xs:element minOccurs="0" ref="object:links"/>
       </xs:sequence>
       <xs:attribute name="rel" use="optional" type="xs:NMTOKEN"/>
       <xs:attribute name="type" use="required"/>
       <xs:attribute name="uri" type="xs:anyURI"/>
       <xs:attribute name="url"/>
-      <xs:attribute name="title" use="optional" type="xs:NCName"/>
+      <xs:attribute name="title" use="optional" type="xs:normalizedString"/>
+      <xs:attribute name="uuid" use="optional"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>

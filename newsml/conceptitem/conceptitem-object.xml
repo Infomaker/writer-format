@@ -29,21 +29,20 @@
         <itemMetaExtProperty type="imext:uri" value="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
 
         <links xmlns="http://www.infomaker.se/newsml/1.0">
-          <link title="John Doe" rel="creator" type="x-im/user"
-              uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
-              <data>
-                  <email>john.doe@example.org</email>
-                  <altId>58456</altId>
-              </data>
-          </link>
-          <link rel="irel:seeAlso" type="text/html" url="http://example.org/volvo">
-          </link>
+            <link title="John Doe" rel="creator" type="x-im/user"
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
+                <data>
+                    <email>john.doe@example.org</email>
+                    <altId>58456</altId>
+                </data>
+            </link>
+            <link rel="irel:seeAlso" type="text/html" url="http://example.org/volvo"> </link>
         </links>
     </itemMeta>
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:b201e042-555b-11e5-885d-feff819cdc9f"
-          uri="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
+            uri="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
 
         <!-- TODO: is "topic" correct for tags? -->
         <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "topic" -->
