@@ -162,7 +162,7 @@
                 <group type="body">
                     <element id="fafbedf02da1" type="body" format="html">
                         <p xml:space="preserve">Mauris eleifend, orci nec volutpat efficitur,
-                            <object id="59097ae592c7" type="x-im/youtube" url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
+                            <object id="59097ae592c7" type="x-im/youtube" xml:space="default" url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
                                 <data>
                                     <autoStart>true</autoStart>
                                 </data>
