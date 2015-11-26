@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.9   Removed "data/cars" from link[@type=x-im/topic]. This information, i.e. "cars", is not stored on the conceptItem any longer.
 * 1.8   Changed object[type="x-im/lifetime"] to object[type="x-im/newsvalue"]. Moved newsprio to object[type="x-im/newsvalue"]/score. Removed "element" wrapping a block "object", i.e. allowed for element and object to be siblings. Added missing "id" to object[type="x-im/newsvalue"].
 * 1.7   Rename document from im-newsml-spec.md to im-newsitem-spec.md.
 * 1.6   Misc typos, (PT6H was PTH6 and language/@tag="sv" was "en").
@@ -130,9 +131,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             <!-- Topic. -->
             <link title="Volvo" rel="subject" type="x-im/topic"
                 uuid="b201e042-555b-11e5-885d-feff819cdc9f">
-                <data>
-                    <category>CARS</category>
-                </data>
+                <data/>                    
             </link>
 
             <!-- Place. -->

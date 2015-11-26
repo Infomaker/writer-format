@@ -54,10 +54,7 @@
         <!-- Descriptions -->
         <definition role="drol:long">A long description...</definition>
         <definition role="drol:short">A short description</definition>
-
-        <!-- The full path for "object" -->
-        <definition role="imrol:path">Cars/Volvo</definition>
-
+        
         <!--
             Additional information for the concept. If there are any related information to the
             concept it is represented as links (href) using the remoteContent

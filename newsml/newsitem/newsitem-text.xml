@@ -73,15 +73,11 @@
             </link>
             <link title="Volvo" rel="subject" type="x-im/topic"
                 uuid="b201e042-555b-11e5-885d-feff819cdc9f">
-                <data>
-                    <category>CARS</category>
-                </data>
+                <data/>                    
             </link>
             <link title="Saab" rel="subject" type="x-im/topic"
                 uuid="14d59118-91e4-11e5-8994-feff819cdc9f">
-                <data>
-                    <category>CARS</category>
-                </data>
+                <data/>                    
             </link>
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
