@@ -13,7 +13,11 @@
         <itemMetaExtProperty type="imext:uri" value="x-im://image/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
-                title="Jane Doe"/>
+                title="Jane Doe">
+                <data>                    
+                    <altId>58456</altId>
+                </data>
+            </link>
             <link rel="thumb" type="x-im/image"
                 url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka_thumb.jpeg"/>
         </links>
@@ -21,10 +25,6 @@
     <contentMeta>
         <contentCreated>2015-07-01T14:11:20+02:00</contentCreated>
         <contentModified>2015-07-01T14:11:20+02:00</contentModified>
-        <contributor type="cpnat:person">
-            <name>Jane Doe</name>
-            <remoteInfo residref="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
-        </contributor>
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="46f60ada63fd" type="x-im/image">
                 <data>

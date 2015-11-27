@@ -4,6 +4,7 @@
 The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/).
 
 ## Revision history
+* 1.10  Removed "subject" elements since it was duplicating information found in corresponding "link" element. The use of these "subject" elements only make implementation of plugins more complex. Also removed "link[@type=x-im/user]/data/email" and "link[type=x-im/category]/data/path" since that information does not need to be indexed and can/should be retrieved from the entity it refers to.
 * 1.9   Removed "data/cars" from link[@type=x-im/topic]. This information, i.e. "cars", is not stored on the conceptItem any longer.
 * 1.8   Changed object[type="x-im/lifetime"] to object[type="x-im/newsvalue"]. Moved newsprio to object[type="x-im/newsvalue"]/score. Removed "element" wrapping a block "object", i.e. allowed for element and object to be siblings. Added missing "id" to object[type="x-im/newsvalue"].
 * 1.7   Rename document from im-newsml-spec.md to im-newsitem-spec.md.
@@ -35,6 +36,8 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
         
         <!-- The party (person or organisation) responsible for the management of the Item. -->
         <provider literal="John Doe"/>
+
+        <!-- When newsItem is first created, "versionCreated" and "firstCreated" must have identical timestamps -->
         <versionCreated>2015-07-01T14:11:20+02:00</versionCreated>
         <firstCreated>2015-07-01T14:00:02+02:00</firstCreated>
         
@@ -87,8 +90,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             <!-- Creator. -->
             <link title="John Doe" rel="creator" type="x-im/user"
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
-                <data>
-                    <email>john.doe@example.org</email>
+                <data>                    
                     <altId>58456</altId>
                 </data>
             </link>
@@ -96,8 +98,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
             <!-- Author. -->
             <link title="Jane Doe" rel="author" type="x-im/user"
                 uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f">
-                <data>
-                    <email>jane.doe@example.org</email>
+                <data>                    
                     <altId>456</altId>
                 </data>
                 <links>
@@ -122,21 +123,17 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
 
             <!-- Category. -->
             <link title="Hedemora" rel="subject" type="x-im/category"
-                uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87">
-                <data>
-                    <path>Allmänt/Dalarna/Hedemora</path>
-                </data>
-            </link>
+                uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>                            
 
             <!-- Topic. -->
             <link title="Volvo" rel="subject" type="x-im/topic"
-                uuid="b201e042-555b-11e5-885d-feff819cdc9f">
-                <data/>                    
-            </link>
+                uuid="b201e042-555b-11e5-885d-feff819cdc9f"/>                
 
             <!-- Place. -->
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
+                <!-- Keep "positions" since it is probably a candidate
+                    for indexing for an article -->
                 <data>      
                     <!-- WKT format for position -->              
                     <position>POINT(56.89921 14.55600)</position>                    
@@ -145,71 +142,10 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
         </links>
     </itemMeta>
     <contentMeta>
+        <!-- When newsItem is first created, "contentCreated" and "contentModified" must have identical timestamps -->
         <contentCreated>2015-07-01T14:00:02+02:00</contentCreated>
         <contentModified>2015-07-01T14:11:20+02:00</contentModified>
-
-        <!-- 
-            Element contains information regarding the person who has 
-            created the article. There can be only one "creator".
-            
-            Note that "remoteInfo" (if present) should reference to
-            a "links/link" with rel="creator" and type="x-im/user".
-        -->
-        <creator type="cpnat:person">
-            <name>John Doe</name>
-            <remoteInfo residref="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
-        </creator>
-
-        <!-- 
-            Element represent the person/persons that are found in
-            the article´s byline(s).
-            
-            Note that "remoteInfo" (if present) should reference to
-            "links/link" with rel="author" and type="x-im/user".
-        -->
-        <contributor type="cpnat:person">
-            <name>Jane Doe</name>
-            <remoteInfo residref="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
-        </contributor>
-
-        <slugline>Praesent nisl risus, lobortis sed congue at...</slugline>
-        <description>Quisque ullamcorper non ligula vel commodo.</description>
-
-        <!-- 
-            Element represent "Category".
-            
-            Note that "remoteInfo" (if present) should reference to
-            "links/link" with rel="subject" and type="x-im/category".
-
-            Note that "name" is mapped to link[@type="x-im/category"]/@title.
-        -->
-        <subject type="cpnat:abstract">
-            <name>Hedemora</name>
-            <remoteInfo residref="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
-        </subject>
-
-        <!-- 
-            Element represent "Topic" (Tag).
-            
-            Note that "remoteInfo" (if present) should reference to
-            "links/link" with rel="subject" and type="x-im/topic".
-        -->
-        <subject type="cpnat:object">
-            <name>Volvo</name>
-            <remoteInfo residref="b201e042-555b-11e5-885d-feff819cdc9f"/>
-        </subject>
-
-        <!-- 
-            Element represent "Place".
-            
-            Note that "remoteInfo" (if present) should reference to
-            "links/link" with rel="subject" and type="x-im/place".
-        -->
-        <subject type="cpnat:poi">
-            <name>Alvesta</name>
-            <remoteInfo residref="bce38dda-555b-11e5-885d-feff819cdc9f"/>
-        </subject>
-
+        
         <!-- Language in content. -->
         <language tag="sv"/>
 
@@ -329,7 +265,11 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- Photographer. -->
             <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
-                title="Jane Doe"/>
+                title="Jane Doe">
+                <data>                    
+                    <altId>58456</altId>
+                </data>
+            </link>
             
             <!-- Link to thumb. -->
             <link rel="thumb" type="x-im/image"
@@ -343,18 +283,7 @@ All articles are represented as `<newsItem>`s with `<itemClass qcode="ninat:text
     <contentMeta>
         <contentCreated>2015-07-01T14:11:20+02:00</contentCreated>
         <contentModified>2015-07-01T14:11:20+02:00</contentModified>
-        
-        <!-- 
-            Element represent the photographer.
-
-            Note that "remoteInfo" (if present) should reference to
-            "links/link" with rel="author" and type="x-im/user".
-        -->
-        <contributor type="cpnat:person">
-            <name>Jane Doe</name>
-            <remoteInfo residref="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
-        </contributor>
-
+               
         <!-- 
             The "metadata" element contains metadata that are included 
             in the image.

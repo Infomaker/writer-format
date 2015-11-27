@@ -27,21 +27,18 @@
             <link title="John Doe" rel="creator" type="x-im/user"
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
                 <data>
-                    <email>john.doe@example.org</email>
                     <altId>58456</altId>
                 </data>
             </link>
             <link title="John Doe" rel="author" type="x-im/user"
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
                 <data>
-                    <email>john.doe@example.org</email>
                     <altId>58456</altId>
-                </data>                
+                </data>
             </link>
             <link title="Jane Doe" rel="author" type="x-im/user"
                 uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f">
                 <data>
-                    <email>jane.doe@example.org</email>
                     <altId>456</altId>
                 </data>
                 <links>
@@ -60,24 +57,17 @@
                 </data>
             </link>
             <link title="Hedemora" rel="subject" type="x-im/category"
-                uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87">
-                <data>
-                    <path>Allmänt/Dalarna/Hedemora</path>
-                </data>
-            </link>
+                uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
             <link title="Dalarna" rel="subject" type="x-im/category"
-                uuid="03d22994-91e4-11e5-8994-feff819cdc9f">
-                <data>
-                    <path>Allmänt/Dalarna</path>
-                </data>
+                uuid="03d22994-91e4-11e5-8994-feff819cdc9f">                
             </link>
             <link title="Volvo" rel="subject" type="x-im/topic"
                 uuid="b201e042-555b-11e5-885d-feff819cdc9f">
-                <data/>                    
+                <data/>
             </link>
             <link title="Saab" rel="subject" type="x-im/topic"
                 uuid="14d59118-91e4-11e5-8994-feff819cdc9f">
-                <data/>                    
+                <data/>
             </link>
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
@@ -95,48 +85,12 @@
     </itemMeta>
     <contentMeta>
         <contentCreated>2015-07-01T14:00:02+02:00</contentCreated>
-        <contentModified>2015-07-01T14:11:20+02:00</contentModified>
-        <creator type="cpnat:person">
-            <name>John Doe</name>
-            <remoteInfo residref="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
-        </creator>
-        <contributor type="cpnat:person">
-            <name>John Doe</name>
-            <remoteInfo residref="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
-        </contributor>
-        <contributor type="cpnat:person">
-            <name>Jane Doe</name>
-            <remoteInfo residref="bad4314c-7e33-11e5-8bcf-feff819cdc9f"/>
-        </contributor>
+        <contentModified>2015-07-01T14:11:20+02:00</contentModified>        
         <slugline>Praesent nisl risus, lobortis sed congue at...</slugline>
-        <description>Quisque ullamcorper non ligula vel commodo.</description>
-        <subject type="cpnat:abstract">
-            <name>Hedemora</name>
-            <remoteInfo residref="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
-        </subject>
-        <subject type="cpnat:abstract">
-            <name>Dalarna</name>
-            <remoteInfo residref="03d22994-91e4-11e5-8994-feff819cdc9f"/>
-        </subject>
-        <subject type="cpnat:object">
-            <name>Volvo</name>
-            <remoteInfo residref="b201e042-555b-11e5-885d-feff819cdc9f"/>
-        </subject>
-        <subject type="cpnat:object">
-            <name>Saab</name>
-            <remoteInfo residref="14d59118-91e4-11e5-8994-feff819cdc9f"/>
-        </subject>
-        <subject type="cpnat:poi">
-            <name>Alvesta</name>
-            <remoteInfo residref="bce38dda-555b-11e5-885d-feff819cdc9f"/>
-        </subject>
-        <subject type="cpnat:poi">
-            <name>Stockholm</name>
-            <remoteInfo residref="48bdde54-91e4-11e5-8994-feff819cdc9f"/>
-        </subject>
+        <description>Quisque ullamcorper non ligula vel commodo.</description>        
         <language tag="sv"/>
         <by>Jane Doe</by>
-        <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>        
+        <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="8400c74d665x" type="x-im/newsvalue">
                 <data>
@@ -215,7 +169,8 @@
                 <group type="body">
                     <element id="fafbedf02da1" type="body" format="html">
                         <p xml:space="preserve">Mauris eleifend, orci nec volutpat efficitur,
-                            <object id="vavbedf02op4" type="x-im/link" xml:space="default">
+                            <object
+                                id="vavbedf02op4" type="x-im/link" xml:space="default">
                                 <data>
                                     <href>https://codex.wordpress.org/Shortcode_API</href>
                                     <anchor>shortcode</anchor>
@@ -225,7 +180,8 @@
                             </object> massa nibh congue libero, sed vehicula libero dui eget neque.</p>
                         <p xml:space="preserve">In hac habitasse platea dictumst.</p>
                     </element>
-                    <object id="59097ae592c7" type="x-im/youtube" url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
+                    <object id="59097ae592c7" type="x-im/youtube"
+                        url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
                         <data>
                             <autoStart>true</autoStart>
                         </data>
@@ -277,7 +233,7 @@
                                 url="//roY8P3C922OIYjlksefgr99_jJkg.jpeg"
                                 uuid="75a35cd0-91e6-11e5-8994-feff819cdc9f">
                                 <data>
-                                    <caption>Mauris eu pretium ligula.</caption>                                  
+                                    <caption>Mauris eu pretium ligula.</caption>
                                 </data>
                             </link>
                         </links>
