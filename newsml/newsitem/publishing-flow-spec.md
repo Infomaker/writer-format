@@ -1,7 +1,7 @@
 # Publishing flow
 The supported (in writer) publishing flow depends on a couple of elements in the newsItem which are described in this spec.
 
-## Save new article
+## Save new article ("Spara ny artikel")
 Create and save a new article from scratch.
 
 **Values on article after "Spara ny artikel":**
@@ -19,7 +19,7 @@ Create and save a new article from scratch.
 - Publicera
 - Tidspublicera
 
-## Publish article
+## Publish article ("Publicera artikel")
 Article is published and displayed in writer with a published timestamp.
 
 **Values on article after "Publicera artikel":**
@@ -38,7 +38,7 @@ Article is published and displayed in writer with a published timestamp.
 - Ompublicera
 - Avpublicera
 
-## Update article
+## Update article ("Uppdatera artikel")
 Update an already published article.
 
 **Values on article after "Uppdatera artikel":**
@@ -60,7 +60,7 @@ Update an already published article.
 - Ompublicera
 - Avpublicera
 
-## Re-publish article
+## Re-publish article ("Ompublicera artikel")
 Publish an already published article again.
 
 **Values on article after "Ompublicera artikel":**
@@ -84,10 +84,10 @@ Publish an already published article again.
 - Ompublicera
 - Avpublicera
 
-## Un-publish article
+## Un-publish article ("Avpublicera artikel")
 Un-publish a published article.
 
-**Values on article after "Ompublicera artikel":**
+**Values on article after "Avpublicera artikel":**
 ``` xml
 <itemMeta>
 	...
@@ -108,7 +108,7 @@ Un-publish a published article.
 - Publicera
 - Tidspublicera
 
-## Time controlled publishing
+## Time controlled publishing ("Tidspublicera artikel")
 Save a non-published article with a future publish and un-publish timestamp.
 
 **Values on article after "Tidspublicera artikel":**
