@@ -39,14 +39,13 @@
             <link rel="irel:seeAlso" type="text/html" url="http://www.everysport.com/sport/innebandy/2014-2015/division-3-herr/24790"/>
             
             <!-- Parent category (optional) -->
-            <link title="Dalarna" rel="broader" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>                           
+            <link rel="broader" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>                           
             
             <!-- External id (optional) from TT or IPTC -->
-            <link title="Musikinstrument" rel="same-as" type="x-im/mediatopic"
-                uri="http://cv.iptc.org/newscodes/mediatopic/20000019"
-                uuid="4a89318f-1f05-5a95-bfb9-1014ac7fe71a">
+            <link rel="same-as" type="x-im/mediatopic"
+                uri="http://cv.iptc.org/newscodes/mediatopic/20000019">
                 <data>
-                    <qcode>medtop:15078231</qcode>
+                    <qcode>medtop:20000019</qcode>
                 </data>
             </link>
         </links>
