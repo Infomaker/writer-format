@@ -24,9 +24,7 @@
         <edNote>This is a note...</edNote>
 
         <!-- Extension used to map concept to x-im/topic -->
-        <itemMetaExtProperty type="imext:type" value="x-im/topic"/>
-
-        <itemMetaExtProperty type="imext:uri" value="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
+        <itemMetaExtProperty type="imext:type" value="x-im/topic"/>        
 
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- User that has created the concept. -->

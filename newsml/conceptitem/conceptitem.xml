@@ -43,10 +43,7 @@
         -->
         <!-- Mandatory -->
         <itemMetaExtProperty type="imext:type" value="x-im/category"/>
-
-        <!-- URI of conceptItem -->
-        <itemMetaExtProperty type="imext:uri" value="x-im://d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
-
+        
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- User that has created the concept. -->
             <link rel="creator" type="x-im/user" uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
