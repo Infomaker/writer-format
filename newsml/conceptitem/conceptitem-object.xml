@@ -13,30 +13,28 @@
         <!-- The party (person or organisation) responsible for the management of the Item. -->
         <provider literal="John Doe"/>
 
-        <versionCreated>2015-08-11T07:30:42Z</versionCreated>
-        <firstCreated>2015-08-11T07:30:42Z</firstCreated>
+        <!-- Timestamps for created and updated. https://www.ietf.org/rfc/rfc3339.txt -->
+        <versionCreated>2015-12-07T15:03:42+00:00</versionCreated>
+        <firstCreated>2015-12-07T15:03:42+00:00</firstCreated>
 
         <!-- The publishing status of the Item, its value is "usable" by default. -->
         <pubStatus qcode="stat:usable"/>
 
-        <!-- TODO: Denna kanske vi kan ta bort förutsatt att den alltid är samma som <name> nedan -->
-        <title>Volvo</title>
+        <!-- Any note that might be of interest to save with the concept. -->
+        <edNote>This is a note...</edNote>
 
-        <!-- TODO: is "topic" correct for tags? -->
         <!-- Extension used to map concept to x-im/topic -->
         <itemMetaExtProperty type="imext:type" value="x-im/topic"/>
 
         <itemMetaExtProperty type="imext:uri" value="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
 
         <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- User that has created the concept. -->
             <link title="John Doe" rel="creator" type="x-im/user"
-                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
-                <data>
-                    <email>john.doe@example.org</email>
-                    <altId>58456</altId>
-                </data>
-            </link>
-            <link rel="irel:seeAlso" type="text/html" url="http://example.org/volvo"> </link>
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
+
+            <!-- Additional information for the concept. -->
+            <link rel="irel:seeAlso" type="text/html" url="http://example.org/volvo"/>
         </links>
     </itemMeta>
     <concept>
@@ -44,7 +42,6 @@
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:b201e042-555b-11e5-885d-feff819cdc9f"
             uri="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
 
-        <!-- TODO: is "topic" correct for tags? -->
         <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "topic" -->
         <type qcode="cpnat:object"/>
 
@@ -54,11 +51,5 @@
         <!-- Descriptions -->
         <definition role="drol:long">A long description...</definition>
         <definition role="drol:short">A short description</definition>
-        
-        <!--
-            Additional information for the concept. If there are any related information to the
-            concept it is represented as links (href) using the remoteContent
-        -->
-        <remoteInfo rel="irel:seeAlso" contenttype="text/html" href="http://example.org/volvo"/>
     </concept>
 </conceptItem>

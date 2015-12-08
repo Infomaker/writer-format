@@ -1,106 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Dummy conceptItem containing supported elements. Examples of conceptItems per type
+    are found here: https://github.com/Infomaker/writer-format/tree/master/newsml/conceptitem.
+-->
 <conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" guid="ee569f7d-8e8d-4180-9d01-976dc6e9f014"
     version="1" standard="NewsML-G2" standardversion="2.20" conformance="power">
 
     <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
+    <!-- Mandatory -->
     <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
-
+    
     <!-- catalog for infomaker extensions: imchn, imext etc... -->
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
 
     <itemMeta>
+        <!-- Mandatory -->
         <itemClass qcode="cinat:concept"/>
 
         <!-- The party (person or organisation) responsible for the management of the Item. -->
+        <!-- Mandatory -->
         <provider literal="Infomaker Writer"/>
 
-        <versionCreated>2015-08-11T07:30:42Z</versionCreated>
-        <firstCreated>2015-08-11T07:30:42Z</firstCreated>
+        <!-- Timestamps for created and updated. https://www.ietf.org/rfc/rfc3339.txt -->
+        <versionCreated>2015-12-07T15:03:42+00:00</versionCreated>
+        <firstCreated>2015-12-07T15:03:42+00:00</firstCreated>
 
-        <!-- The publishing status of the Item, its value is "usable" by default. Cancelled, usable or withheld. -->
+        <!-- 
+            The publishing status of the Item, its value is "usable" by default. 
+            canceled, usable or withheld. 
+        -->
         <pubStatus qcode="stat:usable"/>
 
-        <title>Div 3 herr</title>
+        <!-- Any note that might be of interest to save with the concept. -->
+        <edNote>This is a note...</edNote>
 
         <!-- Extension used to map concept to x-im/category -->
-        <!-- Mapped by cpnat type:
+        <!-- 
+            Mapped by cpnat type:
             cpnat:abstract            -> x-im/category
             cpnat:poi, cpnat:geoArea  -> x-im/place
             others                    -> x-im/topic
         -->
+        <!-- Mandatory -->
         <itemMetaExtProperty type="imext:type" value="x-im/category"/>
 
+        <!-- URI of conceptItem -->
         <itemMetaExtProperty type="imext:uri" value="x-im://d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
 
         <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- User that has created the concept. -->
+            <link rel="creator" type="x-im/user" uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
 
             <!-- Links (optional)-->
-            <link rel="irel:seeAlso" type="text/html" url="http://www.innebandy.se/Vastergotland/Kontakt-och-tavlingar/"></link>
-            <link rel="irel:seeAlso" type="text/html" url="http://www.everysport.com/sport/innebandy/2014-2015/division-3-herr/24790"></link>
+            <link rel="irel:seeAlso" type="text/html"
+                url="http://www.innebandy.se/Vastergotland/Kontakt-och-tavlingar/"/>
+            <link rel="irel:seeAlso" type="text/html"
+                url="http://www.everysport.com/sport/innebandy/2014-2015/division-3-herr/24790"/>
 
-            <!-- Parent category (optional) -->
-            <link title="Dalarna" rel="broader" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904">
-                <data>
-                    <qcode>imcpt:230efee7-0b68-4b39-8840-7859a62ee904</qcode>
-                </data>
-            </link>
+            <!--
+                Parent to "category". If using OC as a repository, relations can be configured
+                using link/@uuid and conceptItem/@guid. Note that this can be an hiearchy, 
+                meaning that it might be necessary to recursively go through all links[@rel=broader]
+                in order to get the full path of the concept.
+            -->
+            <link rel="broader" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
 
-            <!-- External id (optional) from TT or IPTC -->
-            <link title="Musikinstrument" rel="same-as" type="x-im/mediatopic"
-                uri="http://cv.iptc.org/newscodes/mediatopic/20000019"
-                uuid="4a89318f-1f05-5a95-bfb9-1014ac7fe71a">
-                <data>
-                    <qcode>medtop:15078231</qcode>
-                </data>
-            </link>
+            <!-- Can be used if one wishes to relate to other IPTC categories for example. -->
+            <link rel="same-as" type="x-im/mediatopic"
+                uri="http://cv.iptc.org/newscodes/mediatopic/20000019"/>
         </links>
 
     </itemMeta>
     <concept>
-        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:ee569f7d-8e8d-4180-9d01-976dc6e9f014"/>
-
+        <!-- @qcode OR @uri must be used -->
+        <!-- Mandatory -->
+        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:ee569f7d-8e8d-4180-9d01-976dc6e9f014"
+            uri="x-im://ee569f7d-8e8d-4180-9d01-976dc6e9f014"/>
         <!--
-        Categories:
-         cpnat:abstract
-
-        Places:
-         cpnat:poi
-         cpnat:geoArea
-
-        Topics:
-         cpnat:event
-         cpnat:person
-         cpnat:organisation
-         cpnat:object (övriga)
-
-        Stories (not implemented yet):
-         imnat:story
+            Categories:
+             cpnat:abstract
+    
+            Places:
+             cpnat:poi
+             cpnat:geoArea
+    
+            Topics:
+             cpnat:event
+             cpnat:person
+             cpnat:organisation
+             cpnat:object (övriga)
+    
+            Stories (not implemented yet):
+             imnat:story
          -->
         <type qcode="cpnat:abstract"/>
 
+        <!-- The textual name of the conceptItem -->
+        <!-- Mandatory -->
         <name>Div 3 herr</name>
 
-        <definition role="drol:long">En längre beskrivning...</definition>
-        <definition role="drol:short">Kort beskrivning</definition>
+        <definition role="drol:long">A long description...</definition>
+        <definition role="drol:short">A short description</definition>
 
-        <!-- The full path for Category (optional) -->
+        <!-- The full path for concept -->
+        <!-- @deprecated. Used in MVP but should not be used in "production" -->
         <definition role="imrol:path">Sport/Innebandy/Div 3 herr</definition>
-
-        <!-- Links again -->
-        <remoteInfo rel="irel:seeAlso" contenttype="text/html"
-            href="http://www.innebandy.se/Vastergotland/Kontakt-och-tavlingar/"/>
-        <remoteInfo rel="irel:seeAlso" contenttype="text/html"
-            href="http://www.everysport.com/sport/innebandy/2014-2015/division-3-herr/24790"/>
-
-        <!-- Parent (Optional) -->
-        <broader qcode="imcpt:230efee7-0b68-4b39-8840-7859a62ee904" type="cpnat:abstract">
-            <name>Innebandy</name>
-        </broader>
-
-        <!-- External id -->
-        <sameAs type="cpnat:abstract" qcode="medtop:15078231">
-            <name>Division 3 Herr</name>
-        </sameAs>
 
         <!--
             To represent geodata we are using WKT, for more info see
@@ -113,6 +117,5 @@
                 </data>
             </object>
         </metadata>
-
     </concept>
 </conceptItem>

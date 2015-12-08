@@ -13,14 +13,15 @@
         <!-- The party (person or organisation) responsible for the management of the Item. -->
         <provider literal="John Doe"/>
 
-        <versionCreated>2015-08-11T07:30:42Z</versionCreated>
-        <firstCreated>2015-08-11T07:30:42Z</firstCreated>
+        <!-- Timestamps for created and updated. https://www.ietf.org/rfc/rfc3339.txt -->
+        <versionCreated>2015-12-07T15:03:42+00:00</versionCreated>
+        <firstCreated>2015-12-07T15:03:42+00:00</firstCreated>
 
         <!-- The publishing status of the Item, its value is "usable" by default. -->
         <pubStatus qcode="stat:usable"/>
 
-        <!-- TODO: Denna kanske vi kan ta bort förutsatt att den alltid är samma som <name> nedan -->
-        <title>Hedemora</title>
+        <!-- Any note that might be of interest to save with the concept. -->
+        <edNote>This is a note...</edNote>
 
         <!-- Extension used to map concept to x-im/category -->
         <itemMetaExtProperty type="imext:type" value="x-im/category"/>
@@ -28,27 +29,23 @@
         <itemMetaExtProperty type="imext:uri" value="x-im://d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
 
         <links xmlns="http://www.infomaker.se/newsml/1.0">
-            <link title="John Doe" rel="creator" type="x-im/user"
-                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
-                <data>
-                    <email>john.doe@example.org</email>
-                    <altId>58456</altId>
-                </data>
-            </link>
-            <link rel="irel:seeAlso" type="text/html" url="http://example.org/hedemora"> </link>
-            <link title="Dalarna" rel="broader" type="x-im/category"
-                uuid="230efee7-0b68-4b39-8840-7859a62ee904">
-                <data>
-                    <qcode>imcpt:230efee7-0b68-4b39-8840-7859a62ee904</qcode>
-                </data>
-            </link>
-            <link title="Musikinstrument" rel="same-as" type="x-im/mediatopic"
-                uri="http://cv.iptc.org/newscodes/mediatopic/20000019"
-                uuid="4a89318f-1f05-5a95-bfb9-1014ac7fe71a">
-                <data>
-                    <qcode>medtop:15078231</qcode>
-                </data>
-            </link>
+            <!-- User that has created the concept. -->
+            <link rel="creator" type="x-im/user" uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
+
+            <!-- Additional information for the concept. -->
+            <link rel="irel:seeAlso" type="text/html" url="http://example.org/hedemora"/>
+
+            <!--
+                Parent to "category". If using OC as a repository, relations can be configured
+                using link/@uuid and conceptItem/@guid. Note that this can be an hiearchy, 
+                meaning that it might be necessary to recursively go through all links[@rel=broader]
+                in order to get the full path of the concept.
+            -->
+            <link rel="broader" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+
+            <!-- Can be used if one wishes to relate to other IPTC categories for example. -->
+            <link rel="same-as" type="x-im/mediatopic"
+                uri="http://cv.iptc.org/newscodes/mediatopic/20000019"/>
         </links>
     </itemMeta>
     <concept>
@@ -67,27 +64,7 @@
         <definition role="drol:short">A short description</definition>
 
         <!-- The full path for "category" -->
+        <!-- @deprecated. Used in MVP but should not be used in "production" -->
         <definition role="imrol:path">Allmänt/Dalarna/Hedemora</definition>
-
-        <!--
-            Additional information for the concept. If there are any related information to the
-            concept it is represented as links (href) using the remoteContent
-        -->
-        <remoteInfo rel="irel:seeAlso" contenttype="text/html" href="http://example.org/hedemora"/>
-
-        <!--
-            Parent to "category".
-
-            If using OC as a repository, relations could be built using broader/@qcode and
-            parent's conceptId/@qcode.
-        -->
-        <broader qcode="imcpt:230efee7-0b68-4b39-8840-7859a62ee904" type="cpnat:abstract">
-            <name>Dalarna</name>
-        </broader>
-
-        <!-- Can be used if one wishes to relate to other IPTC categories for example. -->
-        <sameAs type="cpnat:abstract" qcode="medtop:15078231">
-            <name>Musikinstrument</name>
-        </sameAs>
     </concept>
 </conceptItem>
