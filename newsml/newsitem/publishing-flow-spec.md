@@ -73,8 +73,8 @@ Publish an already published article again.
 	...
 	<signal qcode=”replace:major”/>
 	...
-	<!-- timestamp remains untouched -->
-	<itemMetaExtProperty type="imext:pubstart" value="2015-12-07T15:03:42+00:00"/>
+	<!-- new timestamp -->
+	<itemMetaExtProperty type="imext:pubstart" value="2015-12-08T15:03:42+00:00"/>
 	...
 </itemMeta>
 ```
