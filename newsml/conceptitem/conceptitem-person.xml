@@ -27,8 +27,8 @@
         <itemMetaExtProperty type="imext:type" value="x-im/person"/>   
         
         <!-- First and last name -->
-        <itemMetaExtProperty type="imext:firstName">Jane</itemMetaExtProperty>
-        <itemMetaExtProperty type="imext:lastName">Doe</itemMetaExtProperty>
+        <itemMetaExtProperty type="imext:firstName" value="Jane"/>
+        <itemMetaExtProperty type="imext:lastName" value="Doe"/>
 
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- User that has created the concept. -->
