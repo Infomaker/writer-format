@@ -38,8 +38,8 @@
             <link rel="same-as" type="x-np/user" uri="x-np://user/342342"/>
 
             <!-- Avatar -->
-            <link rel="avatar" type="x-im/image" url="//example.org/byline/images/robertr.jpg"
-                uuid="9c188460-c500-11e5-9912-ba0be0483c18" uri="x-im://image/robertr.jpeg">
+            <link rel="avatar" type="x-im/image" uuid="9c188460-c500-11e5-9912-ba0be0483c18"
+                uri="x-im://image/robertr.jpeg">
                 <data>
                     <width>300</width>
                     <height>300</height>
@@ -47,9 +47,9 @@
             </link>
 
             <link rel="irel:seeAlso" type="x-im/social+facebook" url="//www.facebook.com/robertr"
-                uri="x-im://social+facebook/robertr"/>
+                uri="x-im://social-facebook/robertr"/>
             <link rel="irel:seeAlso" type="x-im/social+twitter" url="//www.twitter.com/robertr"
-                uri="x-im://social+twitter/robertr"/>
+                uri="x-im://social-twitter/robertr"/>
 
             <!-- Additional information for the concept. -->
             <link rel="irel:seeAlso" type="text/html" url="//robertrobertson.com"/>
