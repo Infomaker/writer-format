@@ -36,3 +36,9 @@ TODO (sufficient with only teaser?)
 
 ## x-im/youtube
 TODO
+
+## x-im/position
+TODO
+
+## x-im/contact-info
+TODO

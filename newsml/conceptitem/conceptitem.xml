@@ -108,7 +108,7 @@
             https://en.wikipedia.org/wiki/Well-known_text.
         -->
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
-            <object id="1" type="x-im/place">
+            <object id="1" type="x-im/position">
                 <data>
                     <position>POINT(14.55600 56.89921)</position>
                 </data>
