@@ -72,7 +72,7 @@
 
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- Conctact information -->
-            <object id="N4Lkp0OqWYt" type="x-im/contactInfo">
+            <object id="N4Lkp0OqWYt" type="x-im/contact-info">
                 <data>
                     <email>robert.robertson@example.org</email>
                     <phone>+46731111133</phone>
