@@ -21,9 +21,7 @@
         <xs:choice maxOccurs="unbounded">
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="idf:element"/>
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="object:object"/>
-        </xs:choice>        
-        <!--<xs:element maxOccurs="unbounded" minOccurs="0" ref="idf:element"/>
-        <xs:element maxOccurs="unbounded" minOccurs="0" ref="object:object"/>-->
+        </xs:choice>                
       </xs:sequence>      
       <xs:attribute name="type" use="required" type="xs:NCName"/>
     </xs:complexType>

@@ -1,74 +1,109 @@
 <newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1" conformance="power"
     standardversion="2.20" standard="NewsML-G2" guid="1d02738f-7c99-42ba-a6da-3d1b97261523">
+    <!-- Mandatory. Catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
     <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
+
+    <!-- Mandatory. Catalog for infomaker extensions: imchn, imext etc... -->
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
+
     <itemMeta>
+        <!-- Mandatory. Identifies the newsItem as an aricle. -->
         <itemClass qcode="ninat:text"/>
+
+        <!-- Mandatory. The party (person or organisation) responsible for the management of the Item. -->
         <provider literal="John Doe"/>
+
+        <!-- When newsItem is first created, "versionCreated" and "firstCreated" must have identical timestamps -->
         <versionCreated>2015-07-01T14:11:20+02:00</versionCreated>
         <firstCreated>2015-07-01T14:00:02+02:00</firstCreated>
+
+        <!-- 
+            The publishing status of the Item. If no pubStatus exists the article is considered to be
+            usable. Valid values stat:withheld, stat:usable and stat:canceled (extension indicating "done"
+            is needed but value not deciede yet.
+        -->
         <pubStatus qcode="stat:withheld"/>
+
+        <!-- 
+            An editorial service to which an item is assigned by its provider.
+            An article that is considered "premium" has a service with qcode="imchn:premium"
+        -->
         <service qcode="imchn:premium"/>
+        <service qcode="imchn:ddse"/>
         <service qcode="imchn:test"/>
+
+        <!-- Mandatory. The name of the article -->
         <title>Proin eget dignissim ipsum</title>
+
+        <!-- Notes attached to the article (editorial purpose). No support in writer frontend as-is -->
         <edNote>Duis eget magna lacus. In sodales lectus vel egestas rhoncus</edNote>
-        <itemMetaExtProperty type="imext:uri" value="x-im://1d02738f-7c99-42ba-a6da-3d1b97261523"/>
+
+        <!-- 
+            The QCodeType prefix of the extensions (itemMetaExtProperty) used
+            is "imext:" where im stands for Infomaker.
+        -->
+
+        <!-- Mandatory. Uniform resource indicator -->
+        <itemMetaExtProperty type="imext:uri"
+            value="x-im://article/1d02738f-7c99-42ba-a6da-3d1b97261523"/>
+
+        <!-- Uniform resource locator -->
         <itemMetaExtProperty type="imext:url"
             value="http://example.org/articles/1d02738f-7c99-42ba-a6da-3d1b97261523.xml"/>
+
+        <!-- Publication start date -->
         <itemMetaExtProperty type="imext:pubstart" value="2015-07-01T14:27:00+02:00"/>
+
+        <!-- Publication stop date -->
         <itemMetaExtProperty type="imext:pubstop" value="2015-10-05T15:14:13+02:00"/>
+
+        <!-- Article type and type id. -->
         <itemMetaExtProperty type="imext:type" value="Web article"/>
         <itemMetaExtProperty type="imext:typeid" value="285"/>
-        <itemMetaExtProperty type="imext:subtype" value="Article"/>
-        <itemMetaExtProperty type="imext:subtypeid" value="1"/>
+
+        <!-- 
+            The "links" element contains resources of various kinds that are
+            linked to the article. Each link must have a "rel" and a "type".                       
+        -->
         <links xmlns="http://www.infomaker.se/newsml/1.0">
+
+            <!-- Related article. -->
             <link title="Quisque pharetra id velit quis commodo" rel="article" type="x-im/article"
                 uuid="2175c4bb-fdcc-5a52-bc3b-658562f554cf"/>
+
+            <!-- Creator. "Skapad av...". Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="creator" type="x-im/user"
-                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
-                <data>
-                    <altId>58456</altId>
-                </data>
-            </link>
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="x-np://user/58456"/>
+
+            <!-- Authors. This is the article´s byline. Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="author" type="x-im/user"
-                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e">
-                <data>
-                    <altId>58456</altId>
-                </data>
-            </link>
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="x-np://user/58456"/>
+
+            <!-- 
+                This author gives an example of how the format could allow for denormalization of data 
+                concerning the author, i.e. saving duplicate data on the article 
+            -->
             <link title="Jane Doe" rel="author" type="x-im/user"
-                uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f">
-                <data>
-                    <altId>456</altId>
-                </data>
+                uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" uri="x-np://user/58456">
                 <links>
-                    <link rel="avatar" type="x-im/image"
-                        url="//example.org/byline/images/janedoe.jpg"/>
+                    <link rel="avatar" type="x-im/image" uuid="9c188460-c500-11e5-9912-ba0be0483c18"
+                        uri="x-im://image/janedoe.jpeg"/>
                 </links>
             </link>
-            <link title="Sport" rel="section" type="x-im/mainsection">
-                <data>
-                    <altId>87521</altId>
-                </data>
-            </link>
-            <link title="Local" rel="section" type="x-im/section">
-                <data>
-                    <altId>45784</altId>
-                </data>
-            </link>
+
+            <!-- Concept - Category -->
             <link title="Hedemora" rel="subject" type="x-im/category"
                 uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
             <link title="Dalarna" rel="subject" type="x-im/category"
-                uuid="03d22994-91e4-11e5-8994-feff819cdc9f">                
-            </link>
+                uuid="03d22994-91e4-11e5-8994-feff819cdc9f"/>
+
+            <!-- Concept - Tag/Topic -->
             <link title="Volvo" rel="subject" type="x-im/topic"
-                uuid="b201e042-555b-11e5-885d-feff819cdc9f">
-                <data/>
-            </link>
+                uuid="b201e042-555b-11e5-885d-feff819cdc9f"/>
             <link title="Saab" rel="subject" type="x-im/topic"
-                uuid="14d59118-91e4-11e5-8994-feff819cdc9f">
-                <data/>
-            </link>
+                uuid="14d59118-91e4-11e5-8994-feff819cdc9f"/>
+
+            <!-- Concept - Place. Note that position is saved on the article but is owned by the concept -->
             <link title="Alvesta" rel="subject" type="x-im/place"
                 uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
                 <data>
@@ -84,14 +119,45 @@
         </links>
     </itemMeta>
     <contentMeta>
+        <!-- When newsItem is first created, "contentCreated" and "contentModified" must have identical timestamps -->
         <contentCreated>2015-07-01T14:00:02+02:00</contentCreated>
-        <contentModified>2015-07-01T14:11:20+02:00</contentModified>        
+        <contentModified>2015-07-01T14:11:20+02:00</contentModified>
+
+        <!-- Slugline. No support in writer frontend as-is -->
         <slugline>Praesent nisl risus, lobortis sed congue at...</slugline>
-        <description>Quisque ullamcorper non ligula vel commodo.</description>        
+
+        <!-- Description attached to article (editorial use). No support in writer frontend as-is -->
+        <description>Quisque ullamcorper non ligula vel commodo.</description>
+
+        <!-- Language in content. No support in writer frontend as-is -->
         <language tag="sv"/>
+
+        <!-- String representation (comma separated if multiple) of itemMeta/links/link[@rel="author"]. -->
         <by>Jane Doe</by>
+
+        <!-- Extracted from contentSet/inlineXML/idf/group/element[@type="headline"]. -->
         <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
+
+        <!-- 
+            The "metadata" element contains metadata that are included in the article
+            but not part of the content itself.
+        -->
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- 
+                Score (prio), lifetime and lifetime end date for article. Valid values
+                described below.
+                
+                "score" is an integer ranging from 1 - 6 where 1 is the lowest score (prio).
+                
+                "description" and "text" are stored as pairs
+                6H/PT6H
+                1D/P1D
+                7D/P7D
+                30D/P30D
+                ∞/0 (infinite)
+                
+                imext:lifetimeend: date format yyyy-MM-dd'T'HH:mm:ssZ. null allowed.
+            -->
             <object id="8400c74d665x" type="x-im/newsvalue">
                 <data>
                     <score>1</score>
@@ -101,6 +167,12 @@
                     <end>2016-01-31T10:00:00.000+01:00</end>
                 </data>
             </object>
+
+            <!-- 
+                Teaser text for the article. Only one teaser object per article is supported
+                and only plain text is allowed in writer as-is. It is possible to add images
+                and bylines to a teaser.
+            -->
             <object id="8400c74d667e" type="x-im/teaser"
                 title="Sed sit amet turpis a purus fringilla">
                 <data>
@@ -119,6 +191,8 @@
                     </link>
                 </links>
             </object>
+
+            <!-- Related image that is not placed in content. -->
             <object id="46f60ada63fd" type="x-im/image" uuid="c382c937-8511-5d48-9677-55658c2bbb32">
                 <links>
                     <link rel="self" type="x-im/image"
@@ -157,29 +231,33 @@
     </contentMeta>
     <contentSet>
         <inlineXML>
+            <!-- 
+                Actual content of the article. As-is the writer supports usage of one group used
+                for all elements or usage of group[@type="header"] and group[@type="body"].
+                
+                Inside group element there can be any number of "element" and "object" element. 
+                Each "element" element is to considered a block element which contains text and
+                "object" elements. @format does not do anything as-is. 
+            -->
             <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
                 <group type="header">
-                    <element id="d0dbf67d385e" type="headline" format="html">
-                        <p xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    </element>
-                    <element id="8a5ef068ef17" type="dateline" format="html">
-                        <p xml:space="preserve">New York</p>
-                    </element>
+                    <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit</element>
+                    <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
                 </group>
                 <group type="body">
-                    <element id="fafbedf02da1" type="body" format="html">
-                        <p xml:space="preserve">Mauris eleifend, orci nec volutpat efficitur,
-                            <object
-                                id="vavbedf02op4" type="x-im/link" xml:space="default">
-                                <data>
-                                    <href>https://codex.wordpress.org/Shortcode_API</href>
-                                    <anchor>shortcode</anchor>
-                                    <title>Shortcode API</title>
-                                    <display>inline</display>
-                                </data>
-                            </object> massa nibh congue libero, sed vehicula libero dui eget neque.</p>
-                        <p xml:space="preserve">In hac habitasse platea dictumst.</p>
-                    </element>
+                    <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, orci nec
+                        volutpat efficitur, <!-- TODO: Text format examples needed! -->
+                        <object id="vavbedf02op4" type="x-im/link">
+                            <data>
+                                <href>https://codex.wordpress.org/Shortcode_API</href>
+                                <anchor>shortcode</anchor>
+                                <title>Shortcode API</title>
+                                <display>inline</display>
+                            </data>
+                        </object> massa nibh congue libero, sed vehicula libero dui eget neque. </element>
+                    <element id="8a5ef068ef15" type="body" format="html">In hac habitasse platea
+                        dictumst</element>
                     <object id="59097ae592c7" type="x-im/youtube"
                         url="https://www.youtube.com/watch?v=2H4rJ7iw7W0" title="Maecenas at nisl">
                         <data>
@@ -222,9 +300,15 @@
                             </link>
                         </links>
                     </object>
-                    <element id="c93fe9cfad5d" type="body" format="html">
-                        <p xml:space="preserve">Aenean ullamcorper faucibus felis suscipit faucibus. Cras eu leo lectus.</p>
-                    </element>
+
+                    <!-- This is an example of how to represent two factboxes in a newsItem article -->
+                    <element id="8a5ef068ef11" type="fact-headline">This is fact headline</element>
+                    <element id="8a5ef068ef10" type="fact-body">This is fact body</element>
+                    <element id="8a5ef068ef21" type="fact-headline">This is fact headline
+                        2</element>
+                    <element id="8a5ef068ef40" type="fact-body">This is fact body 2</element>
+                    <element id="c93fe9cfad5d" type="body" format="html">Aenean ullamcorper faucibus
+                        felis suscipit faucibus. Cras eu leo lectus.</element>
                     <object id="qcr4i5fcf333" type="x-im/image"
                         uuid="75a35cd0-91e6-11e5-8994-feff819cdc9f">
                         <links>
