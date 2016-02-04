@@ -136,7 +136,7 @@
         <by>Jane Doe</by>
 
         <!-- Extracted from contentSet/inlineXML/idf/group/element[@type="headline"]. -->
-        <headline>Lorem ipsum dolor sit amet, consectetur adipiscing elit</headline>
+        <headline>Lorem ipsum dolor sit</headline>
 
         <!-- 
             The "metadata" element contains metadata that are included in the article
@@ -241,9 +241,9 @@
             -->
             <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
                 <group type="header">
-                    <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit</element>
+                    <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor sit</element>
                     <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
+                    <element id="8a5ef068ef17" type="leadin" format="html">Quisque dignissim molestie tellus</element>
                 </group>
                 <group type="body">
                     <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, orci nec
