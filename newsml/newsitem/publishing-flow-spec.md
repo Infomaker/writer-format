@@ -10,17 +10,39 @@ Create and save a new article from scratch.
 	...
 	<pubStatus qcode="stat:withheld"/>
 	...
-	<itemMetaExtProperty type="imext:pubstart" value=""/>
+	<!--imext:pubstart (and imext:pubstop) should not be present-->
+	<!--<itemMetaExtProperty type="imext:pubstart" value=""/>-->
 	...
 </itemMeta>
 ```
 
 **Eligible values in writer after "Spara ny artikel":**
+- Klar
+- Publicera
+- Tidspublicera
+
+## Mark article as done ("Klar")
+Article is pending approval (ready to be published). Note that pubStatus is used with an extension to the NewsML standard.
+
+**Values on article after "Klar":**
+``` xml
+<itemMeta>
+	...
+	<pubStatus qcode="imext:done"/>
+	...
+	<!--imext:pubstart (and imext:pubstop) should not be present-->
+	<!--<itemMetaExtProperty type="imext:pubstart" value=""/>-->
+	...
+</itemMeta>
+```
+
+**Eligible values in writer after "Spara ny artikel":**
+- Utkast
 - Publicera
 - Tidspublicera
 
 ## Publish article ("Publicera artikel")
-Article is published and displayed in writer with a published timestamp.
+Article is published and displayed in writer with a published timestamp, now, i.e. when article got published.
 
 **Values on article after "Publicera artikel":**
 ``` xml
@@ -28,7 +50,7 @@ Article is published and displayed in writer with a published timestamp.
 	...
 	<pubStatus qcode="stat:usable"/>
 	...
-	<itemMetaExtProperty type="imext:pubstart" value="2015-12-07T15:03:42+00:00"/>
+	<itemMetaExtProperty type="imext:pubstart" value="{now}"/>
 	...
 </itemMeta>
 ```
@@ -61,7 +83,7 @@ Update an already published article.
 - Avpublicera
 
 ## Re-publish article ("Ompublicera artikel")
-Publish an already published article again.
+Publish an already published article again. imext:pubstart get a new timestamp, now, i.e. when article got re-published.
 
 **Values on article after "Ompublicera artikel":**
 ``` xml
@@ -74,7 +96,7 @@ Publish an already published article again.
 	<signal qcode=”replace:major”/>
 	...
 	<!-- new timestamp -->
-	<itemMetaExtProperty type="imext:pubstart" value="2015-12-08T15:03:42+00:00"/>
+	<itemMetaExtProperty type="imext:pubstart" value="{now}"/>
 	...
 </itemMeta>
 ```
@@ -99,23 +121,26 @@ Un-publish a published article.
 	...
 	<!-- any signal elements are removed -->
 	...
-	<itemMetaExtProperty type="imext:pubstart" value=""/>
+	<!--imext:pubstart (and imext:pubstop) should not be present-->
+	<!--<itemMetaExtProperty type="imext:pubstart" value=""/>-->
 	...
 </itemMeta>
 ```
 
 **Eligible values in writer after "Avpublicera artikel":**
+- Utkast
+- Klar
 - Publicera
 - Tidspublicera
 
 ## Time controlled publishing ("Tidspublicera artikel")
-Save a non-published article with a future publish and un-publish timestamp.
+Save a non-published article with a future publish and un-publish timestamp. Note that pubStatus is set to stat:usable.
 
 **Values on article after "Tidspublicera artikel":**
 ``` xml
 <itemMeta>
 	...	
-	<pubStatus qcode="stat:withheld"/>	
+	<pubStatus qcode="stat:usable"/>	
 	...
 	<embargoed/>
 	...
@@ -129,6 +154,7 @@ Save a non-published article with a future publish and un-publish timestamp.
 - Publicera
 - Uppdatera
 - Tidspublicera
+- Avplublicera
 
 
 
