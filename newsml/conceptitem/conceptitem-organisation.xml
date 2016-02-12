@@ -45,7 +45,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:2108f45a-9f1f-11e5-8994-feff819cdc9f"
-            uri="x-im://2108f45a-9f1f-11e5-8994-feff819cdc9f"/>
+            uri="x-im://organisation/2108f45a-9f1f-11e5-8994-feff819cdc9f"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as an "organisation" -->
         <type qcode="cpnat:organisation"/>

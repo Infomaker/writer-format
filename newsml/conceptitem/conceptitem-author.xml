@@ -58,7 +58,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:b89qebf6-9f17-11e5-8994-feff819cdc8y"
-            uri="x-im://b89qebf6-9f17-11e5-8994-feff819cdc8y"/>
+            uri="x-im://author/b89qebf6-9f17-11e5-8994-feff819cdc8y"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as an "person" -->
         <type qcode="cpnat:person"/>

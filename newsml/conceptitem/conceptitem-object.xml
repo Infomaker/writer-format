@@ -38,7 +38,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:b201e042-555b-11e5-885d-feff819cdc9f"
-            uri="x-im://b201e042-555b-11e5-885d-feff819cdc9f"/>
+            uri="x-im://topic/b201e042-555b-11e5-885d-feff819cdc9f"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "topic" -->
         <type qcode="cpnat:object"/>
