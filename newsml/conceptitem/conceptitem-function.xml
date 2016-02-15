@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" guid="eaa74b26-d3cd-11e5-ab30-625662870761"
+    version="1" standard="NewsML-G2" standardversion="2.20" conformance="power">   
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>    
+    <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>    
+    <itemMeta>
+        <itemClass qcode="cinat:concept"/>              
+        <provider literal="John Doe"/>
+        <versionCreated>2015-12-07T15:03:42+00:00</versionCreated>
+        <firstCreated>2015-12-07T15:03:42+00:00</firstCreated>
+        <pubStatus qcode="stat:usable"/>
+        <edNote>This is a note...</edNote>
+        <itemMetaExtProperty type="imext:type" value="x-im/function"/>                
+        <links xmlns="http://www.infomaker.se/newsml/1.0">            
+            <link title="John Doe" rel="creator" type="x-im/user" uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>            
+        </links>
+    </itemMeta>
+    <concept>
+        <!-- Mandatory. @qcode or @uri must be used -->
+        <conceptId created="2015-08-11T07:30:42Z" uri="x-im://function/eaa74b26-d3cd-11e5-ab30-625662870761"/>        
+        <!-- Mandatory (for writer usage). Identifies the concept as a "story" -->
+        <type qcode="cpnat:object"/>        
+        <!-- 
+            Mandatory. Name of function tag.
+            Examples of usages of function tags: Male, Female, Age etc. 
+        -->
+        <name>Longread</name>        
+        <definition role="drol:long">A long description...</definition>
+        <definition role="drol:short">A short description</definition>
+    </concept>
+</conceptItem>
