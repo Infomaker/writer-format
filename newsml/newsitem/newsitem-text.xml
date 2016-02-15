@@ -76,14 +76,14 @@
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="x-np://user/58456"/>
 
             <!-- Authors. This is the article´s byline. Note that uuid and uri will probably exclude one another -->
-            <link title="John Doe" rel="author" type="x-im/user"
+            <link title="John Doe" rel="author" type="x-im/author"
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="x-np://user/58456"/>
 
             <!-- 
                 This author gives an example of how the format could allow for denormalization of data 
                 concerning the author, i.e. saving duplicate data on the article 
             -->
-            <link title="Jane Doe" rel="author" type="x-im/user"
+            <link title="Jane Doe" rel="author" type="x-im/author"
                 uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" uri="x-np://user/58456">
                 <links>
                     <link rel="avatar" type="x-im/image" uuid="9c188460-c500-11e5-9912-ba0be0483c18"
@@ -205,7 +205,7 @@
                             <height>1024</height>
                         </data>
                         <links>
-                            <link rel="author" type="x-im/user"
+                            <link rel="author" type="x-im/author"
                                 uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
                         </links>
                     </link>
@@ -277,7 +277,7 @@
                                     <height>1024</height>
                                 </data>
                                 <links>
-                                    <link rel="author" type="x-im/user"
+                                    <link rel="author" type="x-im/author"
                                         uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"
                                     />
                                 </links>
