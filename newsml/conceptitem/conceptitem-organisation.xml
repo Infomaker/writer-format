@@ -68,7 +68,7 @@
             archiving.</definition>
         
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
-            <object id="L2Ljp8OqTUy" type="x-im/contactInfo">
+            <object id="L2Ljp8OqTUy" type="x-im/contact-info">
                 <data>
                     <email>jane.doe@example.org</email>
                     <phone>+46480362000</phone>
