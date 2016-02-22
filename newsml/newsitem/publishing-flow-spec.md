@@ -36,7 +36,7 @@ Article is pending approval (ready to be published). Note that pubStatus is used
 </itemMeta>
 ```
 
-**Eligible values in writer after "Spara ny artikel":**
+**Eligible values in writer after "Klar":**
 - Utkast (`imext:draft`)
 - Publicera (`stat:usable`)
 - Tidspublicera (`stat:withheld`)
