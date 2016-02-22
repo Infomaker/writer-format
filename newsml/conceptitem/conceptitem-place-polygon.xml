@@ -29,7 +29,7 @@
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
 
             <!-- Additional information for the concept. -->
-            <link rel="irel:seeAlso" type="text/html" url="http://example.org/alvesta"/>
+            <link rel="irel:seeAlso" type="text/html" url="http://example.org/kalmar"/>
         </links>
     </itemMeta>
     <concept>
@@ -41,7 +41,7 @@
         <type qcode="cpnat:poi"/>
 
         <!-- Mandatory. Name of concept -->
-        <name>Alvesta</name>
+        <name>Kalmar</name>
 
         <!-- Descriptions -->
         <definition role="drol:long">A long description...</definition>
@@ -54,9 +54,9 @@
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="B1Lkp0OqQXo" type="x-im/polygon">
                 <data>
-                    <!-- Instead of duplicating (and making it harder to parse) we should use a generic 
-                        element name ("geometry") that contains the actual WKT (today it is <polygon> or 
-                        <position> depending on what form is being represented 
+                    <!-- TODO: Instead of duplicating (and making it harder to parse) we should use a generic 
+                        element name ("geometry") that contains the actual WKT (compare with how "position"
+                        is implemented; <position>POSITION(...)</position>, this should be <geometry>POSITION(...)</geometry>)
                     -->
                     <geometry>POLYGON(15.927104999999983 56.52092099999997,15.81290899999999 56.521005,15.761852999999974 56.53631000000001,15.743408000000045 56.56162099999999,15.763378999999986 56.578452000000006,15.76974999999993 56.60278499999998,15.884826999999973 56.610537,15.937459999999987 56.65602899999998,15.897770000000037 56.683924000000005,15.953058000000055 56.69666199999999,16.06211499999995 56.671465000000005,16.07262000000003 56.71785899999999,16.03175699999997 56.74044700000002,16.12640399999998 56.75234799999998,16.11106300000006 56.80044500000001,16.11191800000006 56.84746899999999,16.150035000000003 56.841344,16.178530000000023 56.87930699999998,16.174943999999982 56.90671000000002,16.23679500000003 56.93642099999999,16.370225000000005 56.895477,16.438777000000073 56.887794,16.444588920898468 56.827982181232876,16.45837226464846 56.8129675976375,16.506553275390615 56.78757339890983,16.461156719726546 56.75290442123698,16.399744000000055 56.78296599999998,16.38394282031254 56.65206280372057,16.31990650292971 56.62710503013163,16.28092002148435 56.60460106881793,16.224918000000002 56.595492,16.22716300000002 56.54824099999998,16.21953540234381 56.5145372338241,16.17962291015624 56.48224874176693,16.12245400000006 56.470696000000004,16.002729000000045 56.50876299999999,15.99745299999995 56.52902499999998,15.927104999999983 56.52092099999997)</geometry>
                 </data>
