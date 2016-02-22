@@ -10,22 +10,24 @@
         <firstCreated>2015-12-07T15:03:42+00:00</firstCreated>
         <pubStatus qcode="stat:usable"/>
         <edNote>This is a note...</edNote>
-        <itemMetaExtProperty type="imext:type" value="x-im/function"/>                
+        <itemMetaExtProperty type="imext:type" value="x-im/content-profile"/>                
         <links xmlns="http://www.infomaker.se/newsml/1.0">            
             <link title="John Doe" rel="creator" type="x-im/user" uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>            
         </links>
     </itemMeta>
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
-        <conceptId created="2015-08-11T07:30:42Z" uri="x-im://function/eaa74b26-d3cd-11e5-ab30-625662870761"/>        
-        <!-- Mandatory (for writer usage). Identifies the concept as a "story" -->
+        <conceptId created="2015-08-11T07:30:42Z" uri="x-im://content-profile/eaa74b26-d3cd-11e5-ab30-625662870761"/>        
+        <!-- Mandatory (for writer usage). Identifies the concept as a "object" -->
         <type qcode="cpnat:object"/>        
-        <!-- 
-            Mandatory. Name of function tag.
-            Examples of usages of function tags: Male, Female, Age etc. 
-        -->
-        <name>Longread</name>        
-        <definition role="drol:long">A long description...</definition>
-        <definition role="drol:short">A short description</definition>
+        <!-- Mandatory. Name of content profile -->
+        <name>Enable instant article</name>      
+        
+        <definition role="drol:long">Activates instant article support for Facebook.</definition>
+        <definition role="drol:short">A short description...</definition>
+        
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <object id="C8Lop0OwQYp" type="x-im/content-profile+social" title="Instant article"/>            
+        </metadata>
     </concept>
 </conceptItem>
