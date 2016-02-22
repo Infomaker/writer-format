@@ -1,14 +1,14 @@
 # Publishing flow
-The supported (in writer) publishing flow depends on a couple of elements in the newsItem which are described in this spec.
+Writer supports the statuses described below.
 
 ## Save new article ("Spara ny artikel")
-Create and save a new article from scratch.
+Create and save a new article from scratch - draft. Note that pubStatus is used with an extension to the NewsML standard.
 
 **Values on article after "Spara ny artikel":**
 ``` xml
 <itemMeta>
 	...
-	<pubStatus qcode="stat:withheld"/>
+	<pubStatus qcode="imext:draft"/>
 	...
 	<!--imext:pubstart (and imext:pubstop) should not be present-->
 	<!--<itemMetaExtProperty type="imext:pubstart" value=""/>-->
@@ -17,9 +17,9 @@ Create and save a new article from scratch.
 ```
 
 **Eligible values in writer after "Spara ny artikel":**
-- Klar
-- Publicera
-- Tidspublicera
+- Klar (`imext:done`)
+- Publicera (`stat:usable`)
+- Tidspublicera (`stat:withheld`)
 
 ## Mark article as done ("Klar")
 Article is pending approval (ready to be published). Note that pubStatus is used with an extension to the NewsML standard.
@@ -37,9 +37,9 @@ Article is pending approval (ready to be published). Note that pubStatus is used
 ```
 
 **Eligible values in writer after "Spara ny artikel":**
-- Utkast
-- Publicera
-- Tidspublicera
+- Utkast (`imext:draft`)
+- Publicera (`stat:usable`)
+- Tidspublicera (`stat:withheld`)
 
 ## Publish article ("Publicera artikel")
 Article is published and displayed in writer with a published timestamp, now, i.e. when article got published.
@@ -56,31 +56,8 @@ Article is published and displayed in writer with a published timestamp, now, i.
 ```
 
 **Eligible values in writer after "Publicera artikel":**
-- Uppdatera
 - Ompublicera
-- Avpublicera
-
-## Update article ("Uppdatera artikel")
-Update an already published article.
-
-**Values on article after "Uppdatera artikel":**
-``` xml
-<itemMeta>
-	...
-	<pubStatus qcode="stat:usable"/>
-	...
-	<signal qcode=“sig:update”/>
-	...
-	<!-- timestamp remains untouched -->
-	<itemMetaExtProperty type="imext:pubstart" value="2015-12-07T15:03:42+00:00"/>
-	...
-</itemMeta>
-```
-
-**Eligible values in writer after "Uppdatera artikel":**
-- Uppdatera
-- Ompublicera
-- Avpublicera
+- Avpublicera (`stat:canceled`)
 
 ## Re-publish article ("Ompublicera artikel")
 Publish an already published article again. imext:pubstart get a new timestamp, now, i.e. when article got re-published.
@@ -91,10 +68,6 @@ Publish an already published article again. imext:pubstart get a new timestamp, 
 	...
 	<pubStatus qcode="stat:usable"/>
 	...
-	<signal qcode=“sig:update”/>
-	...
-	<signal qcode=”replace:major”/>
-	...
 	<!-- new timestamp -->
 	<itemMetaExtProperty type="imext:pubstart" value="{now}"/>
 	...
@@ -102,9 +75,8 @@ Publish an already published article again. imext:pubstart get a new timestamp, 
 ```
 
 **Eligible values in writer after "Ompublicera artikel":**
-- Uppdatera
 - Ompublicera
-- Avpublicera
+- Avpublicera (`stat:canceled`)
 
 ## Un-publish article ("Avpublicera artikel")
 Un-publish a published article.
@@ -128,19 +100,19 @@ Un-publish a published article.
 ```
 
 **Eligible values in writer after "Avpublicera artikel":**
-- Utkast
-- Klar
-- Publicera
-- Tidspublicera
+- Utkast (`imext:draft`)
+- Klar (`imext:done`)
+- Publicera (`stat:usable`)
+- Tidspublicera (`stat:withheld`)
 
 ## Time controlled publishing ("Tidspublicera artikel")
-Save a non-published article with a future publish and un-publish timestamp. Note that pubStatus is set to stat:usable.
+Save a non-published article with a future publish and un-publish timestamp.
 
 **Values on article after "Tidspublicera artikel":**
 ``` xml
 <itemMeta>
 	...	
-	<pubStatus qcode="stat:usable"/>	
+	<pubStatus qcode="stat:withheld"/>	
 	...
 	<embargoed/>
 	...
@@ -151,10 +123,12 @@ Save a non-published article with a future publish and un-publish timestamp. Not
 ```
 
 **Eligible values in writer after "Tidspublicera artikel":**
-- Publicera
-- Uppdatera
-- Tidspublicera
-- Avplublicera
+- Publicera (`stat:usable`)
+- Utkast (`imext:draft`)
+- Avplublicera (`stat:canceled`)
+
+**Update an article**
+In the writer the user has the option to update the article. This will not result in any change of status (`pubStatus`), this only updates the updated date (`versionCreated` and `contentModified`) of the article.
 
 
 
