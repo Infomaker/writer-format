@@ -54,7 +54,7 @@
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="B1Lkp0OqQXo" type="x-im/position">
                 <data>
-                    <position>POINT(14.55600 56.89921)</position>
+                    <geometry>POINT(14.55600 56.89921)</geometry>
                 </data>
             </object>
         </metadata>
