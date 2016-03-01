@@ -38,7 +38,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:52f2f9c8-9f21-11e5-8994-feff819cdc9f"
-            uri="x-im://story/52f2f9c8-9f21-11e5-8994-feff819cdc9f"/>
+            uri="im://story/52f2f9c8-9f21-11e5-8994-feff819cdc9f"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as a "story" -->
         <type qcode="imnat:story"/>

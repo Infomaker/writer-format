@@ -49,7 +49,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:d72eb011-1552-4af4-8d15-cd4f8c157a87"
-            uri="x-im://category/d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
+            uri="im://category/d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "category" -->
         <type qcode="cpnat:abstract"/>

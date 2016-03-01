@@ -35,7 +35,7 @@
             <link rel="creator" type="x-im/user" uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
 
             <link rel="avatar" type="x-im/image" uuid="13adb9e8-c504-11e5-9912-ba0be0483c18"
-                uri="x-im://image/janedoe.jpeg">
+                uri="im://image/janedoe.jpeg">
                 <data>
                     <width>300</width>
                     <height>300</height>
@@ -43,9 +43,9 @@
             </link>
 
             <link rel="irel:seeAlso" type="x-im/social+tumblr" url="//www.tumblr.com/janedoe"
-                uri="x-im://social-tumblr/janedoe"/>
+                uri="im://social-tumblr/janedoe"/>
             <link rel="irel:seeAlso" type="x-im/social+twitter" url="//www.twitter.com/janedoe"
-                uri="x-im://social-twitter/janedoe"/>
+                uri="im://social-twitter/janedoe"/>
 
             <!-- Additional information for the concept. -->
             <link rel="irel:seeAlso" type="text/html" url="http://jandedoe.com"/>
@@ -54,7 +54,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:e14debf6-9f17-11e5-8994-feff819cdc9f"
-            uri="x-im://person/e14debf6-9f17-11e5-8994-feff819cdc9f"/>
+            uri="im://person/e14debf6-9f17-11e5-8994-feff819cdc9f"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as an "person" -->
         <type qcode="cpnat:person"/>

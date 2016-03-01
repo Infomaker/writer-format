@@ -17,7 +17,7 @@
     </itemMeta>
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
-        <conceptId created="2015-08-11T07:30:42Z" uri="x-im://content-profile/eaa74b26-d3cd-11e5-ab30-625662870761"/>        
+        <conceptId created="2015-08-11T07:30:42Z" uri="im://content-profile/eaa74b26-d3cd-11e5-ab30-625662870761"/>        
         <!-- Mandatory (for writer usage). Identifies the concept as a "object" -->
         <type qcode="cpnat:object"/>        
         <!-- Mandatory. Name of content profile -->

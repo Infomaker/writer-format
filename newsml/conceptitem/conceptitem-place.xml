@@ -35,7 +35,7 @@
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:bce38dda-555b-11e5-885d-feff819cdc9f"
-            uri="x-im://place/bce38dda-555b-11e5-885d-feff819cdc9f"/>
+            uri="im://place/bce38dda-555b-11e5-885d-feff819cdc9f"/>
 
         <!-- Mandatory (for writer usage). Identifies the concept as an abstract which maps to "place" -->
         <type qcode="cpnat:poi"/>

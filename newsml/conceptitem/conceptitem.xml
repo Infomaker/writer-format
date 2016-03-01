@@ -72,7 +72,7 @@
         <!-- @qcode OR @uri must be used -->
         <!-- Mandatory -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:ee569f7d-8e8d-4180-9d01-976dc6e9f014"
-            uri="x-im://category/ee569f7d-8e8d-4180-9d01-976dc6e9f014"/>
+            uri="im://category/ee569f7d-8e8d-4180-9d01-976dc6e9f014"/>
         <!--
             Categories:
              cpnat:abstract

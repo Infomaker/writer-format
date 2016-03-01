@@ -31,7 +31,7 @@
         <itemMetaExtProperty type="imext:type" value="x-im/image"/>
 
         <!-- Uniform resource locator. -->
-        <itemMetaExtProperty type="imext:uri" value="x-im://image/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
+        <itemMetaExtProperty type="imext:uri" value="im://image/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
 
         <!-- Uniform resource indicator. -->
         <itemMetaExtProperty type="imext:url"
@@ -40,7 +40,7 @@
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- Photographer. -->
             <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
-                title="Jane Doe" uri="x-np://user/58456"/>
+                title="Jane Doe" uri="im://user/58456"/>
         </links>
     </itemMeta>
     <contentMeta>
