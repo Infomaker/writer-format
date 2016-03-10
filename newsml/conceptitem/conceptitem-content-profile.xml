@@ -26,6 +26,7 @@
         <definition role="drol:long">Activates instant article support for Facebook.</definition>
         <definition role="drol:short">A short description...</definition>
         
+        <!-- Note that metadata block (and "sub" type below) is optional -->
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="C8Lop0OwQYp" type="x-im/content-profile+social" title="Instant article"/>            
         </metadata>

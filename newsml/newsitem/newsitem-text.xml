@@ -21,6 +21,7 @@
             The publishing status of the Item. If no pubStatus exists the article is considered to be
             usable. Valid values stat:withheld, stat:usable and stat:canceled (extension indicating "done"
             is needed but value not deciede yet.
+            Mandatory.
         -->
         <pubStatus qcode="stat:withheld"/>
 
@@ -35,11 +36,11 @@
         <!-- Mandatory. The name of the article -->
         <title>Proin eget dignissim ipsum</title>
 
-        <!-- Notes attached to the article (editorial purpose). No support in writer frontend as-is -->
+        <!-- Optional. Notes attached to the article (editorial purpose). No support in writer frontend as-is -->
         <edNote>Duis eget magna lacus. In sodales lectus vel egestas rhoncus</edNote>
 
         <!-- 
-            The QCodeType prefix of the extensions (itemMetaExtProperty) used
+            Note. The QCodeType prefix of the extensions (itemMetaExtProperty) used
             is "imext:" where im stands for Infomaker.
         -->
 
@@ -47,23 +48,24 @@
         <itemMetaExtProperty type="imext:uri"
             value="im://article/1d02738f-7c99-42ba-a6da-3d1b97261523"/>
 
-        <!-- Uniform resource locator -->
+        <!-- Optional. Uniform resource locator -->
         <itemMetaExtProperty type="imext:url"
             value="http://example.org/articles/1d02738f-7c99-42ba-a6da-3d1b97261523.xml"/>
 
-        <!-- Publication start date -->
+        <!-- Optional. Publication start date -->
         <itemMetaExtProperty type="imext:pubstart" value="2015-07-01T14:27:00+02:00"/>
 
-        <!-- Publication stop date -->
+        <!-- Optional. Publication stop date -->
         <itemMetaExtProperty type="imext:pubstop" value="2015-10-05T15:14:13+02:00"/>
 
-        <!-- Article type and type id. -->
+        <!-- Examples of extensions. Article type and type id. -->
         <itemMetaExtProperty type="imext:type" value="Web article"/>
         <itemMetaExtProperty type="imext:typeid" value="285"/>
 
         <!-- 
             The "links" element contains resources of various kinds that are
-            linked to the article. Each link must have a "rel" and a "type".                       
+            linked to the article. Each link must have a "rel" and a "type". 
+            Optional.
         -->
         <links xmlns="http://www.infomaker.se/newsml/1.0">
 
@@ -125,28 +127,29 @@
         </links>
     </itemMeta>
     <contentMeta>
-        <!-- When newsItem is first created, "contentCreated" and "contentModified" must have identical timestamps -->
+        <!-- Mandatory. When newsItem is first created, "contentCreated" and "contentModified" must have identical timestamps -->
         <contentCreated>2015-07-01T14:00:02+02:00</contentCreated>
         <contentModified>2015-07-01T14:11:20+02:00</contentModified>
 
-        <!-- Slugline. No support in writer frontend as-is -->
+        <!-- Optional. Slugline. No support in writer frontend as-is -->
         <slugline>Praesent nisl risus, lobortis sed congue at...</slugline>
 
-        <!-- Description attached to article (editorial use). No support in writer frontend as-is -->
+        <!-- Optional. Description attached to article (editorial use). No support in writer frontend as-is -->
         <description>Quisque ullamcorper non ligula vel commodo.</description>
 
-        <!-- Language in content. No support in writer frontend as-is -->
+        <!-- Optional. Language in content. No support in writer frontend as-is -->
         <language tag="sv"/>
 
-        <!-- String representation (comma separated if multiple) of itemMeta/links/link[@rel="author"]. -->
+        <!-- Optional. String representation (comma separated if multiple) of itemMeta/links/link[@rel="author"]. -->
         <by>Jane Doe</by>
 
-        <!-- Extracted from contentSet/inlineXML/idf/group/element[@type="headline"]. -->
+        <!-- Optional. Extracted from contentSet/inlineXML/idf/group/element[@type="headline"]. -->
         <headline>Lorem ipsum dolor sit</headline>
 
         <!-- 
             The "metadata" element contains metadata that are included in the article
             but not part of the content itself.
+            Optional.
         -->
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- 
@@ -238,6 +241,7 @@
     <contentSet>
         <inlineXML>
             <!-- 
+                Mandatory.
                 Actual content of the article. As-is the writer supports usage of one group used
                 for all elements or usage of group[@type="header"] and group[@type="body"].
                 
@@ -246,6 +250,7 @@
                 "object" elements. @format does not do anything as-is. 
             -->
             <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
+                <!-- Note. There may be one or many group:s -->
                 <group type="body">
                     <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor sit</element>
                     <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
