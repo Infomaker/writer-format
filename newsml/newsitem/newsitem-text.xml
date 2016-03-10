@@ -27,7 +27,8 @@
 
         <!-- 
             An editorial service to which an item is assigned by its provider.
-            An article that is considered "premium" has a service with qcode="imchn:premium"
+            An article that is considered "premium" has a service with qcode="imchn:premium".
+            Optional.
         -->
         <service qcode="imchn:premium"/>
         <service qcode="imchn:ddse"/>
