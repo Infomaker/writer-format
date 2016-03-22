@@ -159,7 +159,9 @@
                 
                 "score" is an integer ranging from 1 - 6 where 1 is the lowest score (prio).
                 
-                "description" and "text" are stored as pairs
+                "description" and "text"/"duration" are stored as pairs. NOTE that 
+                 either is "text" used or "duration".
+                 
                 6H/PT6H
                 1D/P1D
                 7D/P7D
@@ -172,7 +174,10 @@
                 <data>
                     <score>1</score>
                     <description>6H</description>
+                    <!-- usage of either 'text' or 'duration' supported. Value of
+                         duration is expected to be in seconds -->
                     <text>PT6H</text>
+                    <duration>3600</duration>
                     <format>lifetimecode</format>
                     <end>2016-01-31T10:00:00.000+01:00</end>
                 </data>
