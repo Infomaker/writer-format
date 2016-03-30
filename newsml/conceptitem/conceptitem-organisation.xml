@@ -35,8 +35,8 @@
                 Social media
                 TODO: Might be placed as links in object[@type="x-im/contactInfo"]?
             -->
-            <link rel="irel:seeAlso" type="x-im/facebook" url="https://www.facebook.com/groups/5096602854/?fref=ts"/>
-            <link rel="irel:seeAlso" type="x-im/twitter" url="https://twitter.com/infomakernews"/>
+            <link rel="irel:seeAlso" type="x-im/social+facebook" url="https://www.facebook.com/groups/5096602854/?fref=ts"/>
+            <link rel="irel:seeAlso" type="x-im/social+twitter" url="https://twitter.com/infomakernews"/>
 
             <!-- Additional information for the concept. -->
             <link rel="irel:seeAlso" type="text/html" url="http://www.infomaker.se/"/>

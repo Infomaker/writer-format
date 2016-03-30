@@ -78,8 +78,7 @@
                     <phone>+46731111133</phone>
                     <streetAddress>Street 2</streetAddress>
                     <postalCode>12345</postalCode>
-                    <country>Sweden</country>
-                    <!-- TODO: Others -->
+                    <country>Sweden</country>                    
                 </data>
             </object>
 
