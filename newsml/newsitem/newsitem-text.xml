@@ -187,6 +187,14 @@
             <object id="8400c74d667e" type="x-im/teaser"
                 title="Sed sit amet turpis a purus fringilla">
                 <data>
+                    <!-- 
+                        subject is an "optional" element used as an override/alternative to the 
+                        text of the teaser  
+                    -->
+                    <subject>In sodales lectus vel egestas rhoncus</subject>
+                    <!-- 
+                        The main text (or body if you will) of the teaser
+                    -->
                     <text>Duis eget magna lacus. In sodales lectus vel egestas rhoncus. Fusce
                         ultrices urna vel ante sodales tincidunt. Maecenas at nisl in lorem egestas
                         egestas id sed ipsum. Sed aliquam gravida dolor.</text>
