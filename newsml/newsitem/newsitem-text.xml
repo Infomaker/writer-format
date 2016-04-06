@@ -19,8 +19,7 @@
 
         <!-- 
             The publishing status of the Item. If no pubStatus exists the article is considered to be
-            usable. Valid values stat:withheld, stat:usable and stat:canceled (extension indicating "done"
-            is needed but value not deciede yet.
+            usable.
             Mandatory.
         -->
         <pubStatus qcode="stat:withheld"/>
