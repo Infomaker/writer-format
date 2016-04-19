@@ -30,9 +30,9 @@ TODO (correct name?)
 
 ## x-im/place
 	TODO
-	## x-im/position
+##	x-im/position
 	TODO
-	## x-im/polygon
+##	x-im/polygon
 
 ## x-im/teaser
 TODO (sufficient with only teaser?)
