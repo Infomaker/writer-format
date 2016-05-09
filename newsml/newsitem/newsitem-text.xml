@@ -44,7 +44,7 @@
             is "imext:" where im stands for Infomaker.
         -->
 
-        <!-- Mandatory. Uniform resource indicator -->
+        <!-- Mandatory. Uniform resource identifier -->
         <itemMetaExtProperty type="imext:uri"
             value="im://article/1d02738f-7c99-42ba-a6da-3d1b97261523"/>
 
