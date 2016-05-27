@@ -38,9 +38,9 @@
         <itemMetaExtProperty type="imext:uri" value="im://image/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
 
         <!-- 
-            Uniform resource locator. Note that imext:url is optional. Writer uses imext:uri to identify image. 
+            Uniform resource locator. Note that imext:originalUrl is optional. Writer uses imext:uri to identify image. 
         -->
-        <itemMetaExtProperty type="imext:url"
+        <itemMetaExtProperty type="imext:originalUrl"
             value="//s3.example-img.se/vApvJyM3pl2wpFpe0G2uBJxZfZc.jpeg"/>
         <!-- 
             Links (extension of NewsML standard).
