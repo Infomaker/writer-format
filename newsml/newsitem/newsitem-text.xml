@@ -19,8 +19,7 @@
 
         <!-- 
             The publishing status of the Item. If no pubStatus exists the article is considered to be
-            usable. Valid values stat:withheld, stat:usable and stat:canceled (extension indicating "done"
-            is needed but value not deciede yet.
+            usable.
             Mandatory.
         -->
         <pubStatus qcode="stat:withheld"/>
@@ -45,7 +44,7 @@
             is "imext:" where im stands for Infomaker.
         -->
 
-        <!-- Mandatory. Uniform resource indicator -->
+        <!-- Mandatory. Uniform resource identifier -->
         <itemMetaExtProperty type="imext:uri"
             value="im://article/1d02738f-7c99-42ba-a6da-3d1b97261523"/>
 
