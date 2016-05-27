@@ -227,36 +227,20 @@
                                 uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
                         </links>
                     </link>
-                    <link rel="2x1" type="x-im/softcrop">
-                        <data>
-                            <x>60</x>
-                            <y>85</y>
-                            <width>1212</width>
-                            <height>752</height>
-                        </data>
-                    </link>
-                    <link rel="3x2" type="x-im/softcrop">
-                        <data>
-                            <x>89</x>
-                            <y>55</y>
-                            <width>900</width>
-                            <height>600</height>
-                        </data>
-                    </link>
                 </links>
             </object>
         </metadata>
     </contentMeta>
     <contentSet>
         <inlineXML>
-            <!-- 
+            <!--
                 Mandatory.
                 Actual content of the article. As-is the writer supports usage of one group used
                 for all elements or usage of group[@type="header"] and group[@type="body"].
-                
-                Inside group element there can be any number of "element" and "object" element. 
+
+                Inside group element there can be any number of "element" and "object" element.
                 Each "element" element is to considered a block element which contains text and
-                "object" elements. @format does not do anything as-is. 
+                "object" elements. @format does not do anything as-is.
             -->
             <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
                 <!-- Note. There may be one or many group:s -->
@@ -265,7 +249,7 @@
                     <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
                     <element id="8a5ef068ef17" type="leadin" format="html">Quisque dignissim molestie tellus</element>
                     <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, <a href="http://google.com" id="link-5399cd1a1d7c8336c2c2203f2be1cb94" title="">Bacon</a> orci nec volutpat efficitur massa.</element>
-                    <element id="8a5ef068ef15" type="body" format="html">In hac habitasse platea dictumst</element>                    
+                    <element id="8a5ef068ef15" type="body" format="html">In hac habitasse platea dictumst</element>
                     <object id="dcc7c5fcf709" type="x-im/image"
                         uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                         <links>
@@ -275,30 +259,57 @@
                                 uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                                 <data>
                                     <text>Vivamus luctus eros.</text>
-                                    <width>1536</width>
-                                    <height>1024</height>
+                                    <width>3560</width>
+                                    <height>2695</height>
+
+                                    <crops rel="original">
+                                        <crop name="16:9">
+                                            <x>964</x>
+                                            <y>367</y>
+                                            <width>924</width>
+                                            <height>523</height>
+                                        </crop>
+                                        <crop name="4:3">
+                                            <x>150</x>
+                                            <y>0</y>
+                                            <width>2261</width>
+                                            <height>1696</height>
+                                        </crop>
+                                        <crop name="1:1">
+                                            <x>432</x>
+                                            <y>0</y>
+                                            <width>1696</width>
+                                            <height>1696</height>
+                                        </crop>
+                                    </crops>
+                                    <crops rel="published">
+                                        <width>2560</width>
+                                        <height>1695</height>
+                                        <crop name="16:9">
+                                            <x>500</x>
+                                            <y>190</y>
+                                            <width>480</width>
+                                            <height>272</height>
+                                        </crop>
+                                        <crop name="4:3">
+                                            <x>77</x>
+                                            <y>0</y>
+                                            <width>1175</width>
+                                            <height>882</height>
+                                        </crop>
+                                        <crop name="1:1">
+                                            <x>224</x>
+                                            <y>0</y>
+                                            <width>882</width>
+                                            <height>882</height>
+                                        </crop>
+                                    </crops>
                                 </data>
                                 <links>
                                     <link rel="author" type="x-im/author"
                                         uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"
                                     />
                                 </links>
-                            </link>
-                            <link rel="2x1" type="x-im/softcrop">
-                                <data>
-                                    <x>45</x>
-                                    <y>80</y>
-                                    <width>2900</width>
-                                    <height>1400</height>
-                                </data>
-                            </link>
-                            <link rel="3x2" type="x-im/softcrop">
-                                <data>
-                                    <x>80</x>
-                                    <y>5</y>
-                                    <width>2700</width>
-                                    <height>1800</height>
-                                </data>
                             </link>
                         </links>
                     </object>
