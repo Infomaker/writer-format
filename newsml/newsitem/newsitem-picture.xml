@@ -61,6 +61,16 @@
         <contentCreated>2015-07-01T14:11:20+02:00</contentCreated>
         <contentModified>2015-07-01T14:11:20+02:00</contentModified>
         <!-- 
+            Optional. A party (person or organisation) which originated, distributed, aggregated or supplied the content or provided some information 
+            used to create or enhance the content. 
+            Writer will not add this be default to pictures uploaded in writer. 
+        -->
+        <infoSource literal="MKT"/>        
+        <!-- 
+            Optional. An alternative identifier assigned to the content. 
+        -->
+        <altId>1234456</altId>
+        <!-- 
             The "metadata" element contains metadata that are included in the article but not part of the content 
             itself.
         -->
