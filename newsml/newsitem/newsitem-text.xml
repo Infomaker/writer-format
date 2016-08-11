@@ -29,7 +29,7 @@
             An article that is considered "premium" has a service with qcode="imchn:premium".
             Optional.
         -->
-        <service qcode="imchn:premium"/>
+        <service qcode="imchn:premium" why="imext:main"/>
         <service qcode="imchn:ddse"/>
         <service qcode="imchn:test"/>
 
@@ -260,7 +260,7 @@
                     <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor
                         sit</element>
                     <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
-                    <element id="8a5ef068ef17" type="leadin" format="html">Quisque dignissim
+                    <element id="8a5ef068ef18" type="leadin" format="html">Quisque dignissim
                         molestie tellus</element>
                     <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, <a
                             href="http://google.com" id="link-5399cd1a1d7c8336c2c2203f2be1cb94"

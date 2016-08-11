@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Infomaker Scandinavia AB
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+           targetNamespace="http://www.infomaker.se/idf/1.0"
+           xmlns:idf="http://www.infomaker.se/idf/1.0">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+    <xs:import namespace="http://www.infomaker.se/newsml/1.0"
+               schemaLocation="Infomaker-NewsML-Extensions_ver1.0.xsd"/>
+    <xs:element name="idf">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="idf:group"/>
+            </xs:sequence>
+            <xs:attribute ref="xml:lang" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="group">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element maxOccurs="unbounded" minOccurs="0" ref="idf:element"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" ref="idf:object"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="type" use="required" type="xs:NCName"/>
+            <xs:attribute name="id" use="optional" type="xs:NMTOKEN"/>
+        </xs:complexType>
+        <xs:unique name="UniqueElementId">
+            <xs:selector xpath="idf:element"/>
+            <xs:field xpath="@id"/>
+        </xs:unique>
+    </xs:element>
+    <xs:element name="element">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Any element is allowed in element section
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:any>
+            </xs:sequence>
+            <xs:attribute name="format" use="optional" type="xs:NCName"/>
+            <xs:attribute name="id" use="required" type="xs:NMTOKEN"/>
+            <xs:attribute name="type" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <!--
+        NOTE! "object" should be the one specified in namespace "http://www.infomaker.se/newsml/1.0".
+        This needs to be fixed as soon as we can validate this new format change in writer!
+    -->
+    <xs:element name="object">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="idf:data"/>
+                <xs:element minOccurs="0" ref="idf:links"/>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="xs:NMTOKEN">
+                <xs:annotation>
+                    <xs:documentation>This must be a unique id inside of the document in which the
+                        object is
+                        used
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="type" use="required" type="idf:notEmptyString"/>
+            <xs:attribute name="title" use="optional"/>
+            <xs:attribute name="uri" use="optional" type="xs:anyURI"/>
+            <xs:attribute name="url" use="optional" type="xs:anyURI"/>
+            <xs:attribute name="uuid" use="optional" type="idf:notEmptyString"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Any element is allowed in data section</xs:documentation>
+                    </xs:annotation>
+                </xs:any>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="links">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="idf:link"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="link">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="idf:data"/>
+                <xs:element minOccurs="0" ref="idf:links"/>
+            </xs:sequence>
+            <xs:attribute name="rel" use="optional" type="xs:NMTOKEN"/>
+            <xs:attribute name="type" use="required" type="idf:notEmptyString"/>
+            <xs:attribute name="uri" use="optional" type="xs:anyURI"/>
+            <xs:attribute name="url" use="optional" type="xs:anyURI"/>
+            <xs:attribute name="title" use="optional" type="xs:normalizedString"/>
+            <xs:attribute name="uuid" use="optional" type="idf:notEmptyString"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="notEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value=".*[^\s].*" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

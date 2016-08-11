@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://iptc.org/std/nar/2006-10-01/" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" version="2.20" xml:lang="en"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://iptc.org/std/nar/2006-10-01/">
+    <xs:import namespace="http://www.infomaker.se/newsml/1.0"
+               schemaLocation="./xsd/Infomaker-NewsML-Extensions_ver1.0.xsd"/>
+    <xs:import namespace="http://www.infomaker.se/idf/1.0"
+               schemaLocation="./xsd/Infomaker-Data-Format_ver1.0.xsd"/>
+    <xs:element name="newsItem">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="catalogRef"/>
+                    <xs:element ref="itemMeta"/>
+                    <xs:element ref="contentMeta"/>
+                    <xs:element ref="contentSet"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="version" use="optional"/>
+            <xs:attribute name="conformance" use="optional"/>
+            <xs:attribute name="standardversion" use="required"/>
+            <xs:attribute name="standard" use="required"/>
+            <xs:attribute name="guid" use="required"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="itemMeta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="itemClass"/>
+                    <xs:element ref="pubStatus"/>
+                    <xs:element ref="provider"/>
+                    <xs:element name="versionCreated" type="xs:dateTime"/>
+                    <xs:element name="firstCreated" type="xs:dateTime"/>
+                    <xs:element ref="service"/>
+                    <xs:element name="title"/>
+                    <xs:element name="edNote"/>
+                    <xs:element name="fileName"/>
+                    <xs:element ref="itemMetaExtProperty"/>
+                    <xs:any namespace="http://www.infomaker.se/newsml/1.0"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="contentMeta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="contentCreated" type="xs:dateTime"/>
+                    <xs:element name="contentModified" type="xs:dateTime"/>
+                    <xs:element name="description"/>
+                    <xs:element name="headline"/>
+                    <xs:element name="slugline"/>
+                    <xs:element name="language"/>
+                    <xs:element name="by"/>
+                    <xs:element name="edNote"/>
+                    <xs:element name="infoSource"/>
+                    <xs:element name="altId"/>
+                    <xs:element ref="contentMetaExtProperty"/>
+                    <xs:any namespace="http://www.infomaker.se/newsml/1.0"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="contentSet">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="inlineXML">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:any namespace="http://www.infomaker.se/idf/1.0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="itemClass">
+        <xs:complexType>
+            <xs:attribute name="qcode" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="ninat:text"/>
+                        <xs:enumeration value="ninat:picture"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="pubStatus">
+        <xs:complexType>
+            <xs:attribute name="qcode" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="stat:usable"/>
+                        <xs:enumeration value="stat:withheld"/>
+                        <xs:enumeration value="stat:canceled"/>
+                        <xs:enumeration value="imext:done"/>
+                        <xs:enumeration value="imext:draft"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="provider">
+        <xs:complexType>
+            <xs:attribute name="literal" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="service">
+        <xs:complexType>
+            <xs:attribute name="qcode" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="why" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="metaExtPropertyBase">
+        <xs:attribute name="type" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="1"/>
+                    <xs:pattern value=".*[^\s].*"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="value" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="1"/>
+                    <xs:pattern value=".*[^\s].*"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:element name="itemMetaExtProperty">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="metaExtPropertyBase"/>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="contentMetaExtProperty">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="metaExtPropertyBase"/>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

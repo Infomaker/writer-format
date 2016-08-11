@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Infomaker Scandinavia AB
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+           targetNamespace="http://www.infomaker.se/newsml/1.0"
+           xmlns:object="http://www.infomaker.se/newsml/1.0">
+    <xs:element name="metadata">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="object:object"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="object">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="object:data"/>
+                <xs:element minOccurs="0" ref="object:links"/>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="xs:NMTOKEN">
+                <xs:annotation>
+                    <xs:documentation>This must be a unique id inside of the document in which the
+                        object is
+                        used
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="type" use="required" type="object:notEmptyString"/>
+            <xs:attribute name="title" use="optional"/>
+            <xs:attribute name="uri" use="optional" type="xs:anyURI"/>
+            <xs:attribute name="url" use="optional" type="xs:anyURI"/>
+            <xs:attribute name="uuid" use="optional" type="object:notEmptyString"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Any element is allowed in data section</xs:documentation>
+                    </xs:annotation>
+                </xs:any>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="links">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="object:link"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="link">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="object:data"/>
+                <xs:element minOccurs="0" ref="object:links"/>
+            </xs:sequence>
+            <xs:attribute name="rel" use="optional" type="xs:NMTOKEN"/>
+            <xs:attribute name="type" use="required" type="object:notEmptyString"/>
+            <xs:attribute name="uri" type="xs:anyURI"/>
+            <xs:attribute name="url" type="xs:anyURI"/>
+            <xs:attribute name="title" use="optional" type="xs:normalizedString"/>
+            <xs:attribute name="uuid" use="optional" type="object:notEmptyString"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="notEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value=".*[^\s].*" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

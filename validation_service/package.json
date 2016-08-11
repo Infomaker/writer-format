@@ -1,0 +1,24 @@
+{
+  "name": "validation_service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "author": "Ola Andersson",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "colors": "^1.1.2",
+    "events": "^1.1.1",
+    "express": "~4.13.1",
+    "fs": "0.0.2",
+    "libxml-xsd": "^0.5.2",
+    "path": "^0.12.7",
+    "promise": "^7.1.1",
+    "util": "^0.10.3",
+    "xml2js": "^0.4.17",
+    "xmldom": "^0.1.22",
+    "xpath": "0.0.23"
+  }
+}
