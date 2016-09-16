@@ -14,8 +14,8 @@
         <provider literal="John Doe"/>
 
         <!-- When newsItem is first created, "versionCreated" and "firstCreated" must have identical timestamps -->
-        <versionCreated>2015-07-01T14:11:20+02:00</versionCreated>
-        <firstCreated>2015-07-01T14:00:02+02:00</firstCreated>
+        <versionCreated>2015-07-01T14:11:20Z</versionCreated>
+        <firstCreated>2015-07-01T14:00:02Z</firstCreated>
 
         <!-- 
             The publishing status of the Item. If no pubStatus exists the article is considered to be
@@ -148,8 +148,8 @@
     </itemMeta>
     <contentMeta>
         <!-- Mandatory. When newsItem is first created, "contentCreated" and "contentModified" must have identical timestamps -->
-        <contentCreated>2015-07-01T14:00:02+02:00</contentCreated>
-        <contentModified>2015-07-01T14:11:20+02:00</contentModified>
+        <contentCreated>2015-07-01T14:00:02Z</contentCreated>
+        <contentModified>2015-07-01T14:11:20Z</contentModified>
         
         <!-- 
             Optional. A party (person or organisation) which originated, distributed, aggregated or supplied the content or provided some information 
