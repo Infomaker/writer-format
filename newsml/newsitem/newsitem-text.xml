@@ -214,8 +214,7 @@
                 and only plain text is allowed in writer as-is. It is possible to add images
                 and bylines to a teaser.
             -->
-            <object id="8400c74d667e" type="x-im/teaser"
-                title="Sed sit amet turpis a purus fringilla">
+            <object id="8400c74d667e" type="x-im/teaser" title="Sed sit amet turpis a purus fringilla">
                 <data>
                     <!-- 
                         subject is an "optional" element used as an override/alternative to the 
@@ -256,12 +255,12 @@
             -->
             <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
                 <!-- Note. There may be one or many group:s -->
-                <group type="body">
-                    <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor
-                        sit</element>
+                <group id="metadata" type="header">
+                    <element id="d0dbf67d385e" type="headline">Lorem ipsum dolor sit</element>                    
                     <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
-                    <element id="8a5ef068ef18" type="leadin" format="html">Quisque dignissim
-                        molestie tellus</element>
+                    <element id="8a5ef068ef18" type="leadin" format="html">Quisque dignissim molestie tellus</element>
+                </group>
+                <group type="body">
                     <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, <a
                             href="http://google.com" id="link-5399cd1a1d7c8336c2c2203f2be1cb94"
                             title="">Bacon</a> orci nec volutpat efficitur massa.</element>
@@ -271,8 +270,7 @@
                         uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                         <links>
                             <link rel="self" type="x-im/image"
-                                uri="im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
-                                url="//s3.example-img.se/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
+                                uri="im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg"                                
                                 uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                                 <data>
                                     <text>Vivamus luctus eros.</text>
@@ -323,9 +321,7 @@
                                     </crops>
                                 </data>
                                 <links>
-                                    <link rel="author" type="x-im/author"
-                                        uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"
-                                    />
+                                    <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
                                 </links>
                             </link>
                         </links>
@@ -339,8 +335,7 @@
                     <element id="8a5ef068ef40" type="fact-body">This is fact body 2</element>
                     <element id="c93fe9cfad5d" type="body" format="html">Aenean ullamcorper faucibus
                         felis suscipit faucibus. Cras eu leo lectus.</element>
-                    <object id="qcr4i5fcf333" type="x-im/image"
-                        uuid="75a35cd0-91e6-11e5-8994-feff819cdc9f">
+                    <object id="qcr4i5fcf333" type="x-im/image" uuid="75a35cd0-91e6-11e5-8994-feff819cdc9f">
                         <links>
                             <link rel="self" type="x-im/image"
                                 uri="im://image/roY8P3C922OIYjlksefgr99_jJkg.jpeg"
