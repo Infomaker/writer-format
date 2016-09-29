@@ -17,8 +17,8 @@
             When newsItem is first created, "versionCreated" and "firstCreated" must have identical timestamps.
             Mandatory.
         -->
-        <versionCreated>2015-07-01T14:11:20+02:00</versionCreated>
-        <firstCreated>2015-07-01T14:11:20+02:00</firstCreated>
+        <versionCreated>2015-07-01T14:11:20Z</versionCreated>
+        <firstCreated>2015-07-01T14:11:20Z</firstCreated>
         <!-- 
             The publishing status of the Item. If no pubStatus exists the picture is considered to be
             usable. Valid values stat:withheld, stat:usable and stat:canceled. Mandatory.
@@ -58,8 +58,8 @@
             When newsItem is first created, "contentCreated" and "contentModified" must have identical timestamps.
             Mandatory.
         -->
-        <contentCreated>2015-07-01T14:11:20+02:00</contentCreated>
-        <contentModified>2015-07-01T14:11:20+02:00</contentModified>
+        <contentCreated>2015-07-01T14:11:20Z</contentCreated>
+        <contentModified>2015-07-01T14:11:20Z</contentModified>
         <!-- 
             Optional. A party (person or organisation) which originated, distributed, aggregated or supplied the content or provided some information 
             used to create or enhance the content. 
