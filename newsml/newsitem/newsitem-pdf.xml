@@ -7,12 +7,11 @@
         <versionCreated>2015-07-01T14:11:20Z</versionCreated>
         <firstCreated>2015-07-01T14:11:20Z</firstCreated>        
         <pubStatus qcode="stat:withheld"/>        
-        <fileName>xDpvJyM3pl2wpFpe0G2uBJxPiUU.jpeg</fileName>        
+        <fileName>hCgYLejZv2uOYdNZlHGdryUsyb8.pdf</fileName>        
         <itemMetaExtProperty type="imext:type" value="x-im/pdf"/>        
-        <itemMetaExtProperty type="imext:uri" value="im://pdf/xDpvJyM3pl2wpFpe0G2uBJxPiUU.jpeg"/>                        
+        <itemMetaExtProperty type="imext:uri" value="im://pdf/hCgYLejZv2uOYdNZlHGdryUsyb8.pdf"/>                        
         <!-- Optional -->
-        <itemMetaExtProperty type="imext:originalUrl" value="//s3.example-pdf.se/xDpvJyM3pl2wpFpe0G2uBJxPiUU.jpeg"/>
-        <itemMetaExtProperty type="imext:contentType" value="application/pdf"/>        
+        <itemMetaExtProperty type="imext:originalUrl" value="//s3.example-pdf.se/hCgYLejZv2uOYdNZlHGdryUsyb8.pdf"/>               
         <!-- Optional -->
         <links xmlns="http://www.infomaker.se/newsml/1.0">            
             <link rel="author" type="x-im/author" uuid="0000000-0000-0000-0000-000000000000" title="Chris Richardson"/>
@@ -37,11 +36,11 @@
                     <!-- 
                         PDF title
                     -->
-                    <text>Maecenas at nisl in lorem egestas egestas.</text>                    
+                    <text>Disaster-Report of 2016</text>                    
                     <!--
                         Original object (file) name
                     -->
-                    <objectName>nMicroservices_Designing_Deploying (1).pdf</objectName>                    
+                    <objectName>DisasterReport.pdf</objectName>                    
                 </data>
             </object>
         </metadata>
