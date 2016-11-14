@@ -48,6 +48,7 @@
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- 
                 Photographer. 
+                Exiftool mapping: xmp-dc:creator/iptc:by-line
             -->
             <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
                 title="Jane Doe"/>
@@ -77,35 +78,41 @@
         <metadata xmlns="http://www.infomaker.se/newsml/1.0">
             <object id="46f60ada63fd" type="x-im/image">
                 <!-- 
-                    Metadata for the image. Except for width and height these are optional. 
+                    Metadata for the image. Except for width and height these are optional.                    
                 -->
                 <data>
                     <width>1536</width>
                     <height>1024</height>
                     <!-- 
                         Caption-Abstract
+                        Exiftool mapping: xmp-dc:description/iptc:caption-abstract
                     -->
                     <text>Maecenas at nisl in lorem egestas egestas.</text>
                     <!-- 
                         Date Created
+                        Exiftool: xmp-photoshop:datecreated/iptc:datecreated
                     -->
                     <photoDateTime>2015-07-01T14:11:20+02:00</photoDateTime>
                     <!--
                         Credit
+                        Exiftool: xmp-photoshop:credit/iptc:credit
                     -->
-                    <credit>Jekyll</credit>
+                    <credit>Company XYZ</credit>
                     <!--
                         Title
+                        Exiftool mapping: xmp-dc:title/iptc:objectname
                     -->
                     <objectName>nebulosa.jpg</objectName>
                     <!-- 
                         Special Instructions
+                        Exiftool mapping: xmp-photoshop:instructions/iptc:specialinstructions
                     -->
-                    <instructions>Got your six</instructions>
+                    <instructions>Only use once</instructions>
                     <!-- 
                         Source
+                        Exiftool: xmp-photoshop:source/iptc:source
                     -->
-                    <source>Jekyll</source>
+                    <source>Mediahouse XYZ</source>
                 </data>
             </object>
         </metadata>
