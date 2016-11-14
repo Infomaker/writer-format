@@ -90,12 +90,12 @@
                     <text>Maecenas at nisl in lorem egestas egestas.</text>
                     <!-- 
                         Date Created
-                        Exiftool: xmp-photoshop:datecreated/iptc:datecreated
+                        Exiftool mapping: xmp-photoshop:datecreated/iptc:datecreated
                     -->
                     <photoDateTime>2015-07-01T14:11:20+02:00</photoDateTime>
                     <!--
                         Credit
-                        Exiftool: xmp-photoshop:credit/iptc:credit
+                        Exiftool mapping: xmp-photoshop:credit/iptc:credit
                     -->
                     <credit>Company XYZ</credit>
                     <!--
@@ -110,7 +110,7 @@
                     <instructions>Only use once</instructions>
                     <!-- 
                         Source
-                        Exiftool: xmp-photoshop:source/iptc:source
+                        Exiftool mapping: xmp-photoshop:source/iptc:source
                     -->
                     <source>Mediahouse XYZ</source>
                 </data>
