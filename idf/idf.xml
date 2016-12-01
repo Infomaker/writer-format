@@ -1,4 +1,4 @@
-<idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
+<idf xml:lang="sv" dir="rtl" xmlns="http://www.infomaker.se/idf/1.0">
     <group type="header">
         <element id="d0dbf67d385e" type="headline" format="html">Lorem ipsum dolor sit amet,
             consectetur adipiscing elit</element>
