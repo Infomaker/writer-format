@@ -80,7 +80,11 @@
 
             <!-- Authors. This is the article´s byline. Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="author" type="x-im/author"
-                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456"/>
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456">
+                <data>
+                    <email>john.doe@example.org</email>
+                </data>
+            </link>
 
             <!-- 
                 This author gives an example of how the format could allow for denormalization of data 
