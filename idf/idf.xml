@@ -6,14 +6,7 @@
     </group>
     <group type="body">
         <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, orci nec volutpat
-            efficitur, <object id="vavbedf02op4" type="x-im/link">
-                <data>
-                    <href>https://codex.wordpress.org/Shortcode_API</href>
-                    <anchor>shortcode</anchor>
-                    <title>Shortcode API</title>
-                    <display>inline</display>
-                </data>
-            </object> massa nibh congue libero, sed vehicula libero dui eget neque. </element>
+            efficitur, massa nibh congue libero, sed vehicula libero dui eget neque. </element>
         <element id="8a5ef068ef15" type="body" format="html">In hac habitasse platea
             dictumst</element>
         <object xmlns="http://www.infomaker.se/object/1.0" id="59097ae592c7" type="x-im/youtube"
