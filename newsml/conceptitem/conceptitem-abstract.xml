@@ -40,6 +40,12 @@
                 in order to get the full path of the concept.
             -->
             <link rel="broader" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+            
+            <!-- 
+                The link below represents the fact that this concept is replaced by another
+                concept.
+            -->
+            <link rel="imext:replacedBy" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
 
             <!-- Can be used if one wishes to relate to other IPTC categories for example. -->
             <link rel="same-as" type="x-im/mediatopic"
