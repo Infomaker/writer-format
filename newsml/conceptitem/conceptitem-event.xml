@@ -24,7 +24,11 @@
         <edNote>This is a note...</edNote>
         
         <!-- Extension used to map concept to x-im/event -->
-        <itemMetaExtProperty type="imext:type" value="x-im/event"/>        
+        <itemMetaExtProperty type="imext:type" value="x-im/event"/>
+        <!-- Start date and time of the event -->
+        <itemMetaExtProperty type="imext:eventStart" value="2015-08-11T07:30:42Z"/>
+        <!-- Stop date and time of the event -->
+        <itemMetaExtProperty type="imext:eventStop" value="2015-08-14T07:30:42Z"/>  
         
         <links xmlns="http://www.infomaker.se/newsml/1.0">
             <!-- User that has created the concept. -->
