@@ -25,6 +25,7 @@
         
         <!-- Extension used to map concept to x-im/event -->
         <itemMetaExtProperty type="imext:type" value="x-im/event"/>
+        
         <!-- Start date and time of the event -->
         <itemMetaExtProperty type="imext:eventStart" value="2015-08-11T07:30:42Z"/>
         <!-- Stop date and time of the event -->
