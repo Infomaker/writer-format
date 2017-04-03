@@ -338,6 +338,17 @@
                             </link>
                         </links>
                     </object>
+                    <!-- This is an example of a factbox (article part) plugin -->
+                    <object id="MTU0LDE0MywyMTQsMTgw" type="x-cmbr/fact" title="Vivamus vitae gravida">
+                        <data>                            
+                            <subject>Fact</subject>
+                            <text format="html"><![CDATA[<p>Quisque ac <strong id="strong-ac46502b0c4e3fe4e750a59d08ee2bee">venenatis</strong> ligula, a rutrum leo. Etiam interdum id massa sed ullamcorper. In vel dignissim velit, in malesuada urna. <em id="emphasis-beb254060df92ef7bbb59647f0c3645e">Phasellus mi neque</em>, mollis quis ex accumsan, convallis gravida metus. Donec facilisis, metus ac placerat molestie, massa tellus consectetur urna, ac volutpat augue mi id ligula. Fusce tortor leo, finibus in auctor sed, bibendum sed odio. Aenean at mi ut lorem pulvinar vulputate a ut diam.</p>]]></text>
+                        </data>
+                        <links>
+                            <!-- If configured to support different types, the selected type is represented as a link -->
+                            <link rel="type" type="x-im/fact-1" title="Faktaruta"/>
+                        </links>
+                    </object>
                 </group>
             </idf>
         </inlineXML>
