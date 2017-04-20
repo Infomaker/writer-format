@@ -98,6 +98,7 @@
                         <xs:enumeration value="stat:canceled"/>
                         <xs:enumeration value="imext:done"/>
                         <xs:enumeration value="imext:draft"/>
+                        <xs:enumeration value="imext:approved"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
