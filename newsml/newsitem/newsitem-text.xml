@@ -323,8 +323,12 @@
                             <!-- 
                                 This is the fallback render solution for "web". It is possible
                                 to add more links for other fallback render demands.
+                                
+                                All links will have the same type (i.e. "x-im/fallback"), what
+                                separates them is the rel attribute which is dictated by the
+                                plugin implementation.
                             -->
-                            <link rel="webrenderer" url="https://imengine.se/457383845734734">
+                            <link rel="webrenderer" url="https://imengine.se/457383845734734" type="x-im/fallback">
                                 <data>
                                     <height>200</height>
                                 </data>
