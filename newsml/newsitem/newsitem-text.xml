@@ -1,5 +1,5 @@
 <newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1" conformance="power"
-          standardversion="2.20" standard="NewsML-G2" guid="1d02738f-7c99-42ba-a6da-3d1b97261523">
+    standardversion="2.20" standard="NewsML-G2" guid="1d02738f-7c99-42ba-a6da-3d1b97261523">
     <!-- Mandatory. Catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
     <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
 
@@ -51,11 +51,11 @@
 
         <!-- Mandatory. Uniform resource identifier -->
         <itemMetaExtProperty type="imext:uri"
-                             value="im://article/1d02738f-7c99-42ba-a6da-3d1b97261523"/>
+            value="im://article/1d02738f-7c99-42ba-a6da-3d1b97261523"/>
 
         <!-- Optional. Uniform resource locator -->
         <itemMetaExtProperty type="imext:url"
-                             value="http://example.org/articles/1d02738f-7c99-42ba-a6da-3d1b97261523.xml"/>
+            value="http://example.org/articles/1d02738f-7c99-42ba-a6da-3d1b97261523.xml"/>
 
         <!-- Optional. Publication start date -->
         <itemMetaExtProperty type="imext:pubstart" value="2015-07-01T14:27:00+02:00"/>
@@ -72,15 +72,15 @@
 
             <!-- Related article. -->
             <link title="Quisque pharetra id velit quis commodo" rel="article" type="x-im/article"
-                  uuid="2175c4bb-fdcc-5a52-bc3b-658562f554cf"/>
+                uuid="2175c4bb-fdcc-5a52-bc3b-658562f554cf"/>
 
             <!-- Creator. "Skapad av...". Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="creator" type="x-im/user"
-                  uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456"/>
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456"/>
 
             <!-- Authors. This is the article´s byline. Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="author" type="x-im/author"
-                  uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456">
+                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456">
                 <data>
                     <email>john.doe@example.org</email>
                 </data>
@@ -91,40 +91,40 @@
                 concerning the author, i.e. saving duplicate data on the article 
             -->
             <link title="Jane Doe" rel="author" type="x-im/author"
-                  uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" uri="im://user/58456">
+                uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" uri="im://user/58456">
                 <links>
                     <link rel="avatar" type="x-im/image" uuid="9c188460-c500-11e5-9912-ba0be0483c18"
-                          uri="im://image/janedoe.jpeg"/>
+                        uri="im://image/janedoe.jpeg"/>
                 </links>
             </link>
 
             <!-- Concept - Category -->
             <link title="Hedemora" rel="subject" type="x-im/category"
-                  uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
+                uuid="d72eb011-1552-4af4-8d15-cd4f8c157a87"/>
             <link title="Dalarna" rel="subject" type="x-im/category"
-                  uuid="03d22994-91e4-11e5-8994-feff819cdc9f"/>
+                uuid="03d22994-91e4-11e5-8994-feff819cdc9f"/>
 
             <!-- Concept - Tag/Topic -->
             <link title="Volvo" rel="subject" type="x-im/topic"
-                  uuid="b201e042-555b-11e5-885d-feff819cdc9f"/>
+                uuid="b201e042-555b-11e5-885d-feff819cdc9f"/>
             <link title="Saab" rel="subject" type="x-im/topic"
-                  uuid="14d59118-91e4-11e5-8994-feff819cdc9f"/>
+                uuid="14d59118-91e4-11e5-8994-feff819cdc9f"/>
 
             <!-- Concept - Place. Note that position is saved on the article but is owned by the concept -->
             <link title="Alvesta" rel="subject" type="x-im/place"
-                  uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
+                uuid="bce38dda-555b-11e5-885d-feff819cdc9f">
                 <data>
                     <geometry>POINT(14.55600 56.89921)</geometry>
                 </data>
             </link>
             <link title="Stockholm" rel="subject" type="x-im/place"
-                  uuid="48bdde54-91e4-11e5-8994-feff819cdc9f">
+                uuid="48bdde54-91e4-11e5-8994-feff819cdc9f">
                 <data>
                     <geometry>POINT(18.0685810 59.3293230)</geometry>
                 </data>
             </link>
             <link title="Kalmar" rel="subject" type="x-im/place"
-                  uuid="320938f8-db94-11e5-b5d2-0a1d41d68578">
+                uuid="320938f8-db94-11e5-b5d2-0a1d41d68578">
                 <data>
                     <geometry>POLYGON((15.927104999999983 56.52092099999997,15.81290899999999
                         56.521005,15.761852999999974 56.53631000000001,15.743408000000045
@@ -145,8 +145,7 @@
                         56.54824099999998,16.21953540234381 56.5145372338241,16.17962291015624
                         56.48224874176693,16.12245400000006 56.470696000000004,16.002729000000045
                         56.50876299999999,15.99745299999995 56.52902499999998,15.927104999999983
-                        56.52092099999997))
-                    </geometry>
+                        56.52092099999997)) </geometry>
                 </data>
             </link>
         </links>
@@ -225,7 +224,7 @@
                 and bylines to a teaser.
             -->
             <object id="8400c74d667e" type="x-im/teaser"
-                    title="Sed sit amet turpis a purus fringilla">
+                title="Sed sit amet turpis a purus fringilla">
                 <data>
                     <!-- 
                         subject is an "optional" element used as an override/alternative to the 
@@ -237,13 +236,12 @@
                     -->
                     <text>Duis eget magna lacus. In sodales lectus vel egestas rhoncus. Fusce
                         ultrices urna vel ante sodales tincidunt. Maecenas at nisl in lorem egestas
-                        egestas id sed ipsum. Sed aliquam gravida dolor.
-                    </text>
+                        egestas id sed ipsum. Sed aliquam gravida dolor. </text>
                 </data>
                 <links>
                     <link rel="image" type="x-im/image"
-                          uri="im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
-                          uuid="c382c937-8511-5d48-9677-55658c2bbb32">
+                        uri="im://image/znX8U1CU124n26zu7gb40_jBzSk.jpeg"
+                        uuid="c382c937-8511-5d48-9677-55658c2bbb32">
                         <data>
                             <width>1536</width>
                             <height>1024</height>
@@ -271,24 +269,20 @@
                     <element id="d0dbf67d385e" type="headline">Lorem ipsum dolor sit</element>
                     <element id="8a5ef068ef17" type="dateline" format="html">New York</element>
                     <element id="8a5ef068ef18" type="leadin" format="html">Quisque dignissim
-                        molestie tellus
-                    </element>
+                        molestie tellus </element>
                 </group>
                 <group type="body">
                     <element id="fafbedf02da1" type="body" format="html">Mauris eleifend, <a
                             href="http://google.com" id="link-5399cd1a1d7c8336c2c2203f2be1cb94"
-                            title="">Bacon
-                    </a> orci nec volutpat efficitur massa.
-                    </element>
+                            title="">Bacon </a> orci nec volutpat efficitur massa. </element>
                     <element id="8a5ef068ef15" type="body" format="html">In hac habitasse platea
-                        dictumst
-                    </element>
+                        dictumst</element>
                     <object id="dcc7c5fcf709" type="x-im/image"
-                            uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
+                        uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                         <links>
                             <link rel="self" type="x-im/image"
-                                  uri="im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
-                                  uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
+                                uri="im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
+                                uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
                                 <data>
                                     <text>Vivamus luctus eros.</text>
                                     <width>3560</width>
@@ -298,8 +292,8 @@
                                     <alignment>auto</alignment>
                                 </data>
                                 <links>
-                                    <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
-                                          title="Jane Doe"/>
+                                    <link rel="author" type="x-im/author"
+                                        uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
                                     <!--
                                         Softcrop below
                                         <link rel="crop" uri="im://crop/[x]/[y]/[width]/[height]" />
@@ -307,42 +301,44 @@
                                         Please note that softcrop is stored as relative values
                                     -->
                                     <link rel="crop" title="16:9" type="x-im/crop"
-                                          uri="im://crop/0.07865168539325842/0.0899/0.8426966292134831/0.9899"/>
+                                        uri="im://crop/0.07865168539325842/0.0899/0.8426966292134831/0.9899"/>
                                     <link rel="crop" title="1:1" type="x-im/crop"
-                                          uri="im://crop/0.24/0.20786516853932585/0.44/0.6591760299625468"/>
+                                        uri="im://crop/0.24/0.20786516853932585/0.44/0.6591760299625468"
+                                    />
                                 </links>
                             </link>
                         </links>
                     </object>
-
-                    <!-- This is an example of how to represent two factboxes in a newsItem article -->
-                    <element id="8a5ef068ef11" type="fact-headline">This is fact headline</element>
-                    <element id="8a5ef068ef10" type="fact-body">This is fact body</element>
-                    <element id="8a5ef068ef21" type="fact-headline">This is fact headline
-                        2
-                    </element>
-                    <element id="8a5ef068ef40" type="fact-body">This is fact body 2</element>
-                    <element id="c93fe9cfad5d" type="body" format="html">Aenean ullamcorper faucibus
-                        felis suscipit faucibus. Cras eu leo lectus.
-                    </element>
-                    <object id="qcr4i5fcf333" type="x-im/image"
-                            uuid="75a35cd0-91e6-11e5-8994-feff819cdc9f">
+                    <element id="6e5af065ef33" type="body" format="html">Sed a urna tincidunt,
+                        consectetur est quis, malesuada est.</element>
+                    <!-- 
+                        Example of youtube plugin with fallback render options (links)
+                    -->
+                    <object id="youtubeembed-1c1bd399dfa9513795e5626e08cab898" type="x-im/youtube"
+                        url="https://www.youtube.com/watch?v=EiWsPd6JDoo">
+                        <data>
+                            <start>0</start>
+                        </data>
                         <links>
-                            <link rel="self" type="x-im/image"
-                                  uri="im://image/roY8P3C922OIYjlksefgr99_jJkg.jpeg"
-                                  url="//roY8P3C922OIYjlksefgr99_jJkg.jpeg"
-                                  uuid="75a35cd0-91e6-11e5-8994-feff819cdc9f">
+                            <!-- 
+                                This is the fallback render solution for "web". It is possible
+                                to add more links for other fallback render demands.
+                            -->
+                            <link rel="webrenderer" url="https://imengine.se/457383845734734">
                                 <data>
-                                    <text>Mauris eu pretium ligula.</text>
+                                    <height>200</height>
                                 </data>
                             </link>
                         </links>
                     </object>
+
                     <!-- This is an example of a factbox (article part) plugin -->
-                    <object id="MTU0LDE0MywyMTQsMTgw" type="x-cmbr/fact" title="Vivamus vitae gravida">
-                        <data>                            
+                    <object id="MTU0LDE0MywyMTQsMTgw" type="x-cmbr/fact"
+                        title="Vivamus vitae gravida">
+                        <data>
                             <subject>Fact</subject>
-                            <text format="html"><![CDATA[<p>Quisque ac <strong id="strong-ac46502b0c4e3fe4e750a59d08ee2bee">venenatis</strong> ligula, a rutrum leo. Etiam interdum id massa sed ullamcorper. In vel dignissim velit, in malesuada urna. <em id="emphasis-beb254060df92ef7bbb59647f0c3645e">Phasellus mi neque</em>, mollis quis ex accumsan, convallis gravida metus. Donec facilisis, metus ac placerat molestie, massa tellus consectetur urna, ac volutpat augue mi id ligula. Fusce tortor leo, finibus in auctor sed, bibendum sed odio. Aenean at mi ut lorem pulvinar vulputate a ut diam.</p>]]></text>
+                            <text format="html"
+                                ><![CDATA[<p>Quisque ac <strong id="strong-ac46502b0c4e3fe4e750a59d08ee2bee">venenatis</strong> ligula, a rutrum leo. Etiam interdum id massa sed ullamcorper. In vel dignissim velit, in malesuada urna. <em id="emphasis-beb254060df92ef7bbb59647f0c3645e">Phasellus mi neque</em>, mollis quis ex accumsan, convallis gravida metus. Donec facilisis, metus ac placerat molestie, massa tellus consectetur urna, ac volutpat augue mi id ligula. Fusce tortor leo, finibus in auctor sed, bibendum sed odio. Aenean at mi ut lorem pulvinar vulputate a ut diam.</p>]]></text>
                         </data>
                         <links>
                             <!-- If configured to support different types, the selected type is represented as a link -->
