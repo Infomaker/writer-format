@@ -320,19 +320,21 @@
                             <start>0</start>
                         </data>
                         <links>
-                            <!-- 
-                                This is the fallback render solution for "web". It is possible
-                                to add more links for other fallback render demands.
-                                
-                                All links will have the same type (i.e. "x-im/fallback"), what
-                                separates them is the rel attribute which is dictated by the
-                                plugin implementation.
+                            <!--
+                                Alternate representations of this object can be referenced by link
+                                elements with the type attribute value "alternate". There might be
+                                several alternate renditions, these are separated by the type attribute
+                                which then specify the content type.
+
+                                - Image type representations must provide width/height attributes.
+                                - Html type representations must provide title attribute.
+
+                                An alternate representation of type "image/jpg" might be used in apps
+                                as a preview handled natively. An alternate representation of type
+                                "text/html" might be opened in a webview by the app.
                             -->
-                            <link rel="webrenderer" url="https://imengine.se/457383845734734" type="x-im/fallback">
-                                <data>
-                                    <height>200</height>
-                                </data>
-                            </link>
+                            <link rel="alternate" type="image/jpg" url="https://imengine.se/457383845734734" width="200" height="400"/>
+                            <link rel="alternate" type="text/html" url="https://imengine.se/457383845734734/html" title="Click link to view content"/>
                         </links>
                     </object>
 
