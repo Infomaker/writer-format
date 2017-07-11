@@ -326,14 +326,20 @@
                                 several alternate renditions, these are separated by the type attribute
                                 which then specify the content type.
 
-                                - Image type representations must provide width/height attributes.
+                                - Image type representations must provide width/height as child elements to data
+                                element.
                                 - Html type representations must provide title attribute.
 
                                 An alternate representation of type "image/jpg" might be used in apps
                                 as a preview handled natively. An alternate representation of type
                                 "text/html" might be opened in a webview by the app.
                             -->
-                            <link rel="alternate" type="image/jpg" url="https://imengine.se/457383845734734" width="200" height="400"/>
+                            <link rel="alternate" type="image/jpg" url="https://imengine.se/457383845734734">
+                                <data>
+                                    <width>200</width>
+                                    <height>400</height>
+                                </data>
+                            </link>
                             <link rel="alternate" type="text/html" url="https://imengine.se/457383845734734/html" title="Click link to view content"/>
                         </links>
                     </object>
