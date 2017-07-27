@@ -263,7 +263,7 @@
                 Each "element" element is to considered a block element which contains text and
                 "object" elements. @format does not do anything as-is.
             -->
-            <idf xml:lang="sv" xmlns="http://www.infomaker.se/idf/1.0">
+            <idf xml:lang="sv" dir="ltr" xmlns="http://www.infomaker.se/idf/1.0">
                 <!-- Note. There may be one or many group:s -->
                 <group id="metadata" type="header">
                     <element id="d0dbf67d385e" type="headline">Lorem ipsum dolor sit</element>
@@ -345,12 +345,18 @@
                     </object>
 
                     <!-- This is an example of a factbox (article part) plugin -->
-                    <object id="MTU0LDE0MywyMTQsMTgw" type="x-cmbr/fact"
+                    <object id="MTU0LDE0MywyMTQsMTgw" type="x-im/content-part"
                         title="Vivamus vitae gravida">
                         <data>
                             <subject>Fact</subject>
-                            <text format="html"
-                                ><![CDATA[<p>Quisque ac <strong id="strong-ac46502b0c4e3fe4e750a59d08ee2bee">venenatis</strong> ligula, a rutrum leo. Etiam interdum id massa sed ullamcorper. In vel dignissim velit, in malesuada urna. <em id="emphasis-beb254060df92ef7bbb59647f0c3645e">Phasellus mi neque</em>, mollis quis ex accumsan, convallis gravida metus. Donec facilisis, metus ac placerat molestie, massa tellus consectetur urna, ac volutpat augue mi id ligula. Fusce tortor leo, finibus in auctor sed, bibendum sed odio. Aenean at mi ut lorem pulvinar vulputate a ut diam.</p>]]></text>
+                            <text format="idf">
+                                <element id="paragraph-f6f5d97f5c8d6cd4977981ee4e609985" type="body">
+                                    <strong id="strong-88285daa39e05cb9bffd601c1e72322e">Quisque ac</strong>
+                                </element>
+                                <element id="paragraph-abb247cabe3778f5296f3b65aa3c3cbb" type="body">Etiam <em
+                                        id="emphasis-8734116999568b91e80e5c4e0453e117">interdum idmassa sed ullamcorper.
+                                </em></element>
+                            </text>
                         </data>
                         <links>
                             <!-- If configured to support different types, the selected type is represented as a link -->
