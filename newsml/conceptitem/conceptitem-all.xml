@@ -23,9 +23,8 @@
         <!-- Any note that might be of interest to save with the concept. -->
         <edNote>This is a note...</edNote>
 
-        <!-- Extension used to map concept to specific Infomaker type. 
-        Can be x-im/place, x-im/category, x-im/author, x-im/content-profile, x-im/event, x-im/organisation, x-im/person, x-im/place, x-im/story, x-im/tag -->
-        <itemMetaExtProperty type="imext:type" value="x-im/xx"/>
+        <!-- Extension used to map concept to x-im/person -->
+        <itemMetaExtProperty type="imext:type" value="x-im/person"/>
 
         <!-- First and last name -->
         <itemMetaExtProperty type="imext:firstName" value="Jane"/>
@@ -65,32 +64,35 @@
 
             <!-- Additional information for the concept. -->
             <link rel="irel:seeAlso" type="text/html" url="http://jandedoe.com"/>
-            
             <!--
                 Parent to "concept". If using OC as a repository, relations can be configured
                 using link/@uuid and conceptItem/@guid. Note that this can be an hiearchy, 
                 meaning that it might be necessary to recursively go through all links[@rel=broader]
                 in order to get the full path of the concept.
             -->
-            <link rel="broader" type="x-im/xx" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+            <link rel="broader" type="x-im/person" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
 
             <!-- 
                 The link below represents the fact that this concept is replaced by another
                 concept.
             -->
-            <link rel="imext:replacedBy" type="x-im/xx" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
-
+            <link rel="imext:replacedBy" type="x-im/person"
+                uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+            
+            <!-- Realation to another Concept -->
+            <link rel="irel:associatedWith" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+            
             <!-- Example of relation to other system -->
-            <link rel="same-as" type="my_system" uri="123456"/>
+            <link rel="same-as" type="x-np/user" uri="im://user/342342"/>
         </links>
     </itemMeta>
     <concept>
         <!-- Mandatory. @qcode or @uri must be used -->
         <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:e14debf6-9f17-11e5-8994-feff819cdc9f"
-            uri="im://xx/e14debf6-9f17-11e5-8994-feff819cdc9f"/>
+            uri="im://person/e14debf6-9f17-11e5-8994-feff819cdc9f"/>
 
-        <!-- Mandatory (for writer usage). Identifies the concept. Can be abstract, event, object, organisation, person, poi, story or tag -->
-        <type qcode="cpnat:xx"/>
+        <!-- Mandatory (for writer usage). Identifies the concept as an "person" -->
+        <type qcode="cpnat:person"/>
 
         <!-- Mandatory. Name of concept -->
         <name>Jane Doe</name>
@@ -105,7 +107,6 @@
                 <data>
                     <email>jane.doe@example.org</email>
                     <phone>+46731111111</phone>
-                    <mobile/>
                     <streetAddress>Street 1</streetAddress>
                     <postalCode>12345</postalCode>
                     <city>Town</city>
@@ -121,6 +122,18 @@
                 <data>
                     <geometry>POINT(14.55600 56.89921)</geometry>
                 </data>
+            </object>
+            
+            <!-- Proposal of changes in the concept -->
+            <object id="B1Lkp0OqQXo" type="x-im/proposal">
+                <data>
+                    <text>POINT(14.55600 56.89921)</text>
+                    <created>2015-07-01T14:00:02Z</created>
+                </data>
+                <links>
+                    <link title="John Doe" rel="creator" type="x-im/user"
+                        uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456"/>
+                </links>
             </object>
 
             <object id="B1Lkp0OqQXo" type="x-im/polygon">
@@ -147,7 +160,40 @@
                         56.52092099999997)</geometry>
                 </data>
             </object>
-
+            
+            
+            
+            <object id="dcc7c5fcf709" type="x-im/image"
+                uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
+                <links>
+                    <link rel="self" type="x-im/image"
+                        uri="im://image/znX8U1C123JLDjlksdfgb40_jIka.jpeg"
+                        uuid="f845d7b8-40cb-545a-8069-36e21ff00908">
+                        <data>
+                            <text>Vivamus luctus eros.</text>
+                            <width>3560</width>
+                            <height>2695</height>
+                            <alttext/>
+                            <credit/>
+                            <alignment>auto</alignment>
+                        </data>
+                        <links>
+                            <link rel="author" type="x-im/author"
+                                uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
+                            <!--
+                                        Softcrop below
+                                        <link rel="crop" uri="im://crop/[x]/[y]/[width]/[height]" />
+                                        Please note that softcrop is stored as relative values
+                                    -->
+                            <link rel="crop" title="16:9" type="x-im/crop"
+                                uri="im://crop/0.07865168539325842/0.0899/0.8426966292134831/0.9899"/>
+                            <link rel="crop" title="1:1" type="x-im/crop"
+                                uri="im://crop/0.24/0.20786516853932585/0.44/0.6591760299625468"
+                            />
+                        </links>
+                    </link>
+                </links>
+            </object>
         </metadata>
     </concept>
 </conceptItem>
