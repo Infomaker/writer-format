@@ -39,6 +39,15 @@
         <!-- Optional. Notes attached to the article (editorial purpose). No support in writer frontend as-is -->
         <edNote>Duis eget magna lacus. In sodales lectus vel egestas rhoncus</edNote>
 
+        <!--
+            Optional. Signal used by external "publishing" flows.
+            Valid values are;
+
+                * stat:withheld = Item should not be published by external publish flow (removed if already published)
+                * stat:usable = Item should be published by external publish flow
+        -->
+        <signal qcode="stat:withheld"/>
+
         <!-- 
             Note. The QCodeType prefix of the extensions (itemMetaExtProperty) used
             is "imext:" where im stands for Infomaker.
@@ -251,6 +260,18 @@
             </object>
 
         </metadata>
+
+        <!--
+            The "links" element contains resources of various kinds that are
+            linked to the article. Each link must have a "rel" and a "type".
+            Optional.
+        -->
+        <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <!--
+                Optional. This link represent the "source", e.g. TT, Writer, of the article
+            -->
+            <link rel="articlesource" title="Online" type="x-im/articlesource" uri="im://articlesource/online"/>
+        </links>
     </contentMeta>
     <contentSet>
         <inlineXML>
@@ -340,7 +361,7 @@
                                     <height>400</height>
                                 </data>
                             </link>
-                            <link rel="alternate" type="text/html" url="https://imengine.se/457383845734734/html" title="Click link to view content"/>
+                            <link rel="alternate" type="text/html" url="https://www.youtube.com/watch?v=EiWsPd6JDoo" title="Click link to view content"/>
                         </links>
                     </object>
 
