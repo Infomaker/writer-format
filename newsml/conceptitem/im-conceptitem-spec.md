@@ -6,7 +6,7 @@
 - All concepts are represented as `<conceptItem>`s with `<itemClass qcode="cinat:concept"/>`
 - In the case of OC being the repository and where the concepts are stored as ConceptItems, mimetype used is `application/vnd.iptc.g2.conceptitem+xml`.
 
-`x-im/subject`  
+`x-im/category`  
   NewsML: cpnat:abstract  
   Används för kategori/avdelning  
   Exempel: Nyheter, Sport, Mat & Dryck  
