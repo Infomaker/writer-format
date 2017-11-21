@@ -33,7 +33,7 @@ Exempel:
 
 `x-im/place`  
 NewsML: cpnat:poi  
-Används för positioner och oråden  
+Används för positioner och områden  
 Exempel: Borås, Västra götaland, Sverige  
 
 `x-im/event`  
