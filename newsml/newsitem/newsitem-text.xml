@@ -39,15 +39,6 @@
         <!-- Optional. Notes attached to the article (editorial purpose). No support in writer frontend as-is -->
         <edNote>Duis eget magna lacus. In sodales lectus vel egestas rhoncus</edNote>
 
-        <!--
-            Optional. Signal used by external "publishing" flows.
-            Valid values are;
-
-                * stat:withheld = Item should not be published by external publish flow (removed if already published)
-                * stat:usable = Item should be published by external publish flow
-        -->
-        <signal qcode="stat:withheld"/>
-
         <!-- 
             Note. The QCodeType prefix of the extensions (itemMetaExtProperty) used
             is "imext:" where im stands for Infomaker.
@@ -57,6 +48,11 @@
             Type article. Mandatory. 
         -->
         <itemMetaExtProperty type="imext:type" value="x-im/article"/>
+
+        <!--
+            Published state of article. Valid values are stat:usable and stat:canceled
+        -->
+        <itemMetaExtProperty type="imext:pubstate" value="stat:usable" modified="2015-07-01T14:27:00Z"/>
 
         <!-- Mandatory. Uniform resource identifier -->
         <itemMetaExtProperty type="imext:uri"
