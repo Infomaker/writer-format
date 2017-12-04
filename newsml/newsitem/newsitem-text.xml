@@ -50,9 +50,10 @@
         <itemMetaExtProperty type="imext:type" value="x-im/article"/>
 
         <!--
-            Published state of article. Valid values are stat:usable and stat:canceled
+            Published state of article, i.e. there is a version of the article that is published. 
+            Valid values are true / false
         -->
-        <itemMetaExtProperty type="imext:pubstate" value="stat:usable" modified="2015-07-01T14:27:00Z"/>
+        <itemMetaExtProperty type="imext:hasPublishedVersion" value="true"/>
 
         <!-- Mandatory. Uniform resource identifier -->
         <itemMetaExtProperty type="imext:uri"
