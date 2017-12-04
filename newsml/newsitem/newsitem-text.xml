@@ -53,7 +53,7 @@
             Published state of article, i.e. there is a version of the article that is published. 
             Valid values are true / false
         -->
-        <itemMetaExtProperty type="imext:hasPublishedVersion" value="true"/>
+        <itemMetaExtProperty type="imext:haspublishedversion" value="true"/>
 
         <!-- Mandatory. Uniform resource identifier -->
         <itemMetaExtProperty type="imext:uri"
