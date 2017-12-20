@@ -11,9 +11,9 @@
   Används för kategori/avdelning  
   Exempel: Nyheter, Sport, Mat & Dryck  
 
-`x-im/tag`  
+`x-im/topic`  
 NewsML: cpnat:object  
-Används för alla taggar som inte kan definieras som en person, organisation eller event   
+Används för alla taggar som inte kan definieras som en person, organisation eller event. Kan med fördel översättas kondspecifikt till Ämne, Nyckelord, Tagg eller liknande 
 Exempel: Polisbil, Klimatet  
 	
 `x-im/person`  
