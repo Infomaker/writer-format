@@ -13,8 +13,8 @@
 
 `x-im/topic`  
 NewsML: cpnat:object  
-Används för alla taggar som inte kan definieras som en person, organisation eller event. Kan med fördel översättas kondspecifikt till Ämne, Nyckelord, Tagg eller liknande 
-Exempel: Polisbil, Klimatet  
+Används för alla taggar som inte kan definieras som en person, organisation eller event. Kan med fördel översättas kundspecifikt till Ämne, Nyckelord, Tagg eller liknande 
+Exempel: Polisbil, Klimatet, Åtal, ADHD 
 	
 `x-im/person`  
 cpnat:person  
