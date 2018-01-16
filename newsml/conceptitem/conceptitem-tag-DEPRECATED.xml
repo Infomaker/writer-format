@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    DEPRECATED!
+    Use conceptitem-topic.xml instead.
+-->
+
 <conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" guid="b201e042-555b-11e5-885d-feff819cdc9f"
     version="1" standard="NewsML-G2" standardversion="2.20" conformance="power">
     <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
