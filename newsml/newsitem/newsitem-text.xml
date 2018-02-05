@@ -347,6 +347,8 @@
                                 - Image type representations must provide width/height as child elements to data
                                 element.
                                 - Html type representations must provide title attribute.
+                                - Html type can optionally provide context, and provider as child elements
+                                to its data element to provide further context and information to the content source.
 
                                 An alternate representation of type "image/jpg" might be used in apps
                                 as a preview handled natively. An alternate representation of type
@@ -358,7 +360,61 @@
                                     <height>400</height>
                                 </data>
                             </link>
-                            <link rel="alternate" type="text/html" url="https://www.youtube.com/watch?v=EiWsPd6JDoo" title="Click link to view content"/>
+                            <link rel="alternate" type="text/html" url="https://www.youtube.com/watch?v=EiWsPd6JDoo" title="Click link to view content">
+                                <data>
+                                    <context>Video</context>
+                                    <provider>YouTube</provider>
+                                </data>
+                            </link>
+                        </links>
+                    </object>
+                    <!--
+                        Example of iframely plugin with fallback render options (links)
+                    -->
+                    <object id="iframely-f79e0901d1e0d97b4dc2c163397e6c4f" type="x-im/iframely" url="https://twitter.com/infomakernews/status/910422014271348736">
+                        <data>
+                            <title>Infomaker on Twitter</title>
+                            <embedCode>
+                                <![CDATA[<blockquote class="twitter-tweet" align="center">
+                                    <p lang="sv" dir="ltr">Igår kväll hittade vi på hyss tillsammans med <a href="https://twitter.com/hashtag/wilsoncreative?src=hash&amp;ref_src=twsrc%5Etfw">#wilsoncreative</a>, team <a href="https://twitter.com/WilsonHasse?ref_src=twsrc%5Etfw">@WilsonHasse</a> och co. Stay tuned för det färdiga resultatet! <a href="https://twitter.com/hashtag/ePaper?src=hash&amp;ref_src=twsrc%5Etfw">#ePaper</a> <a href="https://t.co/qSFK03tmMu">pic.twitter.com/qSFK03tmMu</a>
+                                    </p>&mdash; Infomaker (@infomakernews) <a href="https://twitter.com/infomakernews/status/910422014271348736?ref_src=twsrc%5Etfw">September 20, 2017</a>
+                                    </blockquote>
+                                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+                                    </script>
+                                ]]>
+                            </embedCode>
+                        </data>
+                        <links>
+                            <!--
+                                Alternate representations of this object can be referenced by link
+                                elements with the type attribute value "alternate". There might be
+                                several alternate renditions, these are separated by the type attribute
+                                which then specify the content type.
+
+                                - Image type representations must provide width/height as child elements to data
+                                element.
+                                - Html type representations must provide title attribute.
+                                - Html type can optionally provide context, provider, and description as child elements
+                                to its data element to provide further context and information to the content source.
+
+                                An alternate representation of type "image/jpg" might be used in apps
+                                as a preview handled natively. An alternate representation of type
+                                "text/html" might be opened in a webview by the app.
+                            -->
+                            <link rel="alternate" type="text/html" title="Infomaker on Twitter" url="https://twitter.com/infomakernews/status/910422014271348736">
+                                <data>
+                                    <!-- These elements are optional and might not exist if the source content does not provide enough information -->
+                                    <context>Social</context>
+                                    <description>interdum idmassa sed ullamcorper. pic.twitter.com/qSFK03tmMu— Infomaker (@infomakernews) September 20, 2017</description>
+                                    <provider>Twitter</provider>
+                                </data>
+                            </link>
+                            <link rel="alternate" type="image/jpg" url="https://pbs.twimg.com/media/DKJ3zwRWkAA6eY-.jpg:large">
+                                <data>
+                                    <width>2048</width>
+                                    <height>1536</height>
+                                </data>
+                            </link>
                         </links>
                     </object>
 
@@ -366,6 +422,7 @@
                     <object id="MTU0LDE0MywyMTQsMTgw" type="x-im/content-part"
                         title="Vivamus vitae gravida">
                         <data>
+                            <title>Vivamus vitae gravida</title>
                             <subject>Fact</subject>
                             <text format="idf">
                                 <element id="paragraph-f6f5d97f5c8d6cd4977981ee4e609985" type="body">
