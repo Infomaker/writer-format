@@ -1,15 +1,15 @@
 # Infomaker ConceptItem spec
 *Note: This ConceptItem spec concerns Infomakers implementation of ConceptItem for Writer (Infomakers web based editor)*
 
-- The XML variant used [IPTC NewsML G2 2.20](https://iptc.org/standards/newsml-g2/)
+- The XML variant used [IPTC NewsML G2 2.26](https://iptc.org/standards/newsml-g2/)
 - Documentation of the newsItem used are found in files `conceptitem-*.xml`
 - All concepts are represented as `<conceptItem>`s with `<itemClass qcode="cinat:concept"/>`
 - In the case of OC being the repository and where the concepts are stored as ConceptItems, mimetype used is `application/vnd.iptc.g2.conceptitem+xml`.
 
 `x-im/category`  
-  NewsML: cpnat:abstract  
-  Används för kategori/avdelning  
-  Exempel: Nyheter, Sport, Mat & Dryck  
+NewsML: cpnat:abstract  
+Används för kategori/avdelning  
+Exempel: Nyheter, Sport, Mat & Dryck  
 
 `x-im/topic`  
 NewsML: cpnat:object  
@@ -50,3 +50,9 @@ Exempel: Nils Olsson, Stina Andersson
 NewsML: imnat:story  
 Används för att knyta ihop artikelserier  
 Exempel: #meto-upproret, Trumps USA, SHL 17/18  
+
+`x-im/section`
+TODO:
+
+`x-im/channel`
+TODO:
