@@ -29,9 +29,14 @@
             An article that is considered "premium" has a service with qcode="imchn:premium".
             Optional.
         -->
-        <service qcode="imchn:premium" why="imext:main"/>
+        <!--
+            DEPRECATED!
+            Channel plugin should not use service[@qcode='imchn:...'].
+            Use link[@type='x-im/channel'] instead.
+        -->
+        <!--<service qcode="imchn:premium" why="imext:main"/>
         <service qcode="imchn:ddse"/>
-        <service qcode="imchn:test"/>
+        <service qcode="imchn:test"/>-->
 
         <!-- Mandatory. The name of the article -->
         <title>Proin eget dignissim ipsum</title>
@@ -83,6 +88,15 @@
             <!-- Creator. "Skapad av...". Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="creator" type="x-im/user"
                 uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e" uri="im://user/58456"/>
+
+            <!--
+                Channel. The @rel attribute specify which channel is main ("mainchannel"). Other
+                channels use @rel='channel'.
+            -->
+            <link title="Premium" rel="mainchannel" type="x-im/channel"
+                  uuid="a0836ecc-1d4a-4ce0-b5dc-7d06ba853759"/>
+            <link title="dd.se" rel="channel" type="x-im/channel"
+                  uuid="bc2798fa-12ff-11e8-96d9-0ed5f89f718b"/>
 
             <!-- Authors. This is the article´s byline. Note that uuid and uri will probably exclude one another -->
             <link title="John Doe" rel="author" type="x-im/author"
