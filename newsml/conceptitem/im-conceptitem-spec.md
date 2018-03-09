@@ -32,8 +32,8 @@ Används för funktionstaggar som kan styra publiceringen
 Exempel:  
 
 `x-im/place`  
-NewsML: cpnat:poi  
-Används för positioner och områden  
+NewsML: cpnat:poi
+Används för positioner och områden
 Exempel: Borås, Västra götaland, Sverige  
 
 `x-im/event`  
@@ -55,6 +55,6 @@ Exempel: #meto-upproret, Trumps USA, SHL 17/18
 TODO:
 
 `x-im/channel`
-NewsML: cpnat
+NewsML: cpnat:object
 Används för att definera publiceringskanaler
 Exempel: company.com, app
