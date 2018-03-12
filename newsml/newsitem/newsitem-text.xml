@@ -238,6 +238,21 @@
                 </data>
             </object>
 
+
+            <!--
+                Print information belonging to article. Maps to page (print) related
+                fields for article.
+            -->
+            <object id="9076h25e322y" type="x-im/print-meta">
+                <data>
+                    <firstPagin>2</firstPagin>
+                    <multiPageCount>2</multiPageCount>
+                    <part>A</part>
+                    <publicationDate>2017-11-28</publicationDate>
+                    <publicationDateName>29.11.2017</publicationDateName>
+                </data>
+            </object>
+
             <!-- 
                 Teaser text for the article. Only one teaser object per article is supported
                 and only plain text is allowed in writer as-is. It is possible to add images
