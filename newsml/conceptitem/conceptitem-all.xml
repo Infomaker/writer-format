@@ -76,11 +76,11 @@
                 The link below represents the fact that this concept is replaced by another
                 concept.
             -->
-            <link rel="imext:replacedBy" type="x-im/person"
+            <link rel="replaced-by" type="x-im/person"
                 uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
             
             <!-- Realation to another Concept -->
-            <link rel="irel:associatedWith" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+            <link rel="associated-with" type="x-im/category" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
             
             <!-- Example of relation to other system -->
             <link rel="same-as" type="x-np/user" uri="im://user/342342"/>

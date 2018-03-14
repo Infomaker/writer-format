@@ -62,7 +62,7 @@
                 The link below represents the fact that this concept is replaced by another
                 concept.
             -->
-            <link rel="imext:replacedBy" type="x-im/xx" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
+            <link rel="replaced-by" type="x-im/xx" uuid="230efee7-0b68-4b39-8840-7859a62ee904"/>
 
             <!-- Example of relation to other system -->
             <link rel="same-as" type="my_system" uri="123456"/>
