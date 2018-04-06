@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentSet>
+    <inlineXML>
+        <idf xml:lang="sv" dir="ltr" xmlns="http://www.infomaker.se/idf/1.0">
+            <group type="body">
+                <!-- 
+                    TODO What type should be used when dealing with several
+                    binaries?
+                -->
+                <object id="dcc7c5fcf709" type="x-im/video"
+                    uuid="c382c937-8511-5d48-9677-55658c2bbb32">
+                    <links>
+                        <link rel="author" type="x-im/author"
+                            uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>                  
+                        <link rel="member" role="imorder:1" type="video/mp4" uri="member/video/123456433.mp4">
+                            <data>                    
+                            </data>
+                        </link>
+                        <link rel="member" role="imorder:2" type="video/mp4" uri="member/video/123456434.mp4">
+                            <data>                    
+                            </data>
+                        </link>
+                        <link rel="alternate" type="image/jpg" url="https://example.org/1234456">
+                            <data>
+                                <width>560</width>
+                                <height>320</height>
+                            </data>
+                        </link>
+                    </links>
+                </object>
+            </group>
+        </idf>
+    </inlineXML>
+</contentSet>

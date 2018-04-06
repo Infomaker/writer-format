@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentSet>
+    <inlineXML>
+        <idf xml:lang="sv" dir="ltr" xmlns="http://www.infomaker.se/idf/1.0">
+            <group type="body">
+                <object id="dcc7c5fcf709" type="x-im/video"
+                    uuid="c382c937-8511-5d48-9677-55658c2bbb32">
+                    <links>
+                        <link rel="self" type="x-im/video"
+                            uri="im://video/vApvJyM3pl2wpFpe0G2uBJxZfZc.mp4"
+                            uuid="c382c937-8511-5d48-9677-55658c2bbb32">
+                            <data>
+                                <!--
+                                    Some or all exif data?
+                                -->
+                            </data>
+                            <links>
+                                <link rel="author" type="x-im/author"
+                                    uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f" title="Jane Doe"/>
+                            </links>
+                        </link>
+                        <link rel="alternate" type="image/jpg" url="https://example.org/1234456">
+                            <data>
+                                <width>560</width>
+                                <height>320</height>
+                            </data>
+                        </link>
+                    </links>
+                </object>
+            </group>
+        </idf>
+    </inlineXML>
+</contentSet>
