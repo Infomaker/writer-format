@@ -309,8 +309,11 @@
                 Inside group element there can be any number of "element" and "object" element.
                 Each "element" element is to considered a block element which contains text and
                 "object" elements. @format does not do anything as-is.
+
+                Attribute "xml:lang" should be defined with both language and region, e.g. "sv-SE".
+                For more information see https://www.w3.org/2005/05/font-size-test/starhtml-test.html.
             -->
-            <idf xml:lang="sv" dir="ltr" xmlns="http://www.infomaker.se/idf/1.0">
+            <idf xml:lang="sv-SE" dir="ltr" xmlns="http://www.infomaker.se/idf/1.0">
                 <!-- Note. There may be one or many group:s -->
                 <group id="metadata" type="header">
                     <element id="d0dbf67d385e" type="headline">Lorem ipsum dolor sit</element>
