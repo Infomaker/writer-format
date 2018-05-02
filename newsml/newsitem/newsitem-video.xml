@@ -1,0 +1,167 @@
+<newsItem guid="c382c937-8511-5d48-9677-55658c2bbb32" xmlns="http://iptc.org/std/nar/2006-10-01/"
+    conformance="power" standardversion="2.20" standard="NewsML-G2" version="1">
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
+    <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
+    <itemMeta>
+        <!-- 
+            Specifies binary IPTC type. Mandatory
+            - ninat:animated - Animated graphic content
+            - ninat:audio - Audio content
+            - ninat:composite - Composite content            
+            - ninat:graphic - Still (un-animated) graphic content
+            - ninat:picture - Picture content
+            - ninat:video - Video content
+        -->
+        <itemClass qcode="ninat:video"/>
+        <versionCreated>2015-07-01T14:11:20Z</versionCreated>
+        <firstCreated>2015-07-01T14:11:20Z</firstCreated>
+        <pubStatus qcode="stat:withheld"/>
+        <!-- 
+            The binary filename. Optional (Writer uses imext:uri to identify image).
+        -->
+        <fileName>vApvJyM3pl2wpFpe0G2uBJxZfZc.mp4</fileName>
+        <!-- 
+            Specifies Infomaker binary type. Mandatory. 
+            - x-im/video
+            - x-im/animated
+            - x-im/audio
+            - x-im/composite
+            - x-im/graphic
+            - x-im/picture
+        -->
+        <itemMetaExtProperty type="imext:type" value="x-im/video"/>
+        <!-- 
+            Content-type. Mandatory
+        -->
+        <itemMetaExtProperty type="imext:contenttype" value="video/mp4"/>
+        <!-- 
+            Uniform resource identifier. Mandatory 
+        -->
+        <itemMetaExtProperty type="imext:uri" value="im://video/vApvJyM3pl2wpFpe0G2uBJxZfZc.mp4"/>
+        <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- 
+                "Author" of binary. Note if author is not a concept (x-im/author) in OC, uuid
+                will be a "nil"-uuid ("0000-000..."). Optional.
+            -->
+            <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
+                title="Jane Doe"/>
+            <!-- 
+                Alternate link (fallback render link). Optional.
+            -->
+            <link rel="alternate" type="image/jpg" url="https://example.org/1234456">
+                <data>
+                    <width>560</width>
+                    <height>320</height>
+                </data>
+            </link>
+        </links>
+    </itemMeta>
+    <contentMeta>
+        <contentCreated>2015-07-01T14:11:20Z</contentCreated>
+        <contentModified>2015-07-01T14:11:20Z</contentModified>
+        <!-- 
+            Optional. A party (person or organisation) which originated, distributed, aggregated or supplied the content or provided some information 
+            used to create or enhance the content. 
+            Writer will not add this be default to pictures uploaded in writer. 
+        -->
+        <infoSource literal="MKT"/>
+        <!-- 
+            Optional. An alternative identifier assigned to the content. 
+        -->
+        <altId>1234456</altId>
+        <!-- 
+            Metadata for the binary.
+        -->
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- 
+                Metadata for video and that are supported by Infomaker                    
+            -->
+            <object id="46f60ada63fd" type="x-im/video">
+                <data>
+                    <!-- Necessary? -->
+                </data>
+            </object>
+            <!-- 
+                "Raw" exif metadata extracted (exiftool) from binary 
+            -->
+            <object id="132a32ajb3432d" type="x-exif/metadata">
+                <data>
+                    <AudioBitsPerSample>16</AudioBitsPerSample>
+                    <AudioChannels>1</AudioChannels>
+                    <AudioFormat>mp4a</AudioFormat>
+                    <AudioSampleRate>48000</AudioSampleRate>
+                    <AvgBitrate>546 kbps</AvgBitrate>
+                    <Balance>0</Balance>
+                    <BitDepth>24</BitDepth>
+                    <ColorRepresentation>nclc 1 1 1</ColorRepresentation>
+                    <CompatibleBrands>
+                        <element>mp42</element>
+                        <element>isom</element>
+                        <element>avc1</element>
+                    </CompatibleBrands>
+                    <CompressorID>avc1</CompressorID>
+                    <CompressorName>JVT/AVC Coding</CompressorName>
+                    <CreateDate>2010:03:20 21:29:11</CreateDate>
+                    <CurrentTime>0 s</CurrentTime>
+                    <Directory>.</Directory>
+                    <Duration>5.57 s</Duration>
+                    <Encoder>HandBrake 0.9.4 2009112300</Encoder>
+                    <ExifToolVersion>10.5</ExifToolVersion>
+                    <FileAccessDate>2018:04:06 14:33:34+02:00</FileAccessDate>
+                    <FileInodeChangeDate>2018:04:06 14:30:01+02:00</FileInodeChangeDate>
+                    <FileModifyDate>2018:04:06 14:29:54+02:00</FileModifyDate>
+                    <FileName>small.mp4</FileName>
+                    <FilePermissions>rw-r--r--</FilePermissions>
+                    <FileSize>375 kB</FileSize>
+                    <FileType>MP4</FileType>
+                    <FileTypeExtension>mp4</FileTypeExtension>
+                    <GraphicsMode>srcCopy</GraphicsMode>
+                    <HandlerType>Metadata</HandlerType>
+                    <ImageHeight>320</ImageHeight>
+                    <ImageSize>560x320</ImageSize>
+                    <ImageWidth>560</ImageWidth>
+                    <MIMEType>video/mp4</MIMEType>
+                    <MajorBrand>MP4 v2 [ISO 14496-14]</MajorBrand>
+                    <MatrixStructure>1 0 0 0 1 0 0 0 1</MatrixStructure>
+                    <MediaCreateDate>2010:03:20 21:29:11</MediaCreateDate>
+                    <MediaDuration>5.57 s</MediaDuration>
+                    <MediaHeaderVersion>0</MediaHeaderVersion>
+                    <MediaLanguageCode>eng</MediaLanguageCode>
+                    <MediaModifyDate>2010:03:20 21:29:12</MediaModifyDate>
+                    <MediaTimeScale>48000</MediaTimeScale>
+                    <Megapixels>0.179</Megapixels>
+                    <MinorVersion>0.0.0</MinorVersion>
+                    <ModifyDate>2010:03:20 21:29:12</ModifyDate>
+                    <MovieDataOffset>168</MovieDataOffset>
+                    <MovieDataSize>379872</MovieDataSize>
+                    <MovieHeaderVersion>0</MovieHeaderVersion>
+                    <NextTrackID>3</NextTrackID>
+                    <OpColor>0 0 0</OpColor>
+                    <PosterTime>0 s</PosterTime>
+                    <PreferredRate>1</PreferredRate>
+                    <PreferredVolume>100.00%</PreferredVolume>
+                    <PreviewDuration>0 s</PreviewDuration>
+                    <PreviewTime>0 s</PreviewTime>
+                    <Rotation>0</Rotation>
+                    <SelectionDuration>0 s</SelectionDuration>
+                    <SelectionTime>0 s</SelectionTime>
+                    <SourceFile>small.mp4</SourceFile>
+                    <SourceImageHeight>320</SourceImageHeight>
+                    <SourceImageWidth>560</SourceImageWidth>
+                    <TimeScale>90000</TimeScale>
+                    <Track2Name>Stereo</Track2Name>
+                    <TrackCreateDate>2010:03:20 21:29:11</TrackCreateDate>
+                    <TrackDuration>5.53 s</TrackDuration>
+                    <TrackHeaderVersion>0</TrackHeaderVersion>
+                    <TrackID>1</TrackID>
+                    <TrackLayer>0</TrackLayer>
+                    <TrackModifyDate>2010:03:20 21:29:12</TrackModifyDate>
+                    <TrackVolume>0.00%</TrackVolume>
+                    <VideoFrameRate>30</VideoFrameRate>
+                    <XResolution>72</XResolution>
+                    <YResolution>72</YResolution>
+                </data>
+            </object>
+        </metadata>
+    </contentMeta>
+</newsItem>

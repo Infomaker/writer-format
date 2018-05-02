@@ -1,0 +1,112 @@
+<newsItem guid="c382c937-8511-5d48-9677-55658c2bbb32" xmlns="http://iptc.org/std/nar/2006-10-01/"
+    conformance="power" standardversion="2.20" standard="NewsML-G2" version="1">
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
+    <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
+    <itemMeta>
+        <!-- 
+            Specifies binary IPTC type. Mandatory
+            - ninat:animated - Animated graphic content
+            - ninat:audio - Audio content
+            - ninat:composite - Composite content            
+            - ninat:graphic - Still (un-animated) graphic content
+            - ninat:picture - Picture content
+            - ninat:video - Video content
+        -->
+        <!-- 
+            Maybe should be ninat:composed?
+        -->
+        <itemClass qcode="ninat:picture"/>
+        <versionCreated>2015-07-01T14:11:20Z</versionCreated>
+        <firstCreated>2015-07-01T14:11:20Z</firstCreated>
+        <pubStatus qcode="stat:withheld"/>
+        <!-- 
+            The binary filename. Optional (Writer uses imext:uri to identify image).
+        -->
+        <fileName>aBpvKyN4pl4wpJpe3G2uAJyZhWc.gif</fileName>
+        <!-- 
+            Specifies Infomaker binary type. Mandatory. 
+            - x-im/video
+            - x-im/animated
+            - x-im/audio
+            - x-im/composite
+            - x-im/graphic
+            - x-im/picture
+        -->
+        <!-- 
+            Maybe should be x-im/composed?
+        -->
+        <itemMetaExtProperty type="imext:type" value="x-im/picture"/>
+        <!-- 
+            Content-type. Mandatory
+        -->
+        <itemMetaExtProperty type="imext:contenttype" value="image/gif"/>
+        <!-- 
+            Uniform resource identifier. Mandatory 
+        -->
+        <itemMetaExtProperty type="imext:uri" value="im://video/aBpvKyN4pl4wpJpe3G2uAJyZhWc.gif"/>
+        <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- 
+                "Author" of binary. Note if author is not a concept (x-im/author) in OC, uuid
+                will be a "nil"-uuid ("0000-000..."). Optional.
+            -->
+            <link rel="author" type="x-im/author" uuid="bad4314c-7e33-11e5-8bcf-feff819cdc9f"
+                title="Jane Doe"/>
+            <!-- 
+                Alternate link (fallback render link). Optional.
+            -->
+            <link rel="alternate" type="image/jpg" url="https://example.org/1234456">
+                <data>
+                    <width>400</width>
+                    <height>200</height>
+                </data>
+            </link>
+            <!-- 
+                If not splitted files themselves should be separate newsitems 
+                (with relations to each other), then we need to have one 
+                "master" newsitem (this) and links to splitted files (somehow).                
+            -->
+            <link rel="member" role="imorder:1" type="video/mp4" uri="member/video/123456433.mp4">
+                <data>                    
+                </data>
+            </link>
+            <link rel="member" role="imorder:2" type="video/mp4" uri="member/video/123456434.mp4">
+                <data>                    
+                </data>
+            </link>
+        </links>
+    </itemMeta>
+    <contentMeta>
+        <contentCreated>2015-07-01T14:11:20Z</contentCreated>
+        <contentModified>2015-07-01T14:11:20Z</contentModified>
+        <!-- 
+            Optional. A party (person or organisation) which originated, distributed, aggregated or supplied the content or provided some information 
+            used to create or enhance the content. 
+            Writer will not add this be default to pictures uploaded in writer. 
+        -->
+        <infoSource literal="MKT"/>
+        <!-- 
+            Optional. An alternative identifier assigned to the content. 
+        -->
+        <altId>1234456</altId>
+        <!-- 
+            Metadata for the binary.
+        -->
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <!-- 
+                Metadata for video and that are supported by Infomaker                    
+            -->
+            <object id="46f60ada63fd" type="x-im/image">
+                <data>
+                    <!-- Necessary? -->
+                </data>
+            </object>
+            <!-- 
+                "Raw" exif metadata extracted (exiftool) from binary 
+            -->
+            <object id="132a32ajb3432d" type="x-exif/metadata">
+                <data>                    
+                </data>
+            </object>
+        </metadata>
+    </contentMeta>
+</newsItem>
