@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Global, i.e. values shared by multiple Infomaker applications, value lists.
+
+    Using this file with "createcatalog.xsl" script you can create the catalog file and
+    the Knowledge Items associated with the catalog.
+
+    Each valueList corresponds to a KnowledgeItem.
+-->
+<valueLists>
+    <valueList alias="imext">
+        <definition xml:lang="en-GB">Infomaker type extensions.</definition>
+        <name xml:lang="en-GB">Infomaker type extensions</name>
+        <values>
+            <value conceptid="lifetimeend">
+                <definition xml:lang="en-GB">Date when document expires/ends. Date format yyyy-MM-dd'T'HH:mm:ssZ. null allowed.</definition>
+                <name xml:lang="en-GB">Life time end</name>
+            </value>
+            <value conceptid="main">
+                <definition xml:lang="en-GB">Metadata is to be interpreted as "main" metadata in a collection of similar metadata.</definition>
+                <name xml:lang="en-GB">Main</name>
+            </value>
+            <value conceptid="type">
+                <definition xml:lang="en-GB">Specifies type of document.</definition>
+                <name xml:lang="en-GB">Type</name>
+            </value>
+            <value conceptid="haspublishedversion">
+                <definition xml:lang="en-GB">Published state of document, i.e. there is a version of the article that is published. Valid values are true/false.</definition>
+                <name xml:lang="en-GB">Has been published</name>
+            </value>
+            <value conceptid="uri">
+                <definition xml:lang="en-GB">The Uniform Resource Identifier of the document.</definition>
+                <name xml:lang="en-GB">URI</name>
+            </value>
+            <value conceptid="url">
+                <definition xml:lang="en-GB">The Uniform Resource Locator of the document.</definition>
+                <name xml:lang="en-GB">URL</name>
+            </value>
+            <value conceptid="pubstart">
+                <definition xml:lang="en-GB">Publication start date of the document. Date format yyyy-MM-dd'T'HH:mm:ssZ.</definition>
+                <name xml:lang="en-GB">Publication start</name>
+            </value>
+            <value conceptid="pubstop">
+                <definition xml:lang="en-GB">Publication stop date of the document. Date format yyyy-MM-dd'T'HH:mm:ssZ.</definition>
+                <name xml:lang="en-GB">URL</name>
+            </value>            
+        </values>
+    </valueList>
+    
+    <!-- 
+        This value list does not really contain "real" KnowledgeItems (i.e. not qcodes).        
+    -->
+    <valueList alias="x-im" useextensions="true">
+        <definition xml:lang="en-GB">Infomaker entity types. Note that x-im is suffixed with a "/" (slash) followed by the actual type, e.g. x-im/author.</definition>
+        <name xml:lang="en-GB">Infomaker entity types</name>
+        <values>
+            <value conceptid="category">
+                <definition xml:lang="en-GB">Used for categories/subjects. Example: News, Sport, Food.</definition>
+                <name xml:lang="en-GB">Category</name>
+                <broader>cpnat:abstract</broader>
+            </value>
+            <value conceptid="topic">
+                <definition xml:lang="en-GB">Used for concepts that are to be viewed as ”keywords” or ”tag” but is not a ”person”, ”organisation” or an ”event”. Example: Car, Climate, Indictment, ADHD.</definition>
+                <name xml:lang="en-GB">Topic</name>
+                <broader>cpnat:object</broader>
+            </value>
+            <value conceptid="person">
+                <definition xml:lang="en-GB">Used for concepts that are ”person” tags. Example: Carl Lewis, Isaac Asimov.</definition>
+                <name xml:lang="en-GB">Person</name>
+                <broader>cpnat:person</broader>
+            </value>
+            <value conceptid="organisation">
+                <definition xml:lang="en-GB">Used for concepts that are ”organisation” tags. Example: EU, FIFA, UN.</definition>
+                <name xml:lang="en-GB">Organisation</name>
+                <broader>cpnat:organisation</broader>
+            </value>
+            <value conceptid="content-profile">
+                <definition xml:lang="en-GB">Concepts typically used as parameters in publication algorithms. Also called ”function tags”. Example: Live, Breaking News.</definition>
+                <name xml:lang="en-GB">Content Profile</name>
+                <broader>cpnat:object</broader>
+            </value>
+            <value conceptid="place">
+                <definition xml:lang="en-GB">Concepts used to represents geographical positions and areas. Example: Borås, County of Västra götaland, Sweden.</definition>
+                <name xml:lang="en-GB">Place</name>
+                <broader>cpnat:poi</broader>
+            </value>
+            <value conceptid="event">
+                <definition xml:lang="en-GB">Concepts representing events. Example: World Health Summit 2018.</definition>
+                <name xml:lang="en-GB">Event</name>
+                <broader>cpnat:event</broader>
+            </value>
+            <value conceptid="author">
+                <definition xml:lang="en-GB">Concepts representing authors and photographers. Example: Nils Olsson, Stina Andersson.</definition>
+                <name xml:lang="en-GB">Author</name>
+                <broader>cpnat:person</broader>
+            </value>
+            <value conceptid="story">
+                <definition xml:lang="en-GB">Concept typically used to create series of articles. Example: metoo, Elections USA, NHL 17/18.</definition>
+                <name xml:lang="en-GB">Story</name>
+                <broader>imnat:story</broader>
+            </value>
+            <value conceptid="section">
+                <definition xml:lang="en-GB">Concept representing organizational departments. Example: Sport, Culture.</definition>
+                <name xml:lang="en-GB">Section</name>
+                <broader>cpnat:object</broader>
+            </value>
+            <value conceptid="channel">
+                <definition xml:lang="en-GB">Concept defining publication channels. Example: company.com, app.</definition>
+                <name xml:lang="en-GB">Section</name>
+                <broader>cpnat:object</broader>
+            </value>
+            <value conceptid="article">
+                <definition xml:lang="en-GB">NewsItem representing "text" (article).</definition>
+                <name xml:lang="en-GB">Article</name>
+                <broader>ninat:text</broader>
+            </value>
+            <value conceptid="image">
+                <definition xml:lang="en-GB">NewsItem representing "picture" (image).</definition>
+                <name xml:lang="en-GB">Image</name>
+                <broader>ninat:picture</broader>
+            </value>
+            <value conceptid="pdf">
+                <definition xml:lang="en-GB">NewsItem representing pdf.</definition>
+                <name xml:lang="en-GB">PDF</name>
+                <broader>ninat:graphic</broader>
+            </value>
+            <value conceptid="newscoverage">
+                <definition xml:lang="en-GB">PlanningItem representing entities used for planning editorial work.</definition>
+                <name xml:lang="en-GB">News coverage</name>
+                <broader>plinat:newscoverage</broader>
+            </value>
+            <value conceptid="newsvalue">
+                <definition xml:lang="en-GB">Score (prio), lifetime and lifetime end date for article. For more information, see plugin se.infomaker.newspriority.</definition>
+                <name xml:lang="en-GB">News value</name>                
+            </value>
+            <value conceptid="print-meta">
+                <definition xml:lang="en-GB">Print information belonging to article. Maps to page (print) related fields for article.</definition>
+                <name xml:lang="en-GB">Print information</name>                
+            </value>
+            <value conceptid="teaser">
+                <definition xml:lang="en-GB">Print information belonging to article. Maps to page (print) related fields for article.</definition>
+                <name xml:lang="en-GB">Teaser</name>                
+            </value>
+            <value conceptid="articlesource">
+                <definition xml:lang="en-GB">Article source represents the "source", e.g. TT, Writer, of the article. For more information, see plugin se.infomaker.textanalyzer.</definition>
+                <name xml:lang="en-GB">Article Source</name>                
+            </value>
+            <value conceptid="crop">
+                <definition xml:lang="en-GB">Crop defines softcrop used for an image. For more information, see plugin se.infomaker.ximimage.</definition>
+                <name xml:lang="en-GB">Crop</name>                
+            </value>
+            <value conceptid="youtube">
+                <definition xml:lang="en-GB">Used for embedded youtube content. For more information, see plugin se.infomaker.youtubeembed.</definition>
+                <name xml:lang="en-GB">Youtube</name>                
+            </value>
+            <value conceptid="iframely">
+                <definition xml:lang="en-GB">Used for IFramely content. For more information, see plugin se.infomaker.iframely.</definition>
+                <name xml:lang="en-GB">IFramely</name>                
+            </value>
+            <value conceptid="content-part">
+                <definition xml:lang="en-GB">Represent content parts, e.g. "Fact box". For more information, see plugin se.infomaker.contentpart.</definition>
+                <name xml:lang="en-GB">Content Part</name>                
+            </value>
+            <value conceptid="social+facebook">
+                <definition xml:lang="en-GB">Used for links to Facebook. For more information, see plugin se.infomaker.socialembed.</definition>
+                <name xml:lang="en-GB">Facebook</name>                
+            </value>
+            <value conceptid="social+twitter">
+                <definition xml:lang="en-GB">Used for links to Twitter. For more information, see plugin se.infomaker.socialembed.</definition>
+                <name xml:lang="en-GB">Twitter</name>                
+            </value>
+            <value conceptid="contact-info">
+                <definition xml:lang="en-GB">Represents contact information for a "person" or an "organization" for example. For more information, see plugin se.infomaker.ximconcept.</definition>
+                <name xml:lang="en-GB">Contact Information</name>                
+            </value>
+            <value conceptid="content-profile+social">
+                <definition xml:lang="en-GB">Represents tagging of "contact profile". For more information, see plugin se.infomaker.ximconcept (Content Profile).</definition>
+                <name xml:lang="en-GB">Contact Information</name>                
+            </value>
+            <value conceptid="polygon">
+                <definition xml:lang="en-GB">Represents geo data - polygon. For more information, see plugin se.infomaker.ximconcept.</definition>
+                <name xml:lang="en-GB">Polygon</name>                
+            </value>
+            <value conceptid="position">
+                <definition xml:lang="en-GB">Represents geo data - position. For more information, see plugin se.infomaker.ximconcept.</definition>
+                <name xml:lang="en-GB">Position</name>                
+            </value>        
+            <value conceptid="planning-details">
+                <definition xml:lang="en-GB">Represents planning details. For more information, see PlanningItem.</definition>
+                <name xml:lang="en-GB">Planning Details</name>                
+            </value>
+            <value conceptid="event-details">
+                <definition xml:lang="en-GB">Represents event details. For more information, see ConceptItem (Event).</definition>
+                <name xml:lang="en-GB">Planning Details</name>                
+            </value>                       
+        </values>
+    </valueList>
+</valueLists>
