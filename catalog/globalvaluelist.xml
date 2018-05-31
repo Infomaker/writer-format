@@ -44,7 +44,27 @@
             <value conceptid="pubstop">
                 <definition xml:lang="en-GB">Publication stop date of the document. Date format yyyy-MM-dd'T'HH:mm:ssZ.</definition>
                 <name xml:lang="en-GB">URL</name>
-            </value>            
+            </value>
+            <value conceptid="originalUrl">
+                <definition xml:lang="en-GB">Original URL of entity.</definition>
+                <name xml:lang="en-GB">Original URL</name>
+            </value>
+            <value conceptid="firstName">
+                <definition xml:lang="en-GB">First name.</definition>
+                <name xml:lang="en-GB">First name</name>
+            </value>        
+            <value conceptid="lastName">
+                <definition xml:lang="en-GB">Last name.</definition>
+                <name xml:lang="en-GB">Last name</name>
+            </value>
+            <value conceptid="proddate">
+                <definition xml:lang="en-GB">Production date, i.e. when the entity is considered to be in "production".</definition>
+                <name xml:lang="en-GB">Production date</name>
+            </value>
+            <value conceptid="prodenddate">
+                <definition xml:lang="en-GB">Production end date, i.e. when the entity is considered to be out of "production".</definition>
+                <name xml:lang="en-GB">Production end date</name>
+            </value>
         </values>
     </valueList>
     
