@@ -1,4 +1,4 @@
-<span style="color:red">DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead</span>
+## _DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead_
 
 # Writer formats
 Documentation, examples etc regarding the formats used by Writer.

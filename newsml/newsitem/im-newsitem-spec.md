@@ -1,4 +1,4 @@
-<span style="color:red">DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead</span>
+## _DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead_
 
 # Infomaker NewsItem spec
 *Note: This NewsItem spec concerns Infomakers implementation of NewsItem for Newspilot Writer (Infomakers web based editor)*

@@ -1,4 +1,4 @@
-<b style="color:red">DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead</b>
+## _DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead_
 
 # Infomaker ConceptItem spec
 *Note: This ConceptItem spec concerns Infomakers implementation of ConceptItem for Writer (Infomakers web based editor)*
