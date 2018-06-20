@@ -1,3 +1,5 @@
+<span style="color:red">DEPRECATED! Please see [new documentation](https://docs.writer.infomaker.io/format/imnml-overview.html) instead</span>
+
 # Writer formats
 Documentation, examples etc regarding the formats used by Writer.
 
