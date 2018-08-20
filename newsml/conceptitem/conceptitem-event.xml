@@ -1,58 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" guid="460bcd00-a018-11e5-8994-feff819cdc9f"
-    version="1" standard="NewsML-G2" standardversion="2.20" conformance="power">
-    <!-- catalog for ninat:, nprov:, irel:, cpnat:, drol:, etc... -->
-    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_27.xml"/>
-    
-    <!-- catalog for infomaker extensions: imchn, imext etc... -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<conceptItem xmlns="http://iptc.org/std/nar/2006-10-01/" standard="NewsML-G2" standardversion="2.26"
+             guid="00545308-FB53-48C4-A602-10DA367B2B38" conformance="power">
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_30.xml"/>
     <catalogRef href="http://infomaker.se/spec/catalog/catalog.infomaker.g2.1_0.xml"/>
-    
+    <rightsInfo>
+        <copyrightHolder>
+            <name>TT</name>
+        </copyrightHolder>
+    </rightsInfo>
     <itemMeta>
         <itemClass qcode="cinat:concept"/>
-        
-        <!-- The party (person or organisation) responsible for the management of the Item. -->
-        <provider literal="John Doe"/>
-        
-        <!-- Timestamps for created and updated. https://www.ietf.org/rfc/rfc3339.txt -->
-        <versionCreated>2015-12-07T15:03:42+00:00</versionCreated>
-        <firstCreated>2015-12-07T15:03:42+00:00</firstCreated>
-        
-        <!-- The publishing status of the Item, its value is "usable" by default. -->
+        <provider literal="tt"/>
+        <versionCreated>2018-03-26T07:42:59</versionCreated>
         <pubStatus qcode="stat:usable"/>
-        
-        <!-- Any note that might be of interest to save with the concept. -->
-        <edNote>This is a note...</edNote>
-        
-        <!-- Extension used to map concept to x-im/event -->
         <itemMetaExtProperty type="imext:type" value="x-im/event"/>
-        
-        <!-- Start date and time of the event -->
-        <itemMetaExtProperty type="imext:eventStart" value="2015-08-11T07:30:42Z"/>
-        <!-- Stop date and time of the event -->
-        <itemMetaExtProperty type="imext:eventStop" value="2015-08-14T07:30:42Z"/>  
-        
         <links xmlns="http://www.infomaker.se/newsml/1.0">
-            <!-- User that has created the concept. -->
-            <link title="John Doe" rel="creator" type="x-im/user"
-                uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
-            
-            <!-- Additional information for the concept. -->
-            <link rel="irel:seeAlso" type="text/html" url="https://sv.wikipedia.org/wiki/Europam%C3%A4sterskapet_i_fotboll"/>
+            <link rel="creator" title="John Doe" type="x-im/user"
+                  uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
+            <link rel="updater" title="John Doe" type="x-im/user"
+                  uuid="9e1653f3-7575-4cb7-9b74-dc4dea63513e"/>
+            <link rel="subject" title="Sport" type="x-im/topic"
+                  uuid="d077e7a9-d499-4b51-92ae-27bfbed1abe3"/>
+            <link rel="subject" title="Fotboll" type="x-im/topic"
+                  uuid="67e13297-2321-4ee7-8eea-fb9be88afcc7"/>
+            <link rel="subject" title="SPO" type="x-im/section"
+                  uuid="387fc75e-ea46-4cc2-a8c8-bca18c8c5359"/>
+            <link rel="story" title="Uppstart av Allsvenskan 2018" type="x-im/story"
+                  uuid="84b1cb22-fe41-437a-b62f-8740f6a63ab9"/>
+            <link rel="participant" title="Lars-Åke Lagrell" type="x-im/person"
+                  uuid="f81b2485-2e63-452d-bfc0-6bcbe26f968c">
+                <data>
+                    <note>Here we can add some notes relating to the participant</note>
+                </data>
+            </link>
+            <!--
+                Below is an example of how it can look if we should allow adding
+                a person that is not a concept in OC
+            -->
+            <!--<link rel="participant" title="Karl-Erik Nilsson" type="x-participant/person"
+                  uri="participant://person/karl-erik_nilsson">
+                <data>
+                    <affiliation>SVFF</affiliation>
+                    <definition/>
+                    <phone/>
+                    <email/>
+                    <note/>
+                </data>
+            </link>-->
+            <link rel="organiser" title="Svenska Fotbollsförbundet" type="x-im/organisation"
+                  uuid="12e0b2c8-a0b2-4b9f-9e89-bde13b827b3e">
+                <data>
+                    <note>Here we can add some notes relating to the organiser</note>
+                </data>
+            </link>
+            <!--
+                Below is an example of how it can look if we should allow adding
+                an organisation that is not a concept in OC
+            -->
+            <!--<link rel="organiser" title="Svenska Fotbollförbundet" type="x-organiser/organisation"
+                  uri="organiser://organisation/svenska_fotbollforbundet">
+                <data>
+                    <note>Noteringar...</note>
+                    <locality>Solna</locality>
+                    <country/>
+                    <email>svff@svenskfotboll.se</email>
+                    <phone>+46-8-735 09 00</phone>
+                </data>
+            </link>-->
         </links>
     </itemMeta>
+    <contentMeta>
+        <urgency>3</urgency>
+        <contentCreated>2018-01-18T08:01:42</contentCreated>
+        <language tag="sv"/>
+        <contentMetaExtProperty type="nrptype:evtyp" value="Sport"/>
+        <links xmlns="http://www.infomaker.se/newsml/1.0">
+            <link rel="location" title="Posthotellet, Göteborg" type="x-geo/point"
+                  uri="geo://point/posthotellet_goteborg">
+                <data>
+                    <name>Posthotellet, Göteborg</name>
+                    <geometry>POINT(11.974561 57.707907)</geometry>
+                    <locality>Göteborg</locality>
+                    <country>Sverige</country>
+                </data>
+            </link>
+        </links>
+    </contentMeta>
     <concept>
-        <!-- Mandatory. @qcode or @uri must be used -->
-        <conceptId created="2015-08-11T07:30:42Z" qcode="imcpt:460bcd00-a018-11e5-8994-feff819cdc9f"
-            uri="im://event/460bcd00-a018-11e5-8994-feff819cdc9f"/>
-        
-        <!-- Mandatory (for writer usage). Identifies the concept as a "event" -->
+        <conceptId uri="im://event/00545308-FB53-48C4-A602-10DA367B2B38" creator="tt:pn"/>
         <type qcode="cpnat:event"/>
-        
-        <!-- Mandatory. Name of concept -->
-        <name>Fotbolls EM</name>
-        
-        <!-- Descriptions -->
-        <definition role="drol:long">A long description...</definition>
-        <definition role="drol:short">A short description</definition>
+        <name>Fotboll: Superettans upptaktsträff</name>
+        <definition role="nrprol:long">Fotboll: Superettans upptaktsträff.<br/>Spelare och ledare
+            från samtliga 16 klubbar finns på plats på upptaktsträffen inför premiären i superettan.
+            TT bevakar på plats.
+        </definition>
+        <definition role="nrprol:short">Fotboll: Superettans upptaktsträff.</definition>
+        <metadata xmlns="http://www.infomaker.se/newsml/1.0">
+            <object id="d1e25" type="x-im/event-details">
+                <data>
+                    <start>2018-03-26T10:00:00+02:00</start>
+                    <end/>
+                    <registration/>
+                </data>
+            </object>
+            <object id="d1e25" type="x-im/contact-info">
+                <data>
+                    <note>Lars Helmersson</note>
+                    <email>lars.helmersson@svenskfotboll.se</email>
+                    <phone>+46 70 274 94 45</phone>
+                </data>
+            </object>
+        </metadata>
     </concept>
 </conceptItem>

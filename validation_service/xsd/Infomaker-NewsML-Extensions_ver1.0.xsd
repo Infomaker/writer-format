@@ -3,9 +3,12 @@
   Infomaker Scandinavia AB
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-           targetNamespace="http://www.infomaker.se/newsml/1.0"
-           xmlns:object="http://www.infomaker.se/newsml/1.0">
+    targetNamespace="http://www.infomaker.se/newsml/1.0"
+    xmlns:object="http://www.infomaker.se/newsml/1.0">
     <xs:element name="metadata">
+        <xs:annotation>
+            <xs:documentation>Contains information considered to be ”metadata” for the document, e.g. news value.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="object:object"/>
@@ -13,6 +16,9 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="object">
+        <xs:annotation>
+            <xs:documentation>Contains data that lives inside the document only (compared to a link which points to an external entity and represents a relation). Typically a content-plugin will store its information in an object element.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" ref="object:data"/>
@@ -20,20 +26,40 @@
             </xs:sequence>
             <xs:attribute name="id" use="required" type="xs:NMTOKEN">
                 <xs:annotation>
-                    <xs:documentation>This must be a unique id inside of the document in which the
-                        object is
-                        used
-                    </xs:documentation>
+                    <xs:documentation>This must be a unique id inside of the document in which the object is used</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="type" use="required" type="object:notEmptyString"/>
-            <xs:attribute name="title" use="optional"/>
-            <xs:attribute name="uri" use="optional" type="xs:anyURI"/>
-            <xs:attribute name="url" use="optional" type="xs:anyURI"/>
-            <xs:attribute name="uuid" use="optional" type="object:notEmptyString"/>
+            <xs:attribute name="type" use="required" type="object:notEmptyString">
+                <xs:annotation>
+                    <xs:documentation>Identifies the type of the object, e.g. "x-im/newsvalue".</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="title" use="optional">
+                <xs:annotation>
+                    <xs:documentation>A human readable title or name of the object.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="uri" use="optional" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>An URI identifying the object. Cannot not be used in combination with attribute uuid.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="url" use="optional" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>An URL to the object.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="uuid" use="optional" type="object:notEmptyString">
+                <xs:annotation>
+                    <xs:documentation>An UUID identifying the object. Cannot not be used in combination with attribute uri.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="data">
+        <xs:annotation>
+            <xs:documentation>Contains ”any” children. Used to store plugin specific data.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded">
@@ -45,6 +71,9 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="links">
+        <xs:annotation>
+            <xs:documentation>Wraps all link:s used in the document/element.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="object:link"/>
@@ -52,23 +81,50 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="link">
+        <xs:annotation>
+            <xs:documentation>Represents a link to an external (from the documents perspective) entity. Make use of attributes to describe how the relation to the entity should be interpreted.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" ref="object:data"/>
                 <xs:element minOccurs="0" ref="object:links"/>
             </xs:sequence>
-            <xs:attribute name="rel" use="optional" type="xs:NMTOKEN"/>
-            <xs:attribute name="type" use="required" type="object:notEmptyString"/>
-            <xs:attribute name="uri" type="xs:anyURI"/>
-            <xs:attribute name="url" type="xs:anyURI"/>
-            <xs:attribute name="title" use="optional" type="xs:normalizedString"/>
-            <xs:attribute name="uuid" use="optional" type="object:notEmptyString"/>
+            <xs:attribute name="rel" use="optional" type="xs:NMTOKEN">
+                <xs:annotation>
+                    <xs:documentation>Describes the relationship between the entity to which the link points to and the document containing the link.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="type" use="required" type="object:notEmptyString">
+                <xs:annotation>
+                    <xs:documentation>Identifies the type of the link, e.g. "x-im/author".</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="uri" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>An URI identifying the link. Cannot not be used in combination with attribute uuid.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="url" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>The URL of the link.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="title" use="optional" type="xs:normalizedString">
+                <xs:annotation>
+                    <xs:documentation>A human readable title or name of the link.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="uuid" use="optional" type="object:notEmptyString">
+                <xs:annotation>
+                    <xs:documentation>An UUID identifying the link. Cannot not be used in combination with attribute uri.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:simpleType name="notEmptyString">
         <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
-            <xs:pattern value=".*[^\s].*" />
+            <xs:pattern value=".*[^\s].*"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
